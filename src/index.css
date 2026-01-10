@@ -512,3 +512,100 @@ body {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+/* =========================================
+   MODERN THEORY UI - VIBRANT REDESIGN
+   ========================================= */
+
+/* Main Container with extra spacing */
+.modern-theory-wrapper {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Individual Theory Section Card */
+.modern-theory-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.modern-theory-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px -12px rgba(59, 130, 246, 0.25);
+  /* Blue glow on hover */
+}
+
+/* Section Title Styling */
+.modern-theory-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #1e3a8a;
+  margin-bottom: 25px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+/* Decorative line under title */
+.modern-theory-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  /* Blue to Purple */
+  border-radius: 2px;
+}
+
+/* Content Typography */
+.modern-theory-content {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: #374151;
+  /* Gray-700 */
+  font-weight: 500;
+}
+
+.modern-theory-content p {
+  margin-bottom: 15px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+/* Highlighting keywords (optional helper) */
+.highlight-text {
+  background: linear-gradient(120deg, #dbeafe 0%, #eff6ff 100%);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #2563eb;
+  font-weight: 700;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .modern-theory-card {
+    padding: 25px;
+  }
+
+  .modern-theory-title {
+    font-size: 1.5rem;
+  }
+
+  .modern-theory-content {
+    font-size: 1.05rem;
+  }
+}

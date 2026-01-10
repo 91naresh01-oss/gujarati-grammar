@@ -12,7 +12,7 @@ function Theory() {
     }
 
     return (
-        <div style={{ width: '100%', padding: '20px', maxWidth: '800px', margin: '0 auto' }}>
+        <div style={{ width: '100%', minHeight: '100vh', position: 'relative' }}>
             <div className="theory-header-outside">
                 <button onClick={() => navigate('/chapters')} className="back-btn-theory-outside">
                     ←
@@ -22,11 +22,11 @@ function Theory() {
                 </div>
             </div>
 
-            <div className="theory-card-container">
+            <div className="modern-theory-wrapper">
                 {chapter.theory.map((item, index) => (
-                    <div key={index} className="theory-section">
-                        {item.title && <h2 className="theory-title">{item.title}</h2>}
-                        <div className="theory-content">
+                    <div key={index} className="modern-theory-card">
+                        {item.title && <h2 className="modern-theory-title">{item.title}</h2>}
+                        <div className="modern-theory-content">
                             {item.content}
                         </div>
                     </div>
