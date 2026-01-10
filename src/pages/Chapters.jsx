@@ -1,22 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { chaptersData } from '../data';
 
 function Chapters() {
     const navigate = useNavigate();
-
-    const chapters = [
-        {
-            id: 1,
-            name: 'વ્યાકરણ : મહત્વ, પ્રયોજનાદિ',
-            desc: 'વ્યાકરણનો અર્થ, તેના કાર્યો અને ભાષાશુદ્ધિમાં તેનું મહત્વ.',
-        },
-        // Example placeholder for grid demo
-        {
-            id: 2,
-            name: 'સ્વર અને વ્યંજન',
-            desc: 'ગુજરાતી ભાષાના વર્ણવ્યવસ્થાની સમજ.',
-        }
-    ];
+    const chapters = chaptersData;
 
     return (
         <div style={{ width: '100%', padding: '20px' }}>
