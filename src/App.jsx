@@ -7,18 +7,25 @@ import Theory from './pages/Theory';
 
 import Test from './pages/Test';
 import BackgroundBlobs from './components/BackgroundBlobs';
+import Navbar from './components/Navbar';
+import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
   return (
-    <Router>
-      <BackgroundBlobs />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/chapters" element={<Chapters />} />
-        <Route path="/theory/:id" element={<Theory />} />
-        <Route path="/test/:id" element={<Test />} />
-      </Routes>
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <BackgroundBlobs />
+        <Navbar />
+        <div className="app-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/chapters" element={<Chapters />} />
+            <Route path="/theory/:id" element={<Theory />} />
+            <Route path="/test/:id" element={<Test />} />
+          </Routes>
+        </div>
+      </Router>
+    </ThemeProvider>
   );
 }
 

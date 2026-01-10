@@ -609,3 +609,199 @@ body {
     font-size: 1.05rem;
   }
 }
+
+/* ===========================
+   NAVBAR & SETTINGS
+   =========================== */
+.top-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--primary-dark);
+  cursor: pointer;
+}
+
+.brand-icon {
+  font-size: 1.5rem;
+}
+
+.settings-trigger-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.settings-trigger-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+  transform: rotate(45deg);
+}
+
+/* Add padding to body so content isn't hidden behind fixed navbar */
+.app-content {
+  margin-top: 60px;
+  width: 100%;
+}
+
+/* Settings Modal */
+.settings-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  backdrop-filter: blur(5px);
+  animation: fadeIn 0.2s ease-out;
+}
+
+.settings-modal {
+  background: white;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.settings-header {
+  padding: 20px;
+  border-bottom: 1px solid #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.settings-header h3 {
+  margin: 0;
+  color: #1f2937;
+  font-size: 1.25rem;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.close-btn:hover {
+  color: #ef4444;
+}
+
+.settings-content {
+  padding: 24px;
+}
+
+.setting-item {
+  margin-bottom: 24px;
+}
+
+.setting-item label {
+  display: block;
+  font-weight: 600;
+  color: #4b5563;
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+.font-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f9fafb;
+  padding: 8px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.font-btn {
+  background: white;
+  border: 1px solid #e5e7eb;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  font-weight: 700;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.1s;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.font-btn:active {
+  transform: scale(0.95);
+}
+
+.font-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.font-value {
+  font-weight: 700;
+  color: var(--primary-blue);
+  font-size: 1.1rem;
+}
+
+.reset-btn {
+  width: 100%;
+  padding: 12px;
+  background: white;
+  border: 1px solid #d1d5db;
+  color: #4b5563;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.reset-btn:hover {
+  background: #f9fafb;
+  border-color: #9ca3af;
+  color: #111827;
+}
