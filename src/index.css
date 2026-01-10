@@ -1,0 +1,231 @@
+:root {
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --glass-bg: rgba(255, 255, 255, 0.25);
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --text-color: #2d3748;
+  --heading-color: #1a202c;
+  --card-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+  --card-hover-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.35);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--primary-gradient);
+  min-height: 100vh;
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  /* Changed from center to allow scrolling on tall content */
+  padding: 20px;
+}
+
+#root {
+  width: 100%;
+  max-width: 500px;
+  /* Default for Mobile */
+  margin: 0 auto;
+  transition: max-width 0.3s ease;
+}
+
+/* Glassmorphism Card Utility */
+.glass-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--card-shadow);
+  padding: 2rem;
+  text-align: center;
+  animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  /* Subtle lift effect only on cards that are interactive, can aid visual depth */
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 14px 40px;
+  font-size: 1.25rem;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+  font-weight: 700;
+  margin-top: 25px;
+  letter-spacing: 0.5px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.btn-primary:active {
+  transform: scale(0.96);
+}
+
+.btn-secondary {
+  background: white;
+  color: #553c9a;
+  border: 2px solid #553c9a;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+  font-size: 0.95rem;
+}
+
+.btn-secondary:hover {
+  background: #f3eff9;
+  transform: translateY(-1px);
+}
+
+/* Typography */
+h1 {
+  color: var(--heading-color);
+  margin-bottom: 1.5rem;
+  font-size: 2.25rem;
+  font-weight: 800;
+}
+
+h2 {
+  color: var(--heading-color);
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+}
+
+/* Chapters List Styling */
+.chapter-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.chapter-item {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.chapter-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+}
+
+.chapter-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2d3748;
+}
+
+.chapter-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.back-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background 0.2s;
+  font-weight: 600;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* Theory Page Styling */
+.theory-content p {
+  line-height: 1.8;
+  margin-bottom: 12px;
+  color: #4a5568;
+}
+
+.theory-section {
+  background: #f7fafc;
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 5px solid #667eea;
+  transition: transform 0.2s;
+}
+
+.theory-section:hover {
+  transform: translateX(5px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =========================================
+   MEDIA QUERIES (RESPONSIVE DESIGN)
+   ========================================= */
+
+/* Tablet & Desktop */
+@media (min-width: 768px) {
+  #root {
+    max-width: 1000px;
+    padding-top: 40px;
+  }
+
+  /* Home Page specific */
+  .home-container {
+    padding: 3rem;
+  }
+
+  .home-title {
+    font-size: 3.5rem;
+  }
+
+  /* Grid Layout for Chapters */
+  .chapter-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+  }
+
+  /* Theory Page - more readable width */
+  .theory-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
