@@ -4,9 +4,12 @@ import Home from './pages/Home';
 import Chapters from './pages/Chapters';
 import Theory from './pages/Theory';
 
+import BackgroundBlobs from './components/BackgroundBlobs';
+
 function App() {
   return (
     <Router>
+      <BackgroundBlobs />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/chapters" element={<Chapters />} />
