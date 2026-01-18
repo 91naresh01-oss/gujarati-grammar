@@ -3,6 +3,7 @@ import { chapter1Tests } from './gujarati-grammar/chapter1/test';
 import { chapter2Theory } from './gujarati-grammar/chapter2/theory';
 import { chapter2Tests } from './gujarati-grammar/chapter2/test';
 import { chapter3Theory } from './gujarati-grammar/chapter3/theory';
+import { chapter3Tests } from './gujarati-grammar/chapter3/test';
 
 export const chaptersData = [
     {
@@ -24,6 +25,6 @@ export const chaptersData = [
         name: 'વર્ણ વ્યવસ્થા',
         desc: 'ધ્વનિ, સ્વર અને વ્યંજનનું વર્ગીકરણ અને ઉચ્ચારણ સ્થાનની સમજૂતી.',
         theory: chapter3Theory,
-        tests: []
+        tests: chapter3Tests
     }
 ];
