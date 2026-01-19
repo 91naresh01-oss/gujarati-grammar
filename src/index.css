@@ -581,56 +581,225 @@ body {
   font-weight: 700;
 }
 
-/* Mobile responsiveness */
+/* Mobile responsiveness - COMPACT */
 @media (max-width: 600px) {
   body {
-    padding: 10px 0;
-    /* Reduced padding */
+    padding: 0;
   }
 
   #root {
-    width: 97%;
-    max-width: 97%;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 5px;
   }
 
+  /* Home page - Compact */
+  .home-container {
+    max-width: 92%;
+    margin: 8vh auto;
+    padding: 1rem 0.8rem;
+    border-radius: 16px;
+  }
+
+  .home-icon {
+    font-size: 3.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .btn-primary {
+    padding: 12px 28px;
+    font-size: 1rem;
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  /* Chapter grid - Compact */
+  .chapter-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 5px 0;
+  }
+
+  .chapter-card {
+    padding: 0.8rem;
+    border-radius: 12px;
+    gap: 0.6rem;
+  }
+
+  .chapter-header {
+    gap: 10px;
+  }
+
+  .chapter-number-box {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+  }
+
+  .chapter-info h3 {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+
+  .chapter-desc {
+    font-size: 0.8rem;
+    margin-top: 2px;
+    line-height: 1.4;
+  }
+
+  .chapter-actions {
+    padding-top: 8px;
+    gap: 6px;
+  }
+
+  .action-btn {
+    padding: 8px 6px;
+    font-size: 0.75rem;
+    min-height: 38px;
+    border-radius: 6px;
+  }
+
+  /* Page header - Compact */
+  .page-header {
+    margin-bottom: 10px;
+    padding: 3px 8px;
+  }
+
+  .page-title {
+    font-size: 1.2rem;
+  }
+
+  .back-btn-circle {
+    width: 34px;
+    height: 34px;
+    font-size: 1rem;
+  }
+
+  /* Theory page - Compact */
   .theory-page-container {
     width: 100%;
-    /* Root is already 97% */
     max-width: 100%;
-    border-radius: 12px;
+    border-radius: 0;
+    min-height: auto;
   }
 
+  .theory-header-outside {
+    margin-bottom: 6px;
+    padding: 3px 8px;
+  }
+
+  .theory-title-pill {
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    min-width: auto;
+    max-width: 80%;
+  }
+
+  .back-btn-theory-outside {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+
+  .theory-header {
+    padding: 10px 12px;
+    min-height: 44px;
+  }
+
+  .theory-title {
+    font-size: 1rem;
+  }
+
+  .back-icon-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+
+  .theory-body {
+    padding: 10px 8px;
+  }
+
+  /* Modern Theory Wrapper - ULTRA COMPACT */
   .modern-theory-wrapper {
-    padding: 10px 4px;
-    gap: 15px;
+    padding: 6px 3px;
+    gap: 8px;
     width: 100%;
   }
 
   .modern-theory-card {
-    padding: 18px 12px;
-    width: 100%;
-    box-sizing: border-box;
+    padding: 10px 8px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px -3px rgba(0, 0, 0, 0.1);
+  }
+
+  .modern-theory-card:hover {
+    transform: none;
+  }
+
+  .modern-theory-title {
+    font-size: 1.1rem;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+
+  .modern-theory-title::after {
+    width: 30px;
+    height: 2px;
+  }
+
+  .modern-theory-content {
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
 
   /* Force vertical stacking on all flex containers inside theory */
   .modern-theory-content div[style*="display: flex"],
-  .modern-theory-content div[style*="display:flex"] {
+  .modern-theory-content div[style*="display:flex"],
+  .modern-theory-content>div>div[style*="display: grid"],
+  .modern-theory-content>div>div[style*="display:grid"] {
+    display: flex !important;
     flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 12px !important;
+    align-items: stretch !important;
+    gap: 6px !important;
   }
 
-  /* Force grid items to be full width */
-  .modern-theory-content div[style*="display: grid"],
-  .modern-theory-content div[style*="display:grid"] {
-    grid-template-columns: 1fr !important;
-    gap: 15px !important;
+  /* Force 2-column grid to single column */
+  .modern-theory-content div[style*="grid-template-columns: 1fr 1fr"],
+  .modern-theory-content div[style*="grid-template-columns:1fr 1fr"],
+  .modern-theory-content div[style*="repeat(auto-fit"] {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
   }
 
-  /* Adjust inline style paddings */
-  .modern-theory-content div[style*="padding"] {
-    padding: 15px 10px !important;
+  /* Reduce padding in cards - COMPACT */
+  .modern-theory-content div[style*="padding: 2"],
+  .modern-theory-content div[style*="padding: 1"],
+  .modern-theory-content div[style*="padding:2"],
+  .modern-theory-content div[style*="padding:1"] {
+    padding: 8px !important;
+  }
+
+  /* Gradient cards - smaller on mobile */
+  .modern-theory-content div[style*="background: linear-gradient"] {
+    padding: 10px 8px !important;
+    border-radius: 10px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .modern-theory-content div[style*="background: linear-gradient"] h2 {
+    font-size: 1.1rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 4px !important;
+  }
+
+  .modern-theory-content div[style*="background: linear-gradient"] p {
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
   }
 
   /* Fix tables not to overflow and allow horizontal scroll if needed */
@@ -638,29 +807,55 @@ body {
     display: block;
     width: 100%;
     overflow-x: auto;
-    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
   }
 
   .modern-theory-content td,
   .modern-theory-content th {
-    padding: 10px 8px !important;
+    padding: 6px 4px !important;
+    font-size: 0.85rem !important;
+    white-space: nowrap;
+  }
+
+  /* Smaller headings in cards - COMPACT */
+  .modern-theory-content h3,
+  .modern-theory-content h4 {
+    font-size: 1rem !important;
+    margin-bottom: 6px !important;
+  }
+
+  /* Navbar mobile - COMPACT */
+  .top-navbar {
+    height: 48px;
+    padding: 0 10px;
+  }
+
+  .navbar-brand {
     font-size: 0.95rem;
+    gap: 6px;
   }
 
-  /* Fix headers in theory cards */
-  .modern-theory-title {
-    font-size: 1.4rem;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+  .brand-icon {
+    font-size: 1.2rem;
   }
 
-  /* Fix intro card spacing */
-  div[style*="background: linear-gradient"][style*="padding: 30px"] {
-    padding: 20px 15px !important;
+  .app-content {
+    margin-top: 48px;
   }
 
-  div[style*="background: linear-gradient"] h2 {
-    font-size: 1.5rem !important;
+  /* Settings modal mobile */
+  .settings-modal {
+    width: 95%;
+    max-width: 95%;
+    border-radius: 12px;
+  }
+
+  .settings-header {
+    padding: 12px;
+  }
+
+  .settings-content {
+    padding: 12px;
   }
 }
 
