@@ -6,6 +6,8 @@ import { chapter3Theory } from './gujarati-grammar/chapter3/theory';
 import { chapter3Tests } from './gujarati-grammar/chapter3/test';
 import { chapter4Theory } from './gujarati-grammar/chapter4/theory';
 import { chapter4Tests } from './gujarati-grammar/chapter4/test';
+import { chapter5Theory } from './gujarati-grammar/chapter5/theory';
+import { chapter5Tests } from './gujarati-grammar/chapter5/test';
 
 export const chaptersData = [
     {
@@ -35,5 +37,12 @@ export const chaptersData = [
         desc: 'શબ્દમાં રહેલા સ્વર અને વ્યંજનના સમૂહને છૂટા પાડવાની ક્રિયા અને તેના નિયમોની સમજૂતી.',
         theory: chapter4Theory,
         tests: chapter4Tests
+    },
+    {
+        id: 5,
+        name: 'જોડાક્ષર (સંયુક્તાક્ષર)',
+        desc: 'વ્યંજન સાથે વ્યંજનના જોડાણના પ્રકારો અને તેના લેખનના નિયમોની સમજૂતી.',
+        theory: chapter5Theory,
+        tests: chapter5Tests
     }
 ];

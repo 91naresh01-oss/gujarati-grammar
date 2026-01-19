@@ -42,8 +42,8 @@ body {
 
 #root {
   width: 100%;
-  max-width: 1000px;
-  /* Reduced from 1200px */
+  max-width: 1100px;
+  /* Increased from 1000px */
   margin: 0 auto;
   position: relative;
   z-index: 10;
@@ -504,9 +504,12 @@ body {
 
 /* Main Container with extra spacing */
 .modern-theory-wrapper {
-  max-width: 850px;
+  max-width: 1000px;
+  /* Increased from 850px */
   margin: 0 auto;
   padding: 20px;
+  width: 95%;
+  /* Ensure it doesn't hit edges on smaller PC windows */
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -601,40 +604,65 @@ body {
   }
 
   .modern-theory-wrapper {
-    padding: 10px 5px;
-    /* Very small side padding */
+    padding: 10px 4px;
     gap: 15px;
+    width: 100%;
   }
 
   .modern-theory-card {
-    padding: 15px;
-    /* Reduced padding for more content width */
-    border-radius: 12px;
+    padding: 18px 12px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
-  /* Target inner divs in theory content to reduce their inline padding in mobile */
-  .modern-theory-content div {
-    padding-left: 5px !important;
-    padding-right: 5px !important;
+  /* Force vertical stacking on all flex containers inside theory */
+  .modern-theory-content div[style*="display: flex"],
+  .modern-theory-content div[style*="display:flex"] {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
   }
 
-  /* Target even deeper nested cards in theory content */
+  /* Force grid items to be full width */
+  .modern-theory-content div[style*="display: grid"],
+  .modern-theory-content div[style*="display:grid"] {
+    grid-template-columns: 1fr !important;
+    gap: 15px !important;
+  }
+
+  /* Adjust inline style paddings */
   .modern-theory-content div[style*="padding"] {
-    padding: 12px !important;
-    /* Force smaller padding on mobile */
+    padding: 15px 10px !important;
   }
 
-  /* Handle flex layouts in theory content for mobile */
-  .modern-theory-content div[style*="display: flex"] {
-    gap: 10px !important;
+  /* Fix tables not to overflow and allow horizontal scroll if needed */
+  .modern-theory-content table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
   }
 
+  .modern-theory-content td,
+  .modern-theory-content th {
+    padding: 10px 8px !important;
+    font-size: 0.95rem;
+  }
+
+  /* Fix headers in theory cards */
   .modern-theory-title {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
   }
 
-  .modern-theory-content {
-    font-size: 1.05rem;
+  /* Fix intro card spacing */
+  div[style*="background: linear-gradient"][style*="padding: 30px"] {
+    padding: 20px 15px !important;
+  }
+
+  div[style*="background: linear-gradient"] h2 {
+    font-size: 1.5rem !important;
   }
 }
 
