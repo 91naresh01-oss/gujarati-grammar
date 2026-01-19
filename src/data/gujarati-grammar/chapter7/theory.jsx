@@ -1,157 +1,109 @@
 import React from 'react';
-
-// Common Compact Styles
-const styles = {
-    card: {
-        background: '#fff',
-        padding: '15px',
-        borderRadius: '12px',
-        border: '1px solid #e5e7eb',
-        boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
-        marginBottom: '15px'
-    },
-    gradientCard: {
-        background: 'linear-gradient(135deg, #0d9488 0%, #115e59 100%)', // Teal theme for Ch 7
-        padding: '15px',
-        borderRadius: '12px',
-        color: '#fff',
-        marginBottom: '15px',
-        boxShadow: '0 4px 15px rgba(13, 148, 136, 0.2)'
-    },
-    heading: {
-        fontSize: '1.1rem',
-        fontWeight: '700',
-        marginBottom: '10px',
-        color: '#115e59'
-    },
-    subHeading: {
-        fontSize: '0.95rem',
-        fontWeight: '700',
-        color: '#0f766e',
-        marginBottom: '5px',
-        background: '#ccfbf1',
-        padding: '4px 8px',
-        borderRadius: '4px',
-        display: 'inline-block'
-    },
-    gridCards: {
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-        gap: '10px',
-        marginTop: '10px'
-    },
-    infoBox: {
-        border: '1px solid #a7f3d0',
-        background: '#ecfdf5',
-        borderRadius: '8px',
-        padding: '10px'
-    },
-    exceptionBox: {
-        marginTop: '8px',
-        padding: '8px',
-        background: '#fff1f2',
-        borderLeft: '4px solid #f43f5e',
-        fontSize: '0.85rem',
-        color: '#881337'
-    }
-};
+import {
+    TheoryCard,
+    GradientCard,
+    TheoryHeading,
+    TheorySubHeading,
+    TheoryText,
+    TheoryGrid,
+    HighlightBox
+} from '../../../components/TheoryComponents';
 
 export const chapter7Theory = [
     {
         title: "૧. લિંગ વ્યવસ્થા (Gender)",
         content: (
-            <div style={{ padding: '0' }}>
-                <div style={styles.gradientCard}>
-                    <h2 style={{ fontSize: '1.3rem', fontWeight: '800', marginBottom: '5px' }}>🚻 લિંગ (જાતિ)</h2>
-                    <p style={{ fontSize: '0.95rem', opacity: '0.95', margin: 0 }}>
-                        ત્રણ પ્રકાર: ૧. નર (પુલ્લિંગ), ૨. નારી (સ્ત્રીલિંગ), ૩. નાન્યતર (નપુંસકલિંગ).
+            <div>
+                <GradientCard
+                    heading="🚻 લિંગ (જાતિ)"
+                    theme="teal"
+                >
+                    <p style={{ fontSize: '1.15rem', opacity: '0.95', margin: '10px 0 0', lineHeight: '1.6' }}>
+                        ત્રણ પ્રકાર: ૧. નર (પુલ્લિંગ), ૨. નારી (સ્ત્રીલિંગ), ૩. નાन्यતર (નપુંસકલિંગ).
                     </p>
-                    <div style={{ marginTop: '10px', display: 'flex', gap: '8px', fontSize: '0.9rem' }}>
-                        <span style={{ background: 'rgba(255,255,255,0.2)', padding: '2px 8px', borderRadius: '4px' }}>કેવો? (નર)</span>
-                        <span style={{ background: 'rgba(255,255,255,0.2)', padding: '2px 8px', borderRadius: '4px' }}>કેવી? (નારી)</span>
-                        <span style={{ background: 'rgba(255,255,255,0.2)', padding: '2px 8px', borderRadius: '4px' }}>કેવું? (નાન્યતર)</span>
+                    <div style={{ marginTop: '12px', display: 'flex', flexWrap: 'wrap', gap: '10px', fontSize: '1.1rem' }}>
+                        <span style={{ background: 'rgba(255,255,255,0.25)', padding: '5px 12px', borderRadius: '6px', fontWeight: '700' }}>કેવો? (નર)</span>
+                        <span style={{ background: 'rgba(255,255,255,0.25)', padding: '5px 12px', borderRadius: '6px', fontWeight: '700' }}>કેવી? (નારી)</span>
+                        <span style={{ background: 'rgba(255,255,255,0.25)', padding: '5px 12px', borderRadius: '6px', fontWeight: '700' }}>કેવું? (નાન્યતર)</span>
                     </div>
-                </div>
+                </GradientCard>
 
-                <div style={styles.gridCards}>
+                <TheoryGrid minWidth="280px">
                     {/* Nar Jati */}
-                    <div style={styles.infoBox}>
-                        <h4 style={{ ...styles.heading, fontSize: '1rem', color: '#0e7490' }}>૧. નરજાતિ (પુલ્લિંગ)</h4>
-                        <p style={{ fontSize: '0.9rem', marginBottom: '5px' }}>
-                            પ્રત્યય: <strong>'ઓ'</strong><br />
-                            પ્રશ્ન: <strong>'કેવો?'</strong>
+                    <TheoryCard style={{ background: '#ecfdf5', borderColor: '#a7f3d0' }}>
+                        <TheoryHeading color="#0e7490">૧. નરજાતિ (પુલ્લિંગ)</TheoryHeading>
+                        <p style={{ fontSize: '1.1rem', marginBottom: '10px', lineHeight: '1.6' }}>
+                            પ્રત્યય: <strong style={{ color: '#0e7490' }}>'ઓ'</strong> | પ્રશ્ન: <strong style={{ color: '#0e7490' }}>'કેવો?'</strong>
                         </p>
-                        <div style={{ fontSize: '0.85rem', color: '#4b5563' }}>
+                        <div style={{ fontSize: '1.1rem', color: '#1f2937', fontWeight: '500', background: '#fff', padding: '10px', borderRadius: '8px' }}>
                             સિંહ, છોકરો, કૂવો, લીમડો, ચોપડો.
                         </div>
-                        <div style={styles.exceptionBox}>
+                        <HighlightBox type="error">
                             <strong>અપવાદ:</strong> ધો, છો, બદબો (નારી), મોં (નાન્યતર).
-                        </div>
-                    </div>
+                        </HighlightBox>
+                    </TheoryCard>
 
                     {/* Nari Jati */}
-                    <div style={{ ...styles.infoBox, background: '#fdf2f8', borderColor: '#fbcfe8' }}>
-                        <h4 style={{ ...styles.heading, fontSize: '1rem', color: '#be185d' }}>૨. નારીજાતિ (સ્ત્રીલિંગ)</h4>
-                        <p style={{ fontSize: '0.9rem', marginBottom: '5px' }}>
-                            પ્રત્યય: <strong>'ઈ', 'આ'</strong><br />
-                            પ્રશ્ન: <strong>'કેવી?'</strong>
+                    <TheoryCard style={{ background: '#fdf2f8', borderColor: '#fbcfe8' }}>
+                        <TheoryHeading color="#be185d">૨. નારીજાતિ (સ્ત્રીલિંગ)</TheoryHeading>
+                        <p style={{ fontSize: '1.1rem', marginBottom: '10px', lineHeight: '1.6' }}>
+                            પ્રત્યય: <strong style={{ color: '#be185d' }}>'ઈ', 'આ'</strong> | પ્રશ્ન: <strong style={{ color: '#be185d' }}>'કેવી?'</strong>
                         </p>
-                        <div style={{ fontSize: '0.85rem', color: '#4b5563' }}>
+                        <div style={{ fontSize: '1.1rem', color: '#1f2937', fontWeight: '500', background: '#fff', padding: '10px', borderRadius: '8px' }}>
                             કેળ, આમલી, નીતિ, બાલા, કીર્તિ.
                         </div>
-                        <div style={styles.exceptionBox}>
+                        <HighlightBox type="error">
                             <strong>અપવાદ:</strong> દેવતા (નર), કવિ, રવિ, હાથી, પિતા.
-                        </div>
-                    </div>
+                        </HighlightBox>
+                    </TheoryCard>
 
                     {/* Nanyatar Jati */}
-                    <div style={{ ...styles.infoBox, background: '#f0f9ff', borderColor: '#bae6fd' }}>
-                        <h4 style={{ ...styles.heading, fontSize: '1rem', color: '#0369a1' }}>૩. નાન્યતર (નપુંસક)</h4>
-                        <p style={{ fontSize: '0.9rem', marginBottom: '5px' }}>
-                            પ્રત્યય: <strong>'ઉ'</strong><br />
-                            પ્રશ્ન: <strong>'કેવું?'</strong>
+                    <TheoryCard style={{ background: '#f0f9ff', borderColor: '#bae6fd' }}>
+                        <TheoryHeading color="#0369a1">૩. નાન્યતર (નપુંસક)</TheoryHeading>
+                        <p style={{ fontSize: '1.1rem', marginBottom: '10px', lineHeight: '1.6' }}>
+                            પ્રત્યય: <strong style={{ color: '#0369a1' }}>'ઉ'</strong> | પ્રશ્ન: <strong style={{ color: '#0369a1' }}>'કેવું?'</strong>
                         </p>
-                        <div style={{ fontSize: '0.85rem', color: '#4b5563' }}>
+                        <div style={{ fontSize: '1.1rem', color: '#1f2937', fontWeight: '500', background: '#fff', padding: '10px', borderRadius: '8px' }}>
                             ઘેટું, ગાડું, લીંબુ, કૂતરું, કોળું.
                         </div>
-                        <div style={styles.exceptionBox}>
+                        <HighlightBox type="error">
                             <strong>અપવાદ:</strong> ઘઉં, લાડુ (નર); ઋતુ, આબરૂ (નારી).
-                        </div>
-                    </div>
-                </div>
+                        </HighlightBox>
+                    </TheoryCard>
+                </TheoryGrid>
             </div>
         )
     },
     {
         title: "૨. વચન વ્યવસ્થા (Number)",
         content: (
-            <div style={{ padding: '0' }}>
-                <div style={styles.card}>
-                    <h3 style={styles.heading}>🔢 વચન એટલે શું?</h3>
-                    <p style={{ fontSize: '0.9rem', color: '#4b5563' }}>
-                        એક વસ્તુ માટે <strong>એકવચન</strong> અને એકથી વધુ માટે <strong>બહુવચન</strong> વપરાય છે.
-                    </p>
+            <div>
+                <TheoryCard>
+                    <TheoryHeading color="#115e59">🔢 વચન એટલે શું?</TheoryHeading>
+                    <TheoryText>
+                        એક વસ્તુ માટે <strong style={{ color: '#115e59' }}>એકવચન</strong> અને એકથી વધુ માટે <strong style={{ color: '#115e59' }}>બહુવચન</strong> વપરાય છે.
+                    </TheoryText>
 
-                    <h4 style={styles.subHeading}>બહુવચનના નિયમો</h4>
-                    <ul style={{ paddingLeft: '20px', fontSize: '0.9rem', lineHeight: '1.6', color: '#374151' }}>
+                    <TheorySubHeading color="#0f766e" bg="#ccfbf1">બહુવચનના નિયમો</TheorySubHeading>
+                    <ul style={{ paddingLeft: '25px', fontSize: '1.15rem', lineHeight: '1.9', color: '#1f2937' }}>
                         <li>
-                            <strong>'ઓ' લગાડવાથી:</strong><br />
+                            <strong style={{ color: '#0f766e' }}>'ઓ' લગાડવાથી:</strong><br />
                             માણસ → માણસો, પર્વત → પર્વતો, નદી → નદીઓ.
                         </li>
                         <li>
-                            <strong>'ઓ' હોય તો 'આ'/'ઓ':</strong><br />
-                            છોકરો → છોકરા/છોકરાઓ, ઘોડો → ઘોડા/ઘોડાઓ.
+                            <strong style={{ color: '#0f766e' }}>'ઓ' હોય તો 'આ'/'ઓ':</strong><br />
+                            છોકરો → છોકરા/છોકરાઓ, ઘોडો → ઘોડા/ઘોડાઓ.
                         </li>
                         <li>
-                            <strong>'ઉ' હોય તો 'આં'/'ઓ':</strong><br />
+                            <strong style={{ color: '#0f766e' }}>'ઉ' હોય તો 'આં'/'ઓ':</strong><br />
                             છોકરું → છોકરાં/છોકરાંઓ, માછલું → માછલાં.
                         </li>
                         <li>
-                            <strong>સમાન રૂપ:</strong><br />
-                            ઘણાં ઝાડ, ઘણી ગાય.
+                            <strong style={{ color: '#0f766e' }}>સમાન રૂપ:</strong> (ગણી ન શકાય તેવી વસ્તુ)<br />
+                            ઘણાં ઝાડ, ઘણી ગાય, પુષ્કળ પાણી.
                         </li>
                     </ul>
-                </div>
+                </TheoryCard>
             </div>
         )
     }

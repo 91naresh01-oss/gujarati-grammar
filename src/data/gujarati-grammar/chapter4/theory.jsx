@@ -1,86 +1,48 @@
 import React from 'react';
-
-// Common Compact Styles
-const styles = {
-    card: {
-        background: '#fff',
-        padding: '15px',
-        borderRadius: '12px',
-        border: '1px solid #e5e7eb',
-        boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
-        marginBottom: '15px'
-    },
-    gradientCard: {
-        background: 'linear-gradient(135deg, #2563eb 0%, #3b82f6 100%)', // Blue theme for Ch 4
-        padding: '15px',
-        borderRadius: '12px',
-        color: '#fff',
-        marginBottom: '15px',
-        boxShadow: '0 4px 15px rgba(59, 130, 246, 0.2)'
-    },
-    heading: {
-        fontSize: '1.1rem',
-        fontWeight: '700',
-        marginBottom: '10px',
-        color: '#1e3a8a'
-    },
-    subHeading: {
-        background: '#eff6ff',
-        color: '#1e40af',
-        padding: '8px 12px',
-        borderRadius: '8px',
-        fontWeight: '700',
-        marginBottom: '10px',
-        fontSize: '0.95rem'
-    },
-    exampleRow: {
-        display: 'flex',
-        justifyContent: 'space-between',
-        padding: '6px 0',
-        borderBottom: '1px solid #f3f4f6',
-        fontSize: '0.9rem'
-    },
-    ruleBox: {
-        background: '#fff7ed',
-        border: '1px solid #ffedd5',
-        padding: '10px',
-        borderRadius: '8px',
-        marginBottom: '8px',
-        fontSize: '0.9rem',
-        color: '#9a3412'
-    }
-};
+import {
+    TheoryCard,
+    GradientCard,
+    TheoryHeading,
+    TheorySubHeading,
+    TheoryText,
+    HighlightBox
+} from '../../../components/TheoryComponents';
 
 export const chapter4Theory = [
     {
         title: "૧. ધ્વનિશ્રેણી : સમજ અને વ્યાખ્યા",
         content: (
-            <div style={{ padding: '0' }}>
-                <div style={styles.gradientCard}>
-                    <h2 style={{ fontSize: '1.3rem', fontWeight: '800', marginBottom: '5px' }}>🔡 ધ્વનિશ્રેણી એટલે શું?</h2>
-                    <p style={{ fontSize: '0.95rem', opacity: '0.95', margin: 0 }}>
+            <div>
+                <GradientCard
+                    heading="🔡 ધ્વનિશ્રેણી એટલે શું?"
+                    theme="blue"
+                >
+                    <div style={{ marginTop: '10px', fontSize: '1.15rem', opacity: '0.95', lineHeight: '1.6' }}>
                         "શબ્દમાં રહેલા સ્વર અને વ્યંજનના સમૂહને છૂટા પાડવાની ક્રિયા."<br />
-                        <span style={{ fontSize: '0.85rem', opacity: 0.8 }}>(ગુજરાતી 'ફોનેટિક' ભાષા છે - જેવું બોલીએ તેવું લખીએ.)</span>
-                    </p>
-                </div>
-
-                <div style={styles.card}>
-                    <h3 style={styles.heading}>✨ સાદા ઉદાહરણો</h3>
-                    <div style={{ background: '#f8fafc', padding: '10px', borderRadius: '8px' }}>
-                        <div style={styles.exampleRow}>
-                            <strong>ગોપાળ</strong> <span>ગ્ + ઓ + પ્ + આ + ળ્</span>
-                        </div>
-                        <div style={{ ...styles.exampleRow, borderBottom: 'none' }}>
-                            <strong>વહાલા</strong> <span>વ્ + અ + હ્ + આ + લ્ + આ</span>
-                        </div>
+                        <span style={{ fontSize: '1rem', opacity: 0.9, fontWeight: '500' }}>(ગુજરાતી 'ફોનેટિક' ભાષા છે - જેવું બોલીએ તેવું લખીએ.)</span>
                     </div>
-                    <div style={{ marginTop: '10px', fontSize: '0.85rem', color: '#6b7280', fontStyle: 'italic' }}>
-                        * નોંધ: છેલ્લા અક્ષર પછી 'અ' સ્વર આવે તો આપણે તે બોલતા નથી. (વ્યંજનાન્ત ભાષા)
-                    </div>
-                </div>
+                </GradientCard>
 
-                <div style={styles.card}>
-                    <h3 style={styles.heading}>📚 GCERT ના ઉદાહરણો</h3>
+                <TheoryCard>
+                    <TheoryHeading color="#1e3a8a">✨ સાદા ઉદાહરણો</TheoryHeading>
+                    <div style={{ background: '#f8fafc', padding: '15px', borderRadius: '10px', border: '1px solid #e2e8f0' }}>
+                        {[
+                            ["ગોપાળ", "ગ્ + ઓ + પ્ + આ + ળ્"],
+                            ["વહાલા", "વ્ + અ + હ્ + આ + લ્ + આ"]
+                        ].map((item, i) => (
+                            <div key={i} style={{ display: 'flex', justifyContent: 'space-between', padding: '12px 0', borderBottom: i === 0 ? '1px solid #f1f5f9' : 'none', fontSize: '1.15rem' }}>
+                                <strong style={{ color: '#1e3a8a' }}>{item[0]}</strong>
+                                <span style={{ fontWeight: '600' }}>{item[1]}</span>
+                            </div>
+                        ))}
+                    </div>
+                    <HighlightBox type="warn" title="નોંધ">
+                        છેલ્લા અક્ષર પછી 'અ' સ્વર આવે તો આપણે તે બોલતા નથી. (વ્યંજનાન્ત ભાષા)
+                    </HighlightBox>
+                </TheoryCard>
+
+                <TheoryCard>
+                    <TheoryHeading color="#1e3a8a">📚 GCERT ના ઉદાહરણો</TheoryHeading>
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '0px' }}>
                         {[
                             ["અરજ", "અ + ર્ + અ + જ્"],
@@ -89,73 +51,64 @@ export const chapter4Theory = [
                             ["આત્મકથા", "આ + ત્ + મ્ + અ + ક્ + અ + થ્ + આ"],
                             ["બિંદુ", "બ્ + ઈ + ન્ + દ્ + ઉ"],
                             ["દૂરબીન", "દ્ + ઊ + ર્ + અ + બ્ + ઈ + ન્"],
-                            ["અપૂજ", "અ + પ્ + ઊ + જ્"],
-                            ["દોકડો", "દ્ + ઓ + ક્ + અ + ડ્ + ઓ"],
-                            ["હાથોહાથ", "હ્ + આ + થ્ + ઓ + હ્ + આ + થ્"],
                             ["વિદ્વત્તા", "વ્ + ઈ + દ્ + વ્ + અ + ત્ + ત્ + આ"],
-                            ["જ્ઞાનચક્ષુ", "જ્ + ગ્ + આ + ન્ + અ + ચ્ + અ + ક્ + ષ + ઉ"],
-                            ["નિસ્તબ્ધતા", "ન્ + ઈ + સ્ + ત્ + અ + બ્ + ધ્ + અ + ત્ + આ"]
+                            ["જ્ઞાનચક્ષુ", "જ્ + ગ્ + આ + ન્ + અ + ચ્ + અ + ક્ + ષ + ઉ"]
                         ].map((item, i) => (
-                            <div key={i} style={styles.exampleRow}>
-                                <span style={{ fontWeight: '700', color: '#4b5563' }}>{item[0]}</span>
-                                <span style={{ color: '#2563eb' }}>{item[1]}</span>
+                            <div key={i} style={{ display: 'flex', justifyContent: 'space-between', padding: '12px 0', borderBottom: '1px solid #f3f4f6', fontSize: '1.1rem' }}>
+                                <span style={{ fontWeight: '800', color: '#374151' }}>{item[0]}</span>
+                                <span style={{ color: '#2563eb', fontWeight: '600' }}>{item[1]}</span>
                             </div>
                         ))}
                     </div>
-                </div>
+                </TheoryCard>
             </div>
         )
     },
     {
         title: "૨. જોડાક્ષર અને નિયમો",
         content: (
-            <div style={{ padding: '0' }}>
-                <div style={styles.card}>
-                    <h3 style={{ ...styles.heading, color: '#b91c1c' }}>⚠️ અગત્યના નિયમો</h3>
-                    <div style={{ display: 'grid', gap: '8px' }}>
-                        <div style={styles.ruleBox}>1. અંતે જોડાક્ષર હોય તો 'અ' બોલાય. (જન્મ → ...અ)</div>
-                        <div style={styles.ruleBox}>2. વ્યંજન છૂટો પડે ત્યારે 'ખોડો' (્) કરવો.</div>
-                        <div style={styles.ruleBox}>3. જોડાક્ષર છૂટા પડે ત્યારે વચ્ચે સ્વર ના આવે.</div>
-                        <div style={styles.ruleBox}>4. રેફ વિષે: અર્થ = અ + ર્ + થ્ + અ (રેફ પહેલા ર્).</div>
-                        <div style={styles.ruleBox}>5. ક્ર, પ્ર માં: અક્ષર પછી ર્ મૂકવો.</div>
+            <div>
+                <TheoryCard>
+                    <TheoryHeading color="#b91c1c">⚠️ અગત્યના નિયમો</TheoryHeading>
+                    <div style={{ display: 'grid', gap: '10px' }}>
+                        {[
+                            "૧. અંતે જોડાક્ષર હોય તો 'અ' બોલાય. (જન્મ → ...અ)",
+                            "૨. વ્યંજન છૂટો પડે ત્યારે 'ખોડો' (્) કરવો.",
+                            "૩. જોડાક્ષર છૂટા પડે ત્યારે વચ્ચે સ્વર ના આવે.",
+                            "૪. રેફ વિષે: અર્થ = અ + ર્ + થ્ + અ (રેફ પહેલા ર્).",
+                            "૫. ક્ર, પ્ર માં: અક્ષર પછી ર્ મૂકવો. (ક્ર = ક્ + ર્ + અ)"
+                        ].map((rule, i) => (
+                            <HighlightBox key={i} type="warn">
+                                {rule}
+                            </HighlightBox>
+                        ))}
                     </div>
-                </div>
+                </TheoryCard>
 
-                <div style={styles.card}>
-                    <h3 style={styles.heading}>🔗 જોડાક્ષર ઉદાહરણો (Complex)</h3>
-                    <div style={{ height: '300px', overflowY: 'auto', paddingRight: '5px' }}>
+                <TheoryCard>
+                    <TheoryHeading color="#047857">🔗 જોડાક્ષર ઉદાહરણો (Complex)</TheoryHeading>
+                    <div style={{ maxHeight: '400px', overflowY: 'auto', border: '1px solid #f3f4f6', borderRadius: '10px' }}>
                         {[
                             ["જન્મ", "જ્ + અ + ન્ + મ્ + અ"],
                             ["પુણ્ય", "પ્ + ઉ + ણ્ + ય્ + અ"],
                             ["શિલ્પ", "શ્ + ઈ + લ્ + પ્ + અ"],
-                            ["ભાઈબંધ", "ભ્ + આ + ઈ + બ્ + અ + ન્ + ધ્ + અ"],
                             ["વચ્ચે", "વ્ + અ + ચ્ + ચ્ + એ"],
                             ["સ્વરૂપ", "સ્ + વ્ + અ + ર્ + ઊ + પ્"],
-                            ["જશ્ન", "જ્ + અ + શ્ + ન્ + અ"],
                             ["કર્ણ", "ક્ + અ + ર્ + ણ્ + અ"],
                             ["ક્ષમા", "ક્ + ષ + અ + મ્ + આ"],
                             ["વિજ્ઞાન", "વ્ + ઈ + જ્ + ગ્ + આ + ન્ + અ"],
-                            ["આજ્ઞા", "આ + જ્ + ગ્ + આ"],
-                            ["ત્રાડ", "ત્ + ર્ + આ + ડ્ + અ"],
                             ["ચિત્ર", "ચ્ + ઈ + ત્ + ર્ + અ"],
-                            ["અંગરક્ષક", "અં + ગ્ + અ + ર્ + અ + ક્ + ષ + અ + ક્"],
-                            ["અક્ષાંશ", "અ + ક્ + ષ + આ + ન્ + શ્"],
-                            ["ચિઠ્ઠી", "ચ્ + ઈ + ઠ્ + ઠ્ + ઈ"],
-                            ["ગણિતજ્ઞ", "ગ્ + અ + ણ્ + ઈ + ત્ + અ + જ્ + ગ્ + અ"],
                             ["સૂર્ય", "સ્ + ઊ + ર્ + અ + ય્"],
                             ["માર્ગ", "મ્ + આ + ર્ + ગ્ + અ"],
-                            ["સ્પર્શ", "સ્ + પ્ + અ + ર્ + શ્ + અ"],
-                            ["વજ્ર", "વ્ + અ + જ્ + ર્ + અ"],
-                            ["આશ્રય", "આ + શ્ + ર્ + અ + ય્"],
                             ["રાષ્ટ્ર", "ર્ + આ + ષ + ટ્ + ર્ + અ"]
                         ].map((item, i) => (
-                            <div key={i} style={{ ...styles.exampleRow, padding: '8px 0' }}>
-                                <span style={{ fontWeight: '700', minWidth: '80px' }}>{item[0]}</span>
-                                <span style={{ color: '#047857', fontFamily: 'monospace' }}>{item[1]}</span>
+                            <div key={i} style={{ display: 'flex', justifyContent: 'space-between', padding: '12px 15px', background: i % 2 === 1 ? '#f8fafc' : '#fff', fontSize: '1.1rem' }}>
+                                <span style={{ fontWeight: '800', color: '#374151' }}>{item[0]}</span>
+                                <span style={{ color: '#047857', fontWeight: '700' }}>{item[1]}</span>
                             </div>
                         ))}
                     </div>
-                </div>
+                </TheoryCard>
             </div>
         )
     }
