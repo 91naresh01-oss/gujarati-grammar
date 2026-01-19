@@ -261,8 +261,7 @@ body {
    THEORY PAGE SPECIFIC
    =========================== */
 .theory-page-container {
-  max-width: 800px;
-  /* Reduced from 900px */
+  max-width: 750px;
   margin: 0 auto;
   background: white;
   min-height: 90vh;
@@ -504,8 +503,7 @@ body {
 
 /* Main Container with extra spacing */
 .modern-theory-wrapper {
-  max-width: 1000px;
-  /* Increased from 850px */
+  max-width: 750px;
   margin: 0 auto;
   padding: 20px;
   width: 95%;

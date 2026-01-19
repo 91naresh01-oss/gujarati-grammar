@@ -1,104 +1,202 @@
 import React from 'react';
 
+// Common style constants for compact design
+const styles = {
+    card: {
+        background: '#fff',
+        padding: '15px', // Reduced from 25px
+        borderRadius: '12px', // Reduced from 20px
+        border: '1px solid #e5e7eb',
+        boxShadow: '0 2px 4px rgba(0,0,0,0.05)', // Softer shadow
+        marginBottom: '15px' // Reduced margin
+    },
+    gradientCard: {
+        background: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)',
+        padding: '20px', // Reduced from 30px
+        borderRadius: '16px',
+        color: '#fff',
+        marginBottom: '15px',
+        boxShadow: '0 10px 20px rgba(59, 130, 246, 0.2)'
+    },
+    heading: {
+        fontSize: '1.25rem', // Reduced
+        fontWeight: '700',
+        marginBottom: '10px'
+    },
+    text: {
+        fontSize: '1rem', // Standard readable size
+        lineHeight: '1.6',
+        color: '#4b5563'
+    },
+    icon: {
+        fontSize: '1.2rem',
+        marginRight: '8px'
+    }
+};
+
 export const chapter1Theory = [
     {
-        title: "૧. વ્યાકરણ એટલે શું ? (પેજ ૧)",
+        title: "૧. વ્યાકરણ : અર્થ અને વ્યાખ્યા",
         content: (
-            <div style={{ padding: '10px' }}>
-                <div style={{
-                    background: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%)',
-                    padding: '30px',
-                    borderRadius: '24px',
-                    color: '#fff',
-                    marginBottom: '30px',
-                    boxShadow: '0 20px 40px rgba(59, 130, 246, 0.3)',
-                    position: 'relative',
-                    overflow: 'hidden'
-                }}>
-                    <div style={{ position: 'relative', zIndex: 1 }}>
-                        <h2 style={{ fontSize: '2rem', marginBottom: '15px', fontWeight: '800', letterSpacing: '-0.5px' }}>વ્યાકરણ નો અર્થ</h2>
-                        <p style={{ fontSize: '1.2rem', lineHeight: '1.6', opacity: '0.95' }}>
-                            વ્યાકરણ શબ્દનો અર્થ <span style={{ background: 'rgba(255,255,255,0.2)', padding: '2px 8px', borderRadius: '6px', fontWeight: '700' }}>'સ્પષ્ટીકરણ'</span> થાય છે.
-                        </p>
+            <div style={{ padding: '0px' }}> {/* Removed outer padding */}
+
+                {/* Combined Header & Definition Section for Compactness */}
+                <div style={styles.gradientCard}>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                        <div>
+                            <h2 style={{ fontSize: '1.5rem', fontWeight: '800', marginBottom: '5px' }}>વ્યાકરણ એટલે શું?</h2>
+                            <p style={{ fontSize: '1rem', opacity: '0.9', marginBottom: '0' }}>
+                                અર્થ: <span style={{ background: 'rgba(255,255,255,0.2)', padding: '2px 8px', borderRadius: '4px', fontWeight: '700' }}>'સ્પષ્ટીકરણ'</span>
+                            </p>
+                        </div>
+                        <div style={{ fontSize: '2.5rem', opacity: '0.2' }}>📖</div>
                     </div>
                 </div>
 
-                <div style={{ background: '#fff', padding: '25px', borderRadius: '20px', border: '1px solid #e5e7eb', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)', marginBottom: '30px' }}>
-                    <div style={{ display: 'flex', gap: '15px', alignItems: 'flex-start' }}>
-                        <div style={{ background: '#dbeafe', padding: '10px', borderRadius: '12px', fontSize: '1.5rem' }}>📖</div>
-                        <div>
-                            <p style={{ color: '#4b5563', lineHeight: '1.8', fontSize: '1.1rem' }}>
-                                જે શાસ્ત્રમાં શબ્દના પ્રકૃતિ ને પ્રત્યય જુદા પાડી પ્રત્યયના અર્થ દર્શાવ્યા હોય છે અને જેમાં શબ્દોના શુદ્ધ રૂપ તથા તેનો વાક્યમાં પરસ્પર સંબંધ કેવી રીતી છે તે વિષે વિવેચન કર્યું હોય છે, તેને <b style={{ color: '#1e3a8a' }}>‘વ્યાકરણ’</b> કહે છે.
-                            </p>
-                            <p style={{ color: '#4b5563', lineHeight: '1.8', fontSize: '1.1rem', marginTop: '15px' }}>
-                                એને <b style={{ color: '#2563eb' }}>‘શબ્દાનુશાસન’</b> પણ કહે છે.
-                            </p>
+                <div style={styles.card}>
+                    <h3 style={{ ...styles.heading, color: '#1e3a8a', fontSize: '1.1rem', display: 'flex', alignItems: 'center' }}>
+                        <span>📜</span> <span style={{ marginLeft: '8px' }}>વ્યાખ્યા</span>
+                    </h3>
+                    <p style={{ ...styles.text, background: '#f8fafc', padding: '12px', borderRadius: '8px', borderLeft: '4px solid #3b82f6', textAlign: 'left', wordSpacing: 'normal' }}>
+                        "જે શાસ્ત્રમાં શબ્દના પ્રકૃતિને પ્રત્યય જુદા પાડી તેના અર્થ દર્શાવ્યા હોય, અને શબ્દોના શુદ્ધ રૂપ તથા વાક્યમાં તેના સંબંધનું વિવેચન હોય, તેને <strong>'વ્યાકરણ'</strong> કહે છે."
+                    </p>
+                    <div style={{ marginTop: '10px', fontSize: '0.9rem', color: '#6b7280', display: 'flex', alignItems: 'center', gap: '5px' }}>
+                        <span style={{ fontWeight: '600' }}>🏷️ અન્ય નામ:</span> 'શબ્દાનુશાસન'
+                    </div>
+                </div>
+            </div>
+        )
+    },
+    {
+        title: "૨. વેદના અંગ તરીકે વ્યાકરણ",
+        content: (
+            <div style={{ padding: '0px' }}>
+                <div style={styles.card}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px' }}>
+                        <h3 style={{ ...styles.heading, color: '#0f172a', margin: 0 }}>🕉️ વેદના ૬ અંગો</h3>
+                        <span style={{ fontSize: '0.85rem', color: '#ef4444', fontWeight: '600', background: '#fef2f2', padding: '4px 8px', borderRadius: '4px' }}>મુખ્ય: વ્યાકરણ</span>
+                    </div>
+
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '10px' }}>
+                        {[
+                            { name: "૧. શિક્ષા", icon: "🗣️" },
+                            { name: "૨. કલ્પ", icon: "🔥" },
+                            { name: "૩. વ્યાકરણ", icon: "📖", active: true },
+                            { name: "૪. નિરુક્ત", icon: "🔍" },
+                            { name: "૫. છંદ", icon: "🎵" },
+                            { name: "૬. જ્યોતિષ", icon: "⭐" }
+                        ].map((item, i) => (
+                            <div key={i} style={{
+                                background: item.active ? '#eff6ff' : '#f8fafc',
+                                padding: '8px 12px',
+                                borderRadius: '8px',
+                                border: item.active ? '1px solid #bfdbfe' : '1px solid #f1f5f9',
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '8px',
+                                fontSize: '0.9rem',
+                                color: item.active ? '#1d4ed8' : '#334155',
+                                fontWeight: item.active ? '700' : '500'
+                            }}>
+                                <span>{item.icon}</span>
+                                <div>{item.name}</div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        )
+    },
+    {
+        title: "૩. વ્યાકરણનું પ્રયોજન અને કાર્ય",
+        content: (
+            <div style={{ padding: '0px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}> {/* Side by side layout for compactness */}
+
+                    <div style={styles.card}>
+                        <h3 style={{ ...styles.heading, color: '#047857', fontSize: '1.1rem' }}>🛡️ કાર્ય</h3>
+                        <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                            {[
+                                "ભાષા નિયમન",
+                                "વિકાર રોકવો",
+                                "શુદ્ધ શબ્દ જ્ઞાન",
+                                "શુદ્ધ રૂપનો તર્ક"
+                            ].map((item, i) => (
+                                <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.95rem', color: '#374151' }}>
+                                    <span style={{ color: '#10b981', fontSize: '0.8rem' }}>●</span>
+                                    <span>{item}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    <div style={{ ...styles.card, background: '#fffafa', borderColor: '#fee2e2' }}>
+                        <h3 style={{ ...styles.heading, color: '#b91c1c', fontSize: '1.1rem' }}>🎯 ૪ પ્રયોજનો (કાત્યાયન)</h3>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                            {[
+                                "૧. રક્ષા (ભાષા રક્ષણ)",
+                                "૨. ઊહ (તર્ક)",
+                                "૩. આગમ (નિઃશંકતા)",
+                                "૪. લઘુ (સંક્ષેપ)"
+                            ].map((item, i) => (
+                                <div key={i} style={{ fontSize: '0.95rem', color: '#991b1b', fontWeight: '500' }}>
+                                    {item}
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
 
-                <div style={{ background: '#f8fafc', padding: '25px', borderRadius: '20px', border: '1px solid #cbd5e1', marginBottom: '30px' }}>
-                    <h3 style={{ color: '#1e3a8a', marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <span style={{ fontSize: '1.5rem' }}>🔱</span> વેદના છ અંગો
-                    </h3>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '15px' }}>
-                        {[
-                            "શિક્ષા (ઉચ્ચારણશાસ્ત્ર)",
-                            "કલ્પ (ક્રિયા વિધિશાસ્ત્ર)",
-                            "વ્યાકરણ",
-                            "નિરુક્ત (વ્યુત્પત્તિશાસ્ત્ર)",
-                            "છંદ",
-                            "જ્યોતિષ"
-                        ].map((item, i) => (
-                            <div key={i} style={{ background: '#fff', padding: '12px 20px', borderRadius: '12px', border: '1px solid #e2e8f0', color: '#475569', fontWeight: '600', textAlign: 'center' }}>
-                                {item}
-                            </div>
-                        ))}
-                    </div>
-                    <p style={{ marginTop: '20px', color: '#64748b', fontStyle: 'italic', textAlign: 'center' }}>
-                        "છ અંગોમાં વ્યાકરણ એ પ્રધાનતમ અંગ છે."
+                <div style={{ ...styles.card, marginBottom: '0', background: '#f0f9ff', padding: '12px', textAlign: 'center' }}>
+                    <p style={{ margin: 0, fontSize: '0.9rem', color: '#0369a1', fontStyle: 'italic' }}>
+                        "વ્યાકરણ અશુદ્ધતા દૂર કરી શુદ્ધતા આપે છે, જેમ ચારણીથી લોટ ચળાય છે."
                     </p>
                 </div>
             </div>
         )
     },
     {
-        title: "૨. વ્યાકરણ શુદ્ધિ અને કાર્યો (પેજ ૨)",
+        title: "૪. ઉદાહરણો અને મહત્ત્વ",
         content: (
-            <div style={{ padding: '10px' }}>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', marginBottom: '30px' }}>
-                    <div style={{ background: '#fff', padding: '25px', borderRadius: '20px', border: '1px solid #e5e7eb', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
-                        <h4 style={{ color: '#059669', marginBottom: '15px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                            ✅ શુદ્ધિનું મહત્વ
-                        </h4>
-                        <p style={{ color: '#4b5563', lineHeight: '1.6' }}>વ્યાકરણશુદ્ધિ એટલે વ્યાકરણના નિયમો જાળવીને કરેલું લખાણ. જો અર્થમાં બદલાવ આવે તો તે મોટો અનર્થ સર્જી શકે છે.</p>
-                    </div>
-                    <div style={{ background: '#fff', padding: '25px', borderRadius: '20px', border: '1px solid #e5e7eb', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
-                        <h4 style={{ color: '#d97706', marginBottom: '15px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                            ⚠️ ઉદાહરણ (અનર્થ)
-                        </h4>
-                        <div style={{ background: '#fff7ed', padding: '10px', borderRadius: '8px', borderLeft: '4px solid #f59e0b' }}>
-                            <p style={{ color: '#9a3412', fontSize: '0.95rem' }}>'સ્વજન' ને બદલે 'શ્વજન' લખાય તો તેનો અર્થ 'કુતરા જેવા સગા' થઈ જાય!</p>
-                        </div>
-                    </div>
-                </div>
+            <div style={{ padding: '0px' }}>
+                <div style={styles.card}>
+                    <h3 style={{ ...styles.heading, color: '#4f46e5', textAlign: 'center', marginBottom: '15px' }}>📝 શુદ્ધિ ઉદાહરણો</h3>
 
-                <div style={{ background: 'linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%)', padding: '30px', borderRadius: '24px', border: '1px solid #bae6fd' }}>
-                    <h3 style={{ color: '#0369a1', marginBottom: '20px' }}>🚀 વ્યાકરણના મુખ્ય કાર્યો</h3>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
                         {[
-                            "શબ્દરૂપોનું શુદ્ધિ અને અશુદ્ધિ બાબતે ધ્યાન આપવું.",
-                            "ભાષાશુદ્ધિ અને લેખનશુદ્ધિ પર ભાર મુકવો.",
-                            "શબ્દ અને અર્થ વચ્ચેનો સંબંધ સમજવો.",
-                            "પોતાના ઉદ્દેશ અને વિચારો ને સ્પષ્ટ રીતે વ્યક્ત કરવા.",
-                            "વિષય અને વાક્ય મુજબ પદક્રમ ને પદસંવાદ સાચવવો."
-                        ].map((task, i) => (
-                            <div key={i} style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-                                <span style={{ color: '#3b82f6', fontWeight: 'bold' }}>{i + 1}.</span>
-                                <span style={{ color: '#1e40af', fontWeight: '500' }}>{task}</span>
+                            { wrong: "પઢી", right: "પદવી" },
+                            { wrong: "પોર્વાત્ય", right: "પૌરસ્ત્ય" },
+                            { wrong: "શું વાત...?", right: "શી વાત...?" },
+                            { wrong: "દરેક માણસો", right: "દરેક માણસ" }
+                        ].map((item, i) => (
+                            <div key={i} style={{
+                                display: 'flex',
+                                justifyContent: 'space-between',
+                                alignItems: 'center',
+                                background: '#f8fafc',
+                                padding: '8px 12px',
+                                borderRadius: '8px',
+                                borderLeft: '3px solid #6366f1'
+                            }}>
+                                <span style={{ color: '#ef4444', textDecoration: 'line-through', fontSize: '0.9rem' }}>{item.wrong}</span>
+                                <span style={{ color: '#10b981', fontWeight: '700', fontSize: '0.95rem' }}>{item.right}</span>
                             </div>
                         ))}
                     </div>
+                </div>
+
+                <div style={{
+                    background: 'linear-gradient(135deg, #4f46e5 0%, #818cf8 100%)',
+                    padding: '15px',
+                    borderRadius: '12px',
+                    color: '#fff',
+                    textAlign: 'center',
+                    boxShadow: '0 5px 15px rgba(79, 70, 229, 0.2)'
+                }}>
+                    <h3 style={{ fontSize: '1.1rem', fontWeight: '700', marginBottom: '5px' }}>🎓 સર્વ વિદ્યાની વિદ્યા</h3>
+                    <p style={{ fontSize: '0.9rem', margin: 0, opacity: '0.95' }}>
+                        "ભાષા એ તમામ જ્ઞાનનું માધ્યમ છે, અને વ્યાકરણ ભાષાને શુદ્ધ રાખે છે."
+                    </p>
                 </div>
             </div>
         )

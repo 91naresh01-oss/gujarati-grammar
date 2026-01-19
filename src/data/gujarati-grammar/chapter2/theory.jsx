@@ -1,126 +1,243 @@
 import React from 'react';
 
+// Common compact styles
+const styles = {
+    card: {
+        background: '#fff',
+        padding: '15px',
+        borderRadius: '12px',
+        border: '1px solid #e5e7eb',
+        boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
+        marginBottom: '15px'
+    },
+    gradientCard: {
+        background: 'linear-gradient(135deg, #059669 0%, #10b981 100%)', // Green theme for Ch 2
+        padding: '15px',
+        borderRadius: '12px',
+        color: '#fff',
+        marginBottom: '15px',
+        boxShadow: '0 4px 15px rgba(16, 185, 129, 0.2)'
+    },
+    heading: {
+        fontSize: '1.1rem',
+        fontWeight: '700',
+        marginBottom: '10px',
+        color: '#1f2937'
+    },
+    subHeading: {
+        fontSize: '0.95rem',
+        fontWeight: '700',
+        color: '#4b5563',
+        marginBottom: '5px'
+    },
+    table: {
+        width: '100%',
+        borderCollapse: 'collapse',
+        fontSize: '0.9rem'
+    },
+    th: {
+        background: '#f3f4f6',
+        padding: '8px',
+        border: '1px solid #e5e7eb',
+        textAlign: 'left',
+        fontWeight: '600'
+    },
+    td: {
+        padding: '8px',
+        border: '1px solid #e5e7eb'
+    }
+};
+
 export const chapter2Theory = [
     {
-        title: "૧. ગુજરાતી શબ્દભંડોળ (પેજ ૧)",
+        title: "૧. ભાષા : ઉદ્ભવ અને વિકાસ",
         content: (
-            <div style={{ padding: '10px' }}>
-                <div style={{
-                    background: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%)',
-                    padding: '30px',
-                    borderRadius: '24px',
-                    color: '#fff',
-                    marginBottom: '30px',
-                    boxShadow: '0 20px 40px rgba(59, 130, 246, 0.3)'
-                }}>
-                    <h2 style={{ fontSize: '1.8rem', marginBottom: '15px', fontWeight: '800' }}>શબ્દ એટલે 'અક્ષરબ્રહ્મ'</h2>
-                    <p style={{ fontSize: '1.1rem', lineHeight: '1.6', opacity: '0.9' }}>
-                        સૃષ્ટિનો આરંભ 'શબ્દતત્ત્વ'થી થયો છે. કવિ દંડીએ કહ્યું છે: "જો શબ્દ જ્યોતિનો પ્રકાશ ન હોત તો આ વિશ્વ અંધકારપૂર્ણ હોત."
+            <div style={{ padding: '0' }}>
+                <div style={styles.gradientCard}>
+                    <h2 style={{ fontSize: '1.4rem', fontWeight: '800', marginBottom: '5px' }}>🗣️ ભાષા એટલે શું?</h2>
+                    <p style={{ fontSize: '0.95rem', opacity: '0.95', margin: 0 }}>
+                        "વિચારો અને લાગણીઓના સંક્રમણની માનવીય પદ્ધતિ."
                     </p>
                 </div>
 
-                <h3 style={{ color: '#1e3a8a', marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                    <span style={{ background: '#dbeafe', padding: '8px', borderRadius: '10px' }}>📚</span> શબ્દોના પ્રકાર
-                </h3>
-
-                {/* Types Grid */}
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px', marginBottom: '40px' }}>
-                    <div style={{ background: '#fff', padding: '20px', borderRadius: '18px', border: '1px solid #e5e7eb', borderTop: '5px solid #3b82f6' }}>
-                        <h4 style={{ color: '#1e3a8a', marginBottom: '10px' }}>૧. તત્સમ શબ્દો</h4>
-                        <p style={{ color: '#64748b', fontSize: '0.95rem' }}>સંસ્કૃતમાંથી કોઈ પણ ફેરફાર વગર આવેલા શબ્દો.</p>
-                    </div>
-                    <div style={{ background: '#fff', padding: '20px', borderRadius: '18px', border: '1px solid #e5e7eb', borderTop: '5px solid #10b981' }}>
-                        <h4 style={{ color: '#065f46', marginBottom: '10px' }}>૨. તદ્ભવ શબ્દો</h4>
-                        <p style={{ color: '#64748b', fontSize: '0.95rem' }}>સંસ્કૃતમાંથી થોડાંક ફેરફાર સાથે આવેલા શબ્દો.</p>
-                    </div>
-                    <div style={{ background: '#fff', padding: '20px', borderRadius: '18px', border: '1px solid #e5e7eb', borderTop: '5px solid #f59e0b' }}>
-                        <h4 style={{ color: '#92400e', marginBottom: '10px' }}>૩. દેશ્યક શબ્દો</h4>
-                        <p style={{ color: '#64748b', fontSize: '0.95rem' }}>જેનું મૂળ જ્ઞાત નથી (તળપદા શબ્દો).</p>
+                <div style={styles.card}>
+                    <h3 style={{ ...styles.heading, color: '#047857' }}>📜 વ્યાખ્યાઓ</h3>
+                    <div style={{ display: 'grid', gap: '10px' }}>
+                        <div style={{ background: '#f0fdfa', padding: '10px', borderRadius: '8px', borderLeft: '3px solid #14b8a6' }}>
+                            <div style={{ fontWeight: '700', color: '#115e59', fontSize: '0.9rem' }}>જે.બી. કેરોલ:</div>
+                            <div style={{ fontSize: '0.9rem', color: '#134e4a' }}>"ભાષા ધ્વનિઓ અને ધ્વનિશ્રેણીઓની વ્યવસ્થા છે, જે સંદેશા-વ્યવહારમાં વપરાય છે."</div>
+                        </div>
+                        <div style={{ background: '#ecfdf5', padding: '10px', borderRadius: '8px', borderLeft: '3px solid #10b981' }}>
+                            <div style={{ fontWeight: '700', color: '#064e3b', fontSize: '0.9rem' }}>સેપિર:</div>
+                            <div style={{ fontSize: '0.9rem', color: '#065f46' }}>"વિચારો, લાગણીઓ સંક્રમણ કરવાની કેવળ માનવીય પદ્ધતિ."</div>
+                        </div>
                     </div>
                 </div>
 
-                <div style={{ background: '#fff', borderRadius: '24px', border: '1px solid #f1f5f9', overflow: 'hidden', boxShadow: '0 10px 15px -3px rgba(0,0,0,0.04)', marginBottom: '30px' }}>
-                    <div style={{ background: '#f8fafc', padding: '15px 25px', borderBottom: '1px solid #f1f5f9', fontWeight: '800', color: '#334155' }}>📍 તત્સમ શબ્દોનું લિસ્ટ</div>
-                    <div style={{ padding: '20px', maxHeight: '400px', overflowY: 'auto' }}>
-                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(100px, 1fr))', gap: '10px' }}>
-                            {["કર્મ", "ગર્વ", "ગ્રામ", "વર્ષા", "કાર્ય", "અગ્નિ", "આશા", "છિદ્ર", "ભાષ્ય", "વિશુદ્ધ", "સત્ય", "અજ્ઞાન", "આવરણ", "બિંદુ", "વ્યક્તિ", "હૃદય", "ધર્મ", "વૃક્ષ", "પત્ર"].map((w, i) => (
-                                <span key={i} style={{ background: '#eff6ff', color: '#1e40af', padding: '8px 12px', borderRadius: '8px', fontSize: '0.9rem', textAlign: 'center', fontWeight: '600' }}>{w}</span>
+                <div style={styles.card}>
+                    <h3 style={{ ...styles.heading, color: '#b91c1c' }}>📈 ગુજરાતી ભાષાનો વિકાસ</h3>
+                    <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '5px', fontSize: '0.9rem', background: '#fff1f2', padding: '10px', borderRadius: '8px' }}>
+                        <span>આર્યભાષા (સંસ્કૃત)</span> <span>→</span>
+                        <span>પ્રાકૃત</span> <span>→</span>
+                        <span>અપભ્રંશ</span> <span>→</span>
+                        <span>ગુર્જર અપભ્રંશ</span> <span>→</span>
+                        <span style={{ fontWeight: 'bold', color: '#be123c' }}>ગુજરાતી</span>
+                    </div>
+
+                    <div style={{ marginTop: '15px' }}>
+                        <h4 style={styles.subHeading}>ઐતિહાસિક ઉલ્લેખો (કોણે શું કહ્યું?)</h4>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '8px' }}>
+                            {[
+                                { name: "ભાલણ", text: "અપભ્રંશ / ગુર્જરભાષા" },
+                                { name: "પદ્મનાભ/અખો", text: "પ્રાકૃત" },
+                                { name: "પ્રેમાનંદ", text: "‘ગુજરાતી’ (સૌપ્રથમ)", highlight: true },
+                                { name: "ઉમાશંકર", text: "મારું ગુર્જર" }
+                            ].map((item, i) => (
+                                <div key={i} style={{
+                                    background: item.highlight ? '#fef3c7' : '#f8fafc',
+                                    border: item.highlight ? '1px solid #fcd34d' : '1px solid #e2e8f0',
+                                    padding: '8px',
+                                    borderRadius: '6px'
+                                }}>
+                                    <div style={{ fontSize: '0.85rem', fontWeight: '700', color: '#374151' }}>{item.name}</div>
+                                    <div style={{ fontSize: '0.8rem', color: '#6b7280' }}>{item.text}</div>
+                                </div>
                             ))}
                         </div>
                     </div>
                 </div>
-
-                <h3 style={{ color: '#1e3a8a', marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                    <span style={{ background: '#fee2e2', padding: '8px', borderRadius: '10px' }}>🌍</span> વિદેશી શબ્દો
-                </h3>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
-                    <div style={{ background: '#fff', padding: '20px', borderRadius: '20px', border: '1px solid #e2e8f0' }}>
-                        <h4 style={{ color: '#ef4444', marginBottom: '10px' }}>પોર્ટુગીઝ</h4>
-                        <p style={{ fontSize: '0.9rem', color: '#475569', lineHeight: '1.6' }}>તમાકુ, બટાટા, આફૂસ, પલટણ, પગાર, ચાવી, મેજ, ઇસ્ત્રી, કાજુ, સાબુ, તિજોરી, વરંડો.</p>
+            </div>
+        )
+    },
+    {
+        title: "૨. શબ્દભંડોળ (Vocabulary)",
+        content: (
+            <div style={{ padding: '0' }}>
+                <div style={{ ...styles.card, background: '#f0f9ff', borderColor: '#bae6fd' }}>
+                    <h3 style={{ ...styles.heading, color: '#0369a1' }}>શબ્દ પ્રકારો</h3>
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', fontSize: '0.9rem' }}>
+                        <div><strong>૧. તત્સમ:</strong> સંસ્કૃત જેવા જ (Ex: અગ્નિ, પુષ્પ)</div>
+                        <div><strong>૨. તદ્ભવ:</strong> ફેરફાર થયેલા (Ex: આગ, ફૂલ)</div>
+                        <div><strong>૩. દેશ્ય:</strong> તળપદા/મૂળ અજાણ્યા (Ex: ઢેકું, ગોબરું)</div>
+                        <div><strong>૪. વિદેશી:</strong> અન્ય ભાષાના (Ex: ડૉક્ટર, સાબુ)</div>
                     </div>
-                    <div style={{ background: '#fff', padding: '20px', borderRadius: '20px', border: '1px solid #e2e8f0' }}>
-                        <h4 style={{ color: '#3b82f6', marginBottom: '10px' }}>અંગ્રેજી</h4>
-                        <p style={{ fontSize: '0.9rem', color: '#475569', lineHeight: '1.6' }}>બેંચ, બેગ, કેમ્પ, ક્લાસ, પોલીસ, જજ, મોટર, સિમેન્ટ, બિટ્કિટ, એપ્ટિટ્યુડ, ચેક, બિલ્ડિંગ.</p>
+                </div>
+
+                <div style={styles.card}>
+                    <h3 style={{ ...styles.heading, marginBottom: '10px' }}>🔄 તત્સમ - તદ્ભવ જોડીઓ</h3>
+                    <div style={{ maxHeight: '300px', overflowY: 'auto' }}>
+                        <table style={styles.table}>
+                            <thead>
+                                <tr>
+                                    <th style={styles.th}>તત્સમ (મૂળ)</th>
+                                    <th style={{ ...styles.th, color: '#059669' }}>તદ્ભવ (ફરલો)</th>
+                                    <th style={styles.th}>તત્સમ (મૂળ)</th>
+                                    <th style={{ ...styles.th, color: '#059669' }}>તદ્ભવ (ફરલો)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {[
+                                    ["કાર્ય", "કાજ", "આજ્ઞા", "આણ"],
+                                    ["ધૈર્ય", "ધીરજ", "શુષ્ક", "સૂકું"],
+                                    ["અગ્નિ", "આગ", "ખાદ્ય", "ખાજ"],
+                                    ["પુસ્તક", "પોથી", "શૂન્ય", "સૂનું"],
+                                    ["અદ્ય", "આજ", "ગ્રંથિ", "ગાંઠ"],
+                                    ["રજનિ", "રેન", "સંગ્રહ", "સંઘરો"],
+                                    ["અધીન", "આધીન", "છિદ્ર", "છેદ"],
+                                    ["લક્ષણ", "લખણ", "હસ્ત", "હાથ"],
+                                    ["અનુકૂલ", "અનૂકુલ", "તંતુ", "તાંતણો"],
+                                    ["વર્ષા", "વરસાદ", "હૃદય", "હૈયુ"],
+                                    ["કર્મ", "કામ", "અપયશ", "અપજશ"],
+                                    ["તીક્ષ્ણ", "તીખું", "શિથિલ", "ઢીલું"]
+                                ].map((row, i) => (
+                                    <tr key={i} style={{ background: i % 2 === 0 ? '#fff' : '#f9fafb' }}>
+                                        <td style={styles.td}>{row[0]}</td>
+                                        <td style={{ ...styles.td, fontWeight: '500' }}>{row[1]}</td>
+                                        <td style={styles.td}>{row[2]}</td>
+                                        <td style={{ ...styles.td, fontWeight: '500' }}>{row[3]}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div style={styles.card}>
+                    <h3 style={{ ...styles.heading, marginBottom: '10px' }}>🌍 વિદેશી શબ્દો</h3>
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '8px' }}>
+                        {[
+                            { lang: "અરબી", words: "અક્કલ, અખબાર, અદાલત, અમીર, ઈનામ, કિસ્સો, ગરીબ, જવાબ, દુકાન" },
+                            { lang: "ફારસી", words: "અંદાજ, આબરૂ, બિમાર, ગુલાબ, બગીચો, કારકુન, શરમ, સરકાર, હપતો" },
+                            { lang: "પોર્ટુગીઝ", words: "બટાટા, તમાકુ, સાબુ, ચાવી, મિસ્ત્રી, પાઉં, નાતાલ, મોસંબી" },
+                            { lang: "અંગ્રેજી", words: "ટિકિટ, સ્ટેશન, બસ, પેન, ડૉક્ટર, હોસ્પિટલ, કોલેજ, બેંક" }
+                        ].map((item, i) => (
+                            <div key={i} style={{ fontSize: '0.9rem', borderBottom: '1px solid #f3f4f6', paddingBottom: '5px' }}>
+                                <span style={{ fontWeight: '700', color: '#4b5563', width: '70px', display: 'inline-block' }}>{item.lang}:</span>
+                                <span style={{ color: '#6b7280' }}>{item.words}</span>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
         )
     },
     {
-        title: "૨. લિપિ અને બોલી (પેજ ૨)",
+        title: "૩. લિપિ અને બોલી (Script & Dialect)",
         content: (
-            <div style={{ padding: '10px' }}>
-                <div style={{ background: '#ebf5ff', padding: '25px', borderRadius: '24px', border: '1px solid #bfdbfe', marginBottom: '30px' }}>
-                    <h3 style={{ color: '#1e40af', marginBottom: '15px' }}>🖋️ લિપિ એટલે શું?</h3>
-                    <p style={{ color: '#1e3a8a', lineHeight: '1.7' }}>
-                        લિપિની શોધમાં ભારત દેશ પ્રથમ છે. ગુજરાતી લિપિ <b>બ્રાહ્મી લિપિ</b> માંથી ઉતરી આવેલી <b>દેવનાગરી</b> ની ઉપપેદાશ છે. તે ડાબી બાજુથી જમણી બાજુ લખાય છે.
+            <div style={{ padding: '0' }}>
+                <div style={styles.card}>
+                    <h3 style={{ ...styles.heading }}>✍️ લિપિ (Script)</h3>
+                    <ul style={{ paddingLeft: '20px', margin: 0, fontSize: '0.9rem', color: '#374151' }}>
+                        <li style={{ marginBottom: '5px' }}>ભારતની મૂળ લિપિ: <strong>બ્રાહ્મી</strong></li>
+                        <li style={{ marginBottom: '5px' }}>ગુજરાતી લિપિ <strong>દેવનાગરી</strong>ની ઉપપેદાશ છે.</li>
+                        <li style={{ marginBottom: '5px' }}>શિરોરેખા હોતી નથી. (ડાબી થી જમણી લખાય)</li>
+                        <li>પ્રથમ પુસ્તક: <strong>'હોપ વાચનમાળા'</strong> (૧૮૬૦)</li>
+                    </ul>
+                </div>
+
+                <div style={styles.card}>
+                    <h3 style={{ ...styles.heading }}>🗺️ બોલી (Dialect) - સરખામણી</h3>
+                    <div style={{ overflowX: 'auto' }}>
+                        <table style={{ ...styles.table, minWidth: '400px' }}>
+                            <thead>
+                                <tr>
+                                    <th style={styles.th}>ઉ.ગુ. (પટ્ટણી)</th>
+                                    <th style={styles.th}>મ.ગુ. (ચરોતરી)</th>
+                                    <th style={styles.th}>દ.ગુ. (સુરતી)</th>
+                                    <th style={styles.th}>સૌરાષ્ટ્રી</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {[
+                                    ["આવશે", "આવિશ", "આવહે", "આવશે"],
+                                    ["કરે છે", "કરિ છિ", "કરે છ", "કરે સે"],
+                                    ["પાણી", "પોંણી", "પાની", "પાણી"],
+                                    ["મારું", "મારુ", "મ્હજુ", "મ્હારુ"],
+                                    ["છોકરો", "છોરો", "પોયરો", "ગગો"],
+                                    ["ક્યાં", "ચ્યાં", "કાં", "ક્યાં"],
+                                    ["કેમ છો", "ચ્યમ સો", "કેમ છ", "કેમ સે"],
+                                    ["પવન", "વાયરો", "પવન", "વા્યરો"]
+                                ].map((row, i) => (
+                                    <tr key={i} style={{ background: i % 2 === 0 ? '#fff' : '#f9fafb' }}>
+                                        <td style={styles.td}>{row[0]}</td>
+                                        <td style={styles.td}>{row[1]}</td>
+                                        <td style={styles.td}>{row[2]}</td>
+                                        <td style={styles.td}>{row[3]}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                        <div style={{ fontSize: '0.8rem', color: '#9ca3af', marginTop: '5px', fontStyle: 'italic' }}>
+                            * ઉપરનું કોષ્ટક સામાન્ય ઉચ્ચારણ ભેદ દર્શાવે છે.
+                        </div>
+                    </div>
+                </div>
+
+                <div style={{ ...styles.card, background: '#fefce8', borderColor: '#fef08a' }}>
+                    <h3 style={{ ...styles.heading, color: '#854d0e', fontSize: '1rem' }}>ગાંધીજી અને ભાષા</h3>
+                    <p style={{ fontSize: '0.9rem', color: '#a16207', fontStyle: 'italic', margin: 0 }}>
+                        “અંગ્રેજી ભાષાના શબ્દોની જોડણી ખોટી કરતાં આપણને શરમ લાગે છે. તેના કરતાં માતૃભાષાની જોડણીનો વધ કરતાં આપણને વધારે શરમ લાગવી જોઈએ.”
                     </p>
-                </div>
-
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', marginBottom: '30px' }}>
-                    <div style={{ background: '#fff', padding: '25px', borderRadius: '20px', border: '1px solid #e2e8f0', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
-                        <h4 style={{ color: '#8b5cf6', marginBottom: '15px' }}>🗣️ બોલી</h4>
-                        <p style={{ color: '#4b5563', lineHeight: '1.6' }}>એક જ ભાષાના જુદા જુદા પ્રાદેશિક ઉચ્ચારણોને 'બોલી' કહેવાય છે. <b>"બાર ગાઉ એ બોલી બદલાય"</b>.</p>
-                    </div>
-                    <div style={{ background: '#fff', padding: '25px', borderRadius: '20px', border: '1px solid #e2e8f0', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
-                        <h4 style={{ color: '#ec4899', marginBottom: '15px' }}>🎭 ઉપશિષ્ટ (Slang)</h4>
-                        <p style={{ color: '#4b5563', lineHeight: '1.6' }}>વિશિષ્ટ અર્થ ધરાવતી લૌકિક ભાષા. ઉ.દા. 'ટ્યુબલાઇટ થવી', 'ગુંદરિયો'.</p>
-                    </div>
-                </div>
-
-                <h3 style={{ color: '#1e3a8a', marginBottom: '20px' }}>📍 પ્રાદેશિક બોલીઓ</h3>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '15px' }}>
-                    {[
-                        { area: "ઉત્તર ગુજરાત", dialect: "પટ્ટણી" },
-                        { area: "મધ્ય ગુજરાત", dialect: "ચરોતરી" },
-                        { area: "દક્ષિણ ગુજરાત", dialect: "સુરતી" },
-                        { area: "સૌરાષ્ટ્ર", dialect: "સૌરાષ્ટ્રી" }
-                    ].map((d, i) => (
-                        <div key={i} style={{ background: '#fff', padding: '15px', borderRadius: '15px', border: '1px solid #f1f5f9', textAlign: 'center' }}>
-                            <div style={{ color: '#64748b', fontSize: '0.85rem' }}>{d.area}</div>
-                            <div style={{ fontWeight: '800', color: '#1e293b', fontSize: '1.1rem' }}>{d.dialect}</div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        )
-    },
-    {
-        title: "૩. બોલીના નમૂનાઓ (પેજ ૩)",
-        content: (
-            <div style={{ padding: '10px' }}>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '25px' }}>
-                    {[
-                        { title: "ઉત્તર ગુજરાત (પટ્ટણી)", sample: "આંહિ આયે બે દહાડા થયા, જાણોજ સો તો ક શમો ફરિ ક્યો શિં..." },
-                        { title: "મધ્ય ગુજરાત (ચરોતરી)", sample: "ચેટલાક ચોરો ઘરમાં પેહીને ચોરી કરવાના વેચારથી તે માહેં પેઠા..." },
-                        { title: "દક્ષિણ ગુજરાત (સુરતી)", sample: "એક જણને બે પોયરા ઉતા. તેમાંના નાલ્લાએ બાપને ક્યું..." },
-                        { title: "સૌરાષ્ટ્ર (સૌરાષ્ટ્રી)", sample: "એક હતા ડોસીમાં. ઈ રોજ કથાવારતા સાંભળે ને દેવદર્શને જાય..." }
-                    ].map((s, i) => (
-                        <div key={i} style={{ background: '#fff', padding: '25px', borderRadius: '20px', border: '1px solid #e2e8f0', borderLeft: '8px solid #3b82f6' }}>
-                            <h4 style={{ color: '#1e40af', marginBottom: '10px' }}>🔸 {s.title}</h4>
-                            <p style={{ fontStyle: 'italic', color: '#475569', lineHeight: '1.8', fontSize: '1.05rem' }}>"{s.sample}"</p>
-                        </div>
-                    ))}
                 </div>
             </div>
         )

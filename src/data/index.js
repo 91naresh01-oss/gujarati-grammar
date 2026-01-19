@@ -8,6 +8,12 @@ import { chapter4Theory } from './gujarati-grammar/chapter4/theory';
 import { chapter4Tests } from './gujarati-grammar/chapter4/test';
 import { chapter5Theory } from './gujarati-grammar/chapter5/theory';
 import { chapter5Tests } from './gujarati-grammar/chapter5/test';
+import { chapter6Theory } from './gujarati-grammar/chapter6/theory';
+import { chapter6Tests } from './gujarati-grammar/chapter6/test';
+import { chapter7Theory } from './gujarati-grammar/chapter7/theory';
+import { chapter7Tests } from './gujarati-grammar/chapter7/test';
+import { chapter8Theory } from './gujarati-grammar/chapter8/theory';
+import { chapter8Tests } from './gujarati-grammar/chapter8/test';
 
 export const chaptersData = [
     {
@@ -44,5 +50,26 @@ export const chaptersData = [
         desc: 'વ્યંજન સાથે વ્યંજનના જોડાણના પ્રકારો અને તેના લેખનના નિયમોની સમજૂતી.',
         theory: chapter5Theory,
         tests: chapter5Tests
+    },
+    {
+        id: 6,
+        name: 'શબ્દકોશ (Dictionary)',
+        desc: 'શબ્દકોશનો ઇતિહાસ, ક્રમ અને શબ્દો શોધવાના નિયમો.',
+        theory: chapter6Theory,
+        tests: chapter6Tests
+    },
+    {
+        id: 7,
+        name: 'લિંગ અને વચન વ્યવસ્થા',
+        desc: 'ગુજરાતી ભાષામાં લિંગ (જાતિ) અને વચન (એકવચન-બહુવચન) ના નિયમો.',
+        theory: chapter7Theory,
+        tests: chapter7Tests
+    },
+    {
+        id: 8,
+        name: 'સંજ્ઞા (Noun)',
+        desc: 'સંજ્ઞાની વ્યાખ્યા, વિશેષતાઓ (વિકારી/અવિકારી) અને તેના ૬ મુખ્ય પ્રકારોની સમજૂતી.',
+        theory: chapter8Theory,
+        tests: chapter8Tests
     }
 ];
