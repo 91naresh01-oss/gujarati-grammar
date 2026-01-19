@@ -143,9 +143,10 @@ body {
    =========================== */
 .chapter-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   padding: 20px 0;
+  width: 100%;
 }
 
 .chapter-card {
@@ -495,23 +496,7 @@ body {
 /* ===========================
    MEDIA QUERIES
    =========================== */
-@media (min-width: 600px) {
-  .chapter-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 900px) {
-  .chapter-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (min-width: 1200px) {
-  .chapter-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
+/* Responsive grid is now handled by auto-fit in .chapter-grid */
 
 /* =========================================
    MODERN THEORY UI - VIBRANT REDESIGN
@@ -597,8 +582,51 @@ body {
 
 /* Mobile responsiveness */
 @media (max-width: 600px) {
+  body {
+    padding: 10px 0;
+    /* Reduced padding */
+  }
+
+  #root {
+    width: 97%;
+    max-width: 97%;
+    margin: 0 auto;
+  }
+
+  .theory-page-container {
+    width: 100%;
+    /* Root is already 97% */
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  .modern-theory-wrapper {
+    padding: 10px 5px;
+    /* Very small side padding */
+    gap: 15px;
+  }
+
   .modern-theory-card {
-    padding: 25px;
+    padding: 15px;
+    /* Reduced padding for more content width */
+    border-radius: 12px;
+  }
+
+  /* Target inner divs in theory content to reduce their inline padding in mobile */
+  .modern-theory-content div {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
+
+  /* Target even deeper nested cards in theory content */
+  .modern-theory-content div[style*="padding"] {
+    padding: 12px !important;
+    /* Force smaller padding on mobile */
+  }
+
+  /* Handle flex layouts in theory content for mobile */
+  .modern-theory-content div[style*="display: flex"] {
+    gap: 10px !important;
   }
 
   .modern-theory-title {

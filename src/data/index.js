@@ -4,6 +4,8 @@ import { chapter2Theory } from './gujarati-grammar/chapter2/theory';
 import { chapter2Tests } from './gujarati-grammar/chapter2/test';
 import { chapter3Theory } from './gujarati-grammar/chapter3/theory';
 import { chapter3Tests } from './gujarati-grammar/chapter3/test';
+import { chapter4Theory } from './gujarati-grammar/chapter4/theory';
+import { chapter4Tests } from './gujarati-grammar/chapter4/test';
 
 export const chaptersData = [
     {
@@ -26,5 +28,12 @@ export const chaptersData = [
         desc: 'ધ્વનિ, સ્વર અને વ્યંજનનું વર્ગીકરણ અને ઉચ્ચારણ સ્થાનની સમજૂતી.',
         theory: chapter3Theory,
         tests: chapter3Tests
+    },
+    {
+        id: 4,
+        name: 'ધ્વનિશ્રેણી',
+        desc: 'શબ્દમાં રહેલા સ્વર અને વ્યંજનના સમૂહને છૂટા પાડવાની ક્રિયા અને તેના નિયમોની સમજૂતી.',
+        theory: chapter4Theory,
+        tests: chapter4Tests
     }
 ];
