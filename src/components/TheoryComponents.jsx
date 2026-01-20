@@ -3,12 +3,12 @@ import React from 'react';
 // --- Global Theme Configuration ---
 const themeConfig = {
     fontSizes: {
-        body: '1.1rem',           // Regular text/sentences
-        headingMain: '2rem',       // Main title (Chapter name)
-        headingSection: '1.5rem',  // Section heading (H3)
-        headingSub: '1.3rem',      // Sub heading (H4)
-        small: '0.95rem',          // Small text
-        tableHeader: '1.05rem',
+        body: '1.1rem',           // Body Text
+        headingMain: '1.5rem',     // Main Title
+        headingSection: '1.3rem',  // Section Heading (H3)
+        headingSub: '1.2rem',      // Sub Heading (H4)
+        small: '1rem',             // Table/Small
+        tableHeader: '1rem',
         tableCell: '1rem'
     },
     spacing: {
