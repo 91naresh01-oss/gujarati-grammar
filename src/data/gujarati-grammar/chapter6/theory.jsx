@@ -4,21 +4,34 @@ import {
     GradientCard,
     TheoryHeading,
     TheorySubHeading,
-    TheoryText,
     TheoryGrid,
-    HighlightBox
+    HighlightBox,
+    TheoryList,
+    TheoryListItem
 } from '../../../components/TheoryComponents';
 
 export const chapter6Theory = [
     {
         title: "૧. શબ્દકોશ : પરિચય અને ઇતિહાસ",
         content: (
-            <div>
+            <div className="modern-theory-wrapper">
                 <GradientCard
                     heading="📖 શબ્દકોશ (Dictionary)"
-                    theme="amber"
-                    description="વ્યાકરણની દૃષ્ટિએ શબ્દોના અર્થ દર્શાવતો અને ક્રમાનુસાર ગોઠવાયેલો સંગ્રહ."
-                />
+                    description="શબ્દોનું વ્યવસ્થિત તર્કબદ્ધ આયોજન"
+                    theme="teal"
+                >
+                    <div style={{ marginTop: '15px' }}>
+                        <TheorySubHeading glass>શબ્દકોશ એટલે શું?</TheorySubHeading>
+                        <TheoryList color="#ffffff">
+                            <TheoryListItem>
+                                વ્યાકરણની દૃષ્ટિએ શબ્દોના અર્થ દર્શાવતો અને ક્રમાનુસાર ગોઠવાયેલો સંગ્રહ.
+                            </TheoryListItem>
+                            <TheoryListItem>
+                                ભાષાને શુદ્ધ રીતે સમજવા માટે શબ્દકોશ અનિવાર્ય છે.
+                            </TheoryListItem>
+                        </TheoryList>
+                    </div>
+                </GradientCard>
 
                 <TheoryCard>
                     <TheoryHeading color="#92400e">📜 ઐતિહાસિક સફર</TheoryHeading>

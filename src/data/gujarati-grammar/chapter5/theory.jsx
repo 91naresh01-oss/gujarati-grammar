@@ -8,19 +8,33 @@ import {
     TheoryTableHeader,
     TheoryTableRow,
     TheoryGrid,
-    HighlightBox
+    HighlightBox,
+    TheoryList,
+    TheoryListItem
 } from '../../../components/TheoryComponents';
 
 export const chapter5Theory = [
     {
         title: "૧. જોડાક્ષર : વ્યાખ્યા અને વિશિષ્ટ ચિહ્નો",
         content: (
-            <div>
+            <div className="modern-theory-wrapper">
                 <GradientCard
                     heading="✍️ જોડાક્ષર (સંયુક્તાક્ષર)"
-                    theme="rose"
-                    description="સ્વરની મદદ વિના વ્યંજન સાથે વ્યંજન જોડાય તેને જોડાક્ષર કહે છે."
-                />
+                    description="બે વ્યંજનોનું મિલન"
+                    theme="teal"
+                >
+                    <div style={{ marginTop: '15px' }}>
+                        <TheorySubHeading glass>જોડાક્ષર એટલે શું?</TheorySubHeading>
+                        <TheoryList color="#ffffff">
+                            <TheoryListItem>
+                                સ્વરની મદદ વિના વ્યંજન સાથે વ્યંજન જોડાય તેને <strong>જોડાક્ષર</strong> કહે છે.
+                            </TheoryListItem>
+                            <TheoryListItem>
+                                ગુજરાતીમાં અનેક વિશિષ્ટ લિપિ ચિહ્નો જોડાક્ષર દર્શાવે છે.
+                            </TheoryListItem>
+                        </TheoryList>
+                    </div>
+                </GradientCard>
 
                 <TheoryCard>
                     <TheoryHeading color="#881337">✨ વિશિષ્ટ લિપિ ચિહ્નો</TheoryHeading>

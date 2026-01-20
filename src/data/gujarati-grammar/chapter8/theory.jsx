@@ -3,20 +3,35 @@ import {
     TheoryCard,
     GradientCard,
     TheoryHeading,
-    TheoryText,
-    TheoryGrid
+    TheoryGrid,
+    HighlightBox,
+    TheoryList,
+    TheoryListItem,
+    TheorySubHeading
 } from '../../../components/TheoryComponents';
 
 export const chapter8Theory = [
     {
         title: "૧. સંજ્ઞા : વ્યાખ્યા અને વિશેષતાઓ",
         content: (
-            <div>
+            <div className="modern-theory-wrapper">
                 <GradientCard
                     heading="🏷️ સંજ્ઞા (Noun)"
-                    theme="purple"
-                    description="કોઈ પણ વ્યક્તિ, વસ્તુ, સ્થળ કે ખ્યાલનો નિર્દેશ કરતા શબ્દને સંજ્ઞા કહે છે."
-                />
+                    description="નામ એ જ સંજ્ઞા"
+                    theme="teal"
+                >
+                    <div style={{ marginTop: '15px' }}>
+                        <TheorySubHeading glass>સંજ્ઞા એટલે શું?</TheorySubHeading>
+                        <TheoryList color="#ffffff">
+                            <TheoryListItem>
+                                કોઈ પણ વ્યક્તિ, વસ્તુ, સ્થળ કે ખ્યાલનો નિર્દેશ કરતા શબ્દને <strong>સંજ્ઞા</strong> કહે છે.
+                            </TheoryListItem>
+                            <TheoryListItem>
+                                સંજ્ઞા એ ભાષાનો પાયો છે જે પદાર્થોને ઓળખ આપે છે.
+                            </TheoryListItem>
+                        </TheoryList>
+                    </div>
+                </GradientCard>
 
                 <TheoryCard>
                     <TheoryHeading color="#5b21b6">✨ મુખ્ય વિશેષતાઓ</TheoryHeading>

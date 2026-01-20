@@ -10,7 +10,10 @@ import BackgroundBlobs from './components/BackgroundBlobs';
 import Navbar from './components/Navbar';
 import { ThemeProvider } from './context/ThemeContext';
 
+console.log("App.jsx loading...");
+
 function App() {
+  console.log("App rendering...");
   return (
     <ThemeProvider>
       <Router>
@@ -28,5 +31,7 @@ function App() {
     </ThemeProvider>
   );
 }
+
+console.log("App component defined.");
 
 export default App;

@@ -3,22 +3,33 @@ import {
     TheoryCard,
     GradientCard,
     TheoryHeading,
+    TheorySubHeading,
     TheoryText,
     TheoryGrid,
-    HighlightBox
+    HighlightBox,
+    TheoryList,
+    TheoryListItem
 } from '../../../components/TheoryComponents';
 
 export const chapter1Theory = [
     {
         title: "૧. વ્યાકરણ : અર્થ અને વ્યાખ્યા",
         content: (
-            <div>
+            <div className="modern-theory-wrapper">
                 <GradientCard
-                    heading="વ્યાકરણ એટલે શું?"
-                    theme="blue"
+                    heading="૧. વ્યાકરણ : અર્થ અને વ્યાખ્યા"
+                    theme="teal"
                 >
-                    <div style={{ marginTop: '10px', fontSize: '1.2rem', opacity: '0.9' }}>
-                        અર્થ: <span style={{ background: 'rgba(255,255,255,0.2)', padding: '5px 12px', borderRadius: '6px', fontWeight: '700' }}>'સ્પષ્ટીકરણ'</span>
+                    <div style={{ marginTop: '15px' }}>
+                        <TheorySubHeading glass>વ્યાકરણ એટલે શું?</TheorySubHeading>
+                        <TheoryList color="#ffffff">
+                            <TheoryListItem>
+                                <strong>અર્થ:</strong> ‘સ્પષ્ટીકરણ’ (વિ + આ + કૃ + અન)
+                            </TheoryListItem>
+                            <TheoryListItem>
+                                ભાષાને શુદ્ધ રાખનાર અને તેના નિયમોનું વિવેચન કરનાર શાસ્ત્ર.
+                            </TheoryListItem>
+                        </TheoryList>
                     </div>
                 </GradientCard>
 

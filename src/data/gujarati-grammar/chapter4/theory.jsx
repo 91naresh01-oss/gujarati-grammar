@@ -5,21 +5,31 @@ import {
     TheoryHeading,
     TheorySubHeading,
     TheoryText,
-    HighlightBox
+    HighlightBox,
+    TheoryList,
+    TheoryListItem
 } from '../../../components/TheoryComponents';
 
 export const chapter4Theory = [
     {
         title: "૧. ધ્વનિશ્રેણી : સમજ અને વ્યાખ્યા",
         content: (
-            <div>
+            <div className="modern-theory-wrapper">
                 <GradientCard
-                    heading="🔡 ધ્વનિશ્રેણી એટલે શું?"
-                    theme="blue"
+                    heading="🔡 ધ્વનિશ્રેણી"
+                    description="ભાષાના ધ્વનિઓને વ્યવસ્થિત સમજવાની કળા"
+                    theme="teal"
                 >
-                    <div style={{ marginTop: '10px', fontSize: '1.15rem', opacity: '0.95', lineHeight: '1.6' }}>
-                        "શબ્દમાં રહેલા સ્વર અને વ્યંજનના સમૂહને છૂટા પાડવાની ક્રિયા."<br />
-                        <span style={{ fontSize: '1rem', opacity: 0.9, fontWeight: '500' }}>(ગુજરાતી 'ફોનેટિક' ભાષા છે - જેવું બોલીએ તેવું લખીએ.)</span>
+                    <div style={{ marginTop: '15px' }}>
+                        <TheorySubHeading glass>ધ્વનિશ્રેણી એટલે શું?</TheorySubHeading>
+                        <TheoryList color="#ffffff">
+                            <TheoryListItem>
+                                "શબ્દમાં રહેલા સ્વર અને વ્યંજનના સમૂહને છૂટા પાડવાની ક્રિયા."
+                            </TheoryListItem>
+                            <TheoryListItem>
+                                ગુજરાતી <strong>'ફોનેટિક'</strong> ભાષા છે - જેવું બોલીએ તેવું લખીએ.
+                            </TheoryListItem>
+                        </TheoryList>
                     </div>
                 </GradientCard>
 

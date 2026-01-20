@@ -6,25 +6,34 @@ import {
     TheorySubHeading,
     TheoryText,
     TheoryGrid,
-    HighlightBox
+    HighlightBox,
+    TheoryList,
+    TheoryListItem
 } from '../../../components/TheoryComponents';
 
 export const chapter7Theory = [
     {
         title: "૧. લિંગ વ્યવસ્થા (Gender)",
         content: (
-            <div>
+            <div className="modern-theory-wrapper">
                 <GradientCard
                     heading="🚻 લિંગ (જાતિ)"
+                    description="નામની જાતિ ઓળખવાની પદ્ધતિ"
                     theme="teal"
                 >
-                    <p style={{ fontSize: '1.15rem', opacity: '0.95', margin: '10px 0 0', lineHeight: '1.6' }}>
-                        ત્રણ પ્રકાર: ૧. નર (પુલ્લિંગ), ૨. નારી (સ્ત્રીલિંગ), ૩. નાन्यતર (નપુંસકલિંગ).
-                    </p>
-                    <div style={{ marginTop: '12px', display: 'flex', flexWrap: 'wrap', gap: '10px', fontSize: '1.1rem' }}>
-                        <span style={{ background: 'rgba(255,255,255,0.25)', padding: '5px 12px', borderRadius: '6px', fontWeight: '700' }}>કેવો? (નર)</span>
-                        <span style={{ background: 'rgba(255,255,255,0.25)', padding: '5px 12px', borderRadius: '6px', fontWeight: '700' }}>કેવી? (નારી)</span>
-                        <span style={{ background: 'rgba(255,255,255,0.25)', padding: '5px 12px', borderRadius: '6px', fontWeight: '700' }}>કેવું? (નાન્યતર)</span>
+                    <div style={{ marginTop: '15px' }}>
+                        <TheorySubHeading glass>ગુજરાતીમાં ત્રણ લિંગ છે:</TheorySubHeading>
+                        <TheoryList color="#ffffff">
+                            <TheoryListItem>
+                                <strong>નર (પુલ્લિંગ):</strong> 'કેવો?' પ્રશ્નથી ઓળખાય.
+                            </TheoryListItem>
+                            <TheoryListItem>
+                                <strong>નારી (સ્ત્રીલિંગ):</strong> 'કેવી?' પ્રશ્નથી ઓળખાય.
+                            </TheoryListItem>
+                            <TheoryListItem>
+                                <strong>નાન્યતર (નપુંસકલિંગ):</strong> 'કેવું?' પ્રશ્નથી ઓળખાય.
+                            </TheoryListItem>
+                        </TheoryList>
                     </div>
                 </GradientCard>
 

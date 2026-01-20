@@ -9,20 +9,31 @@ import {
     TheoryTableHeader,
     TheoryTableRow,
     TheoryGrid,
-    HighlightBox
+    HighlightBox,
+    TheoryList,
+    TheoryListItem
 } from '../../../components/TheoryComponents';
 
 export const chapter2Theory = [
     {
         title: "૧. ભાષા : ઉદ્ભવ અને વિકાસ",
         content: (
-            <div>
+            <div className="modern-theory-wrapper">
                 <GradientCard
-                    heading="🗣️ ભાષા એટલે શું?"
+                    heading="🗣️ ભાષા : ઉદ્ભવ અને વિકાસ"
+                    description="માનવ વિચારોના સંક્રમણનું શ્રેષ્ઠ માધ્યમ"
                     theme="teal"
                 >
-                    <div style={{ marginTop: '10px', fontSize: '1.2rem', opacity: '0.95', fontWeight: '500' }}>
-                        "વિચારો અને લાગણીઓના સંક્રમણની માનવીય પદ્ધતિ."
+                    <div style={{ marginTop: '15px' }}>
+                        <TheorySubHeading glass>ભાષા એટલે શું?</TheorySubHeading>
+                        <TheoryList color="#ffffff">
+                            <TheoryListItem>
+                                વિચારો અને લાગણીઓના સંક્રમણની માનવીય પદ્ધતિ.
+                            </TheoryListItem>
+                            <TheoryListItem>
+                                ગુજરાતી ભાષા <strong>'ભારતીય આર્ય કુળ'</strong> ની ભાષા છે.
+                            </TheoryListItem>
+                        </TheoryList>
                     </div>
                 </GradientCard>
 

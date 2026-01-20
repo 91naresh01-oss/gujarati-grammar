@@ -138,6 +138,18 @@ body {
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* ===========================
    CHAPTER CARD SPECIFIC
    =========================== */
@@ -567,9 +579,7 @@ body {
 
 .modern-theory-content p {
   margin-bottom: 15px;
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
+  line-height: 1.7;
 }
 
 /* Highlighting keywords (optional helper) */

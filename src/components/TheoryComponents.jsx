@@ -36,6 +36,9 @@ export const TheoryCard = ({ children, style = {} }) => (
         border: `1px solid ${themeConfig.colors.border}`,
         boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
         marginBottom: themeConfig.spacing.elementGap,
+        maxWidth: '100%',
+        overflowWrap: 'anywhere',
+        wordBreak: 'normal',
         ...style
     }}>
         {children}
@@ -46,15 +49,16 @@ export const TheoryCard = ({ children, style = {} }) => (
 export const GradientCard = ({ heading, description, theme = 'blue', children }) => {
     // Theme presets
     const gradients = {
-        blue: 'linear-gradient(135deg, #2563eb 0%, #3b82f6 100%)',
+        blue: 'linear-gradient(135deg, #0f766e 0%, #115e59 100%)', // Updated to Teal as requested
         purple: 'linear-gradient(135deg, #7c3aed 0%, #8b5cf6 100%)',
-        teal: 'linear-gradient(135deg, #0d9488 0%, #115e59 100%)',
+        teal: 'linear-gradient(135deg, #0f766e 0%, #115e59 100%)',
         amber: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)',
         rose: 'linear-gradient(135deg, #be123c 0%, #e11d48 100%)',
-        indigo: 'linear-gradient(135deg, #4f46e5 0%, #6366f1 100%)'
+        indigo: 'linear-gradient(135deg, #4f46e5 0%, #6366f1 100%)',
+        primary: 'linear-gradient(135deg, #0f766e 0%, #115e59 100%)'
     };
 
-    const bgGradient = gradients[theme] || gradients.blue;
+    const bgGradient = gradients[theme] || gradients.primary;
 
     return (
         <div style={{
@@ -63,7 +67,10 @@ export const GradientCard = ({ heading, description, theme = 'blue', children })
             borderRadius: '16px',
             color: '#fff',
             marginBottom: themeConfig.spacing.elementGap,
-            boxShadow: '0 4px 15px rgba(0,0,0, 0.15)'
+            boxShadow: '0 4px 15px rgba(0,0,0, 0.15)',
+            maxWidth: '100%',
+            overflowWrap: 'anywhere',
+            wordBreak: 'normal'
         }}>
             {heading && (
                 <h2 style={{
@@ -104,33 +111,69 @@ export const TheoryHeading = ({ children, color = themeConfig.colors.textMain })
 );
 
 // 4. Sub Heading (H4 Styled)
-export const TheorySubHeading = ({ children, bg = '#eff6ff', color = '#1e3a8a' }) => (
+export const TheorySubHeading = ({ children, bg = '#eff6ff', color = '#1e3a8a', glass = false }) => (
     <h4 style={{
         fontSize: themeConfig.fontSizes.headingSub,
         fontWeight: '700',
-        color: color,
-        background: bg,
-        padding: '8px 12px',
-        borderRadius: '8px',
-        marginBottom: '12px',
+        color: glass ? '#ffffff' : color,
+        background: glass ? 'rgba(255, 255, 255, 0.2)' : bg,
+        padding: '10px 18px',
+        borderRadius: '12px',
+        marginBottom: '15px',
         display: 'inline-block',
-        marginTop: '10px'
+        marginTop: '10px',
+        border: glass ? '1px solid rgba(255, 255, 255, 0.1)' : 'none',
+        backdropFilter: glass ? 'blur(4px)' : 'none'
     }}>
         {children}
     </h4>
 );
 
 // 5. Standard Text Paragraph
-export const TheoryText = ({ children, highlight = false }) => (
+export const TheoryText = ({ children, highlight = false, color: customColor }) => (
     <p style={{
         fontSize: themeConfig.fontSizes.body,
-        color: highlight ? '#111827' : themeConfig.colors.textLight,
+        color: customColor || (highlight ? '#111827' : themeConfig.colors.textLight),
         marginBottom: '10px',
         lineHeight: themeConfig.spacing.lineHeight,
-        fontWeight: highlight ? '500' : '400'
+        fontWeight: highlight ? '500' : '400',
+        overflowWrap: 'anywhere',
+        wordBreak: 'normal'
     }}>
         {children}
     </p>
+);
+
+// --- List Components ---
+export const TheoryList = ({ children, color = 'inherit' }) => (
+    <ul style={{ listStyle: 'none', padding: 0, margin: '15px 0' }}>
+        {React.Children.map(children, child => {
+            if (React.isValidElement(child)) {
+                return React.cloneElement(child, { color: color !== 'inherit' ? color : child.props?.color });
+            }
+            return child;
+        })}
+    </ul>
+);
+
+export const TheoryListItem = ({ children, color = 'inherit' }) => (
+    <li style={{
+        display: 'flex',
+        gap: '12px',
+        marginBottom: '12px',
+        lineHeight: '1.7',
+        color: color,
+        alignItems: 'flex-start',
+        fontSize: themeConfig.fontSizes.body
+    }}>
+        <span style={{
+            color: color === '#ffffff' ? '#ffffff' : '#0d9488',
+            fontSize: '1.2rem',
+            marginTop: '2px',
+            opacity: '0.9'
+        }}>✦</span>
+        <span style={{ flex: 1 }}>{children}</span>
+    </li>
 );
 
 // 6. Highlight/Info Box
@@ -140,7 +183,8 @@ export const HighlightBox = ({ title, children, type = 'info' }) => {
         warn: { bg: '#fff7ed', border: '#fed7aa', text: '#9a3412' }, // Orange
         success: { bg: '#f0fdf4', border: '#bbf7d0', text: '#166534' }, // Green
         error: { bg: '#fef2f2', border: '#fecaca', text: '#991b1b' }, // Red
-        note: { bg: '#f9fafb', border: '#e5e7eb', text: '#374151' } // Gray
+        note: { bg: '#f9fafb', border: '#e5e7eb', text: '#374151' }, // Gray
+        'translucent-white': { bg: 'rgba(255, 255, 255, 0.2)', border: 'rgba(255, 255, 255, 0.3)', text: '#ffffff' } // For gradient backgrounds
     };
 
     const style = types[type] || types.info;
@@ -155,7 +199,7 @@ export const HighlightBox = ({ title, children, type = 'info' }) => {
             fontSize: themeConfig.fontSizes.body
         }}>
             {title && <div style={{ fontWeight: '700', color: style.text, marginBottom: '5px' }}>{title}</div>}
-            <div style={{ color: '#1f2937', lineHeight: '1.6' }}>{children}</div>
+            <div style={{ color: type === 'translucent-white' ? '#ffffff' : '#1f2937', lineHeight: '1.6' }}>{children}</div>
         </div>
     );
 };

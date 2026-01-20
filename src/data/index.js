@@ -1,19 +1,23 @@
-import { chapter1Theory } from './gujarati-grammar/chapter1/theory';
-import { chapter1Tests } from './gujarati-grammar/chapter1/test';
-import { chapter2Theory } from './gujarati-grammar/chapter2/theory';
-import { chapter2Tests } from './gujarati-grammar/chapter2/test';
-import { chapter3Theory } from './gujarati-grammar/chapter3/theory';
-import { chapter3Tests } from './gujarati-grammar/chapter3/test';
-import { chapter4Theory } from './gujarati-grammar/chapter4/theory';
-import { chapter4Tests } from './gujarati-grammar/chapter4/test';
-import { chapter5Theory } from './gujarati-grammar/chapter5/theory';
-import { chapter5Tests } from './gujarati-grammar/chapter5/test';
-import { chapter6Theory } from './gujarati-grammar/chapter6/theory';
-import { chapter6Tests } from './gujarati-grammar/chapter6/test';
-import { chapter7Theory } from './gujarati-grammar/chapter7/theory';
-import { chapter7Tests } from './gujarati-grammar/chapter7/test';
-import { chapter8Theory } from './gujarati-grammar/chapter8/theory';
-import { chapter8Tests } from './gujarati-grammar/chapter8/test';
+import { chapter1Theory } from './gujarati-grammar/chapter1/theory.jsx';
+import { chapter1Tests } from './gujarati-grammar/chapter1/test.js';
+import { chapter2Theory } from './gujarati-grammar/chapter2/theory.jsx';
+import { chapter2Tests } from './gujarati-grammar/chapter2/test.js';
+import { chapter3Theory } from './gujarati-grammar/chapter3/theory.jsx';
+import { chapter3Tests } from './gujarati-grammar/chapter3/test.js';
+import { chapter4Theory } from './gujarati-grammar/chapter4/theory.jsx';
+import { chapter4Tests } from './gujarati-grammar/chapter4/test.js';
+import { chapter5Theory } from './gujarati-grammar/chapter5/theory.jsx';
+import { chapter5Tests } from './gujarati-grammar/chapter5/test.js';
+import { chapter6Theory } from './gujarati-grammar/chapter6/theory.jsx';
+import { chapter6Tests } from './gujarati-grammar/chapter6/test.js';
+import { chapter7Theory } from './gujarati-grammar/chapter7/theory.jsx';
+import { chapter7Tests } from './gujarati-grammar/chapter7/test.js';
+import { chapter8Theory } from './gujarati-grammar/chapter8/theory.jsx';
+import { chapter8Tests } from './gujarati-grammar/chapter8/test.js';
+import { chapter9Theory } from './gujarati-grammar/chapter9/theory.jsx';
+import { chapter9Tests } from './gujarati-grammar/chapter9/test.js';
+import { chapter10Theory } from './gujarati-grammar/chapter10/theory.jsx';
+import { chapter10Tests } from './gujarati-grammar/chapter10/test.js';
 
 export const chaptersData = [
     {
@@ -71,5 +75,19 @@ export const chaptersData = [
         desc: 'સંજ્ઞાની વ્યાખ્યા, વિશેષતાઓ (વિકારી/અવિકારી) અને તેના ૬ મુખ્ય પ્રકારોની સમજૂતી.',
         theory: chapter8Theory,
         tests: chapter8Tests
+    },
+    {
+        id: 9,
+        name: 'સર્વનામ',
+        desc: 'સર્વનામની વ્યાખ્યા, તેના સાત પ્રકારો અને ઉપયોગોની વિસ્તૃત સમજૂતી.',
+        theory: chapter9Theory,
+        tests: chapter9Tests
+    },
+    {
+        id: 10,
+        name: 'વિશેષણ (Adjective)',
+        desc: 'વિશેષણની વ્યાખ્યા, તેના પ્રકારો (ગુણવાચક, સંખ્યાવાચક, વગેરે) અને ઉદાહરણો.',
+        theory: chapter10Theory,
+        tests: chapter10Tests
     }
 ];

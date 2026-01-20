@@ -9,19 +9,33 @@ import {
     TheoryTableHeader,
     TheoryTableRow,
     TheoryGrid,
-    HighlightBox
+    HighlightBox,
+    TheoryList,
+    TheoryListItem
 } from '../../../components/TheoryComponents';
 
 export const chapter3Theory = [
     {
         title: "૧. ધ્વનિ અને સ્વર પરિચય",
         content: (
-            <div>
+            <div className="modern-theory-wrapper">
                 <GradientCard
-                    heading="🔊 ધ્વનિ એટલે શું?"
-                    theme="purple"
-                    description="ભાષાનો નાનામાં નાનો એકમ. ઉચ્ચારણ પ્રક્રિયામાં ફેફસાંમાંથી આવતી હવા નાદતંત્રીને કંપાવે છે."
-                />
+                    heading="🔊 ધ્વનિ અને સ્વર પરિચય"
+                    description="ભાષાનો નાનામાં નાનો એકમ"
+                    theme="teal"
+                >
+                    <div style={{ marginTop: '15px' }}>
+                        <TheorySubHeading glass>ધ્વનિ એટલે શું?</TheorySubHeading>
+                        <TheoryList color="#ffffff">
+                            <TheoryListItem>
+                                ઉચ્ચારણ પ્રક્રિયામાં ફેફસાંમાંથી આવતી હવા નાદતંત્રીને કંપાવે છે.
+                            </TheoryListItem>
+                            <TheoryListItem>
+                                જેનો ઉચ્ચાર અન્ય ધ્વનિની મદદ વિના થાય, તેને <strong>'સ્વર'</strong> કહેવાય.
+                            </TheoryListItem>
+                        </TheoryList>
+                    </div>
+                </GradientCard>
 
                 <TheoryCard>
                     <TheoryHeading color="#7c3aed">🎵 સ્વર (Vowels)</TheoryHeading>
