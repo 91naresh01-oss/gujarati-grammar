@@ -14,6 +14,9 @@ function Home() {
             <button className="btn-primary" onClick={() => navigate('/chapters')} style={{ marginTop: '10px' }}>
                 <span>શરૂ કરો (Start)</span>
             </button>
+            <div style={{ marginTop: '2rem', fontSize: '0.8rem', color: '#9ca3af' }}>
+                Version: 8.6 (Deployed)
+            </div>
         </div>
     );
 }
