@@ -733,10 +733,10 @@ body {
     padding: 10px 8px;
   }
 
-  /* Modern Theory Wrapper - Full Width Mobile */
+  /* Modern Theory Wrapper - Full Width Mobile optimized for Max View */
   .modern-theory-wrapper {
-    padding: 3%;
-    gap: 3%;
+    padding: 10px 4px;
+    gap: 15px;
     width: 100%;
     margin: 0;
   }
@@ -744,8 +744,8 @@ body {
   .modern-theory-card {
     width: 100%;
     margin: 0;
-    padding: 3%;
-    border-radius: 18px;
+    padding: 15px 12px;
+    border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
   }
 
@@ -770,9 +770,8 @@ body {
   }
 
   .modern-theory-content>div:first-child {
-    width: 97%;
+    width: 100%;
     margin: 0 auto;
-    padding: 3%;
   }
 
   /* Mobile font size hierarchy */
