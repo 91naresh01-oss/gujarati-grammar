@@ -3,13 +3,13 @@ import React from 'react';
 // --- Global Theme Configuration ---
 const themeConfig = {
     fontSizes: {
-        body: '1.15rem',
-        headingMain: '1.7rem',
-        headingSection: '1.4rem',
-        headingSub: '1.2rem',
-        small: '1rem',
-        tableHeader: '1.1rem',
-        tableCell: '1.1rem'
+        body: '1.1rem',           // Regular text/sentences
+        headingMain: '2rem',       // Main title (Chapter name)
+        headingSection: '1.5rem',  // Section heading (H3)
+        headingSub: '1.3rem',      // Sub heading (H4)
+        small: '0.95rem',          // Small text
+        tableHeader: '1.05rem',
+        tableCell: '1rem'
     },
     spacing: {
         cardPadding: '20px',
@@ -34,7 +34,7 @@ export const TheoryCard = ({ children, style = {} }) => (
         padding: themeConfig.spacing.cardPadding,
         borderRadius: '15px',
         border: `1px solid ${themeConfig.colors.border}`,
-        boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
+        boxShadow: '0 4px 15px rgba(0, 0, 0, 0.12)',
         marginBottom: themeConfig.spacing.elementGap,
         maxWidth: '100%',
         overflowWrap: 'anywhere',
@@ -210,10 +210,12 @@ export const TheoryTable = ({ children }) => (
         overflowX: 'auto',
         border: `1px solid ${themeConfig.colors.border}`,
         borderRadius: '10px',
-        marginBottom: '15px'
+        marginBottom: '15px',
+        WebkitOverflowScrolling: 'touch'
     }}>
         <table style={{
             width: '100%',
+            minWidth: '300px',
             borderCollapse: 'collapse',
             fontSize: themeConfig.fontSizes.tableCell
         }}>
