@@ -22,7 +22,7 @@ export const chapter4Theory = [
                 >
                     <div style={{ marginTop: '15px' }}>
                         <TheorySubHeading glass>ધ્વનિશ્રેણી એટલે શું?</TheorySubHeading>
-                        <TheoryList color="#ffffff">
+                        <TheoryList color="#000000">
                             <TheoryListItem>
                                 "શબ્દમાં રહેલા સ્વર અને વ્યંજનના સમૂહને છૂટા પાડવાની ક્રિયા."
                             </TheoryListItem>

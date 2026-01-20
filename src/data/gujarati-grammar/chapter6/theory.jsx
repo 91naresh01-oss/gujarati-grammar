@@ -22,7 +22,7 @@ export const chapter6Theory = [
                 >
                     <div style={{ marginTop: '15px' }}>
                         <TheorySubHeading glass>શબ્દકોશ એટલે શું?</TheorySubHeading>
-                        <TheoryList color="#ffffff">
+                        <TheoryList color="#000000">
                             <TheoryListItem>
                                 વ્યાકરણની દૃષ્ટિએ શબ્દોના અર્થ દર્શાવતો અને ક્રમાનુસાર ગોઠવાયેલો સંગ્રહ.
                             </TheoryListItem>

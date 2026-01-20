@@ -25,7 +25,7 @@ export const chapter5Theory = [
                 >
                     <div style={{ marginTop: '15px' }}>
                         <TheorySubHeading glass>જોડાક્ષર એટલે શું?</TheorySubHeading>
-                        <TheoryList color="#ffffff">
+                        <TheoryList color="#000000">
                             <TheoryListItem>
                                 સ્વરની મદદ વિના વ્યંજન સાથે વ્યંજન જોડાય તેને <strong>જોડાક્ષર</strong> કહે છે.
                             </TheoryListItem>

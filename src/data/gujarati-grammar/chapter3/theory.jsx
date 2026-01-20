@@ -26,7 +26,7 @@ export const chapter3Theory = [
                 >
                     <div style={{ marginTop: '15px' }}>
                         <TheorySubHeading glass>ધ્વનિ એટલે શું?</TheorySubHeading>
-                        <TheoryList color="#ffffff">
+                        <TheoryList color="#000000">
                             <TheoryListItem>
                                 ઉચ્ચારણ પ્રક્રિયામાં ફેફસાંમાંથી આવતી હવા નાદતંત્રીને કંપાવે છે.
                             </TheoryListItem>

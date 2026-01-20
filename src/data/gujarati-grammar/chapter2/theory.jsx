@@ -26,7 +26,7 @@ export const chapter2Theory = [
                 >
                     <div style={{ marginTop: '15px' }}>
                         <TheorySubHeading glass>ભાષા એટલે શું?</TheorySubHeading>
-                        <TheoryList color="#ffffff">
+                        <TheoryList color="#000000">
                             <TheoryListItem>
                                 વિચારો અને લાગણીઓના સંક્રમણની માનવીય પદ્ધતિ.
                             </TheoryListItem>

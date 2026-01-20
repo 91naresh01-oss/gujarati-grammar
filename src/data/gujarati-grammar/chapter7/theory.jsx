@@ -23,7 +23,7 @@ export const chapter7Theory = [
                 >
                     <div style={{ marginTop: '15px' }}>
                         <TheorySubHeading glass>ગુજરાતીમાં ત્રણ લિંગ છે:</TheorySubHeading>
-                        <TheoryList color="#ffffff">
+                        <TheoryList color="#000000">
                             <TheoryListItem>
                                 <strong>નર (પુલ્લિંગ):</strong> 'કેવો?' પ્રશ્નથી ઓળખાય.
                             </TheoryListItem>

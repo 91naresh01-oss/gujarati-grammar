@@ -27,7 +27,7 @@ export const chapter11Theory = [
                 >
                     <div style={{ marginTop: '15px' }}>
                         <TheorySubHeading glass>ક્રિયાવિશેષણ એટલે શું?</TheorySubHeading>
-                        <TheoryList color="#ffffff">
+                        <TheoryList color="#000000">
                             <TheoryListItem>
                                 ક્રિયાપદના અર્થમાં વધારો કરતા પદને <strong>'ક્રિયાવિશેષણ'</strong> કહેવાય છે.
                             </TheoryListItem>

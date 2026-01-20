@@ -47,15 +47,15 @@ export const TheoryCard = ({ children, style = {} }) => (
 
 // 2. Gradient Header Card
 export const GradientCard = ({ heading, description, theme = 'blue', children }) => {
-    // Higher-quality Vibrant Pastel Gradient Presets
+    // Pure White Gradient Presets
     const gradients = {
-        blue: 'linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%)',
-        teal: 'linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%)',
-        purple: 'linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%)',
-        amber: 'linear-gradient(135deg, #f6d365 0%, #fda085 100%)',
-        rose: 'linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)',
-        indigo: 'linear-gradient(135deg, #cfd9df 0%, #e2ebf0 100%)',
-        primary: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)'
+        blue: '#ffffff',
+        teal: '#ffffff',
+        purple: '#ffffff',
+        amber: '#ffffff',
+        rose: '#ffffff',
+        indigo: '#ffffff',
+        primary: '#ffffff'
     };
 
     const bgGradient = gradients[theme] || gradients.primary;
@@ -65,7 +65,7 @@ export const GradientCard = ({ heading, description, theme = 'blue', children })
             background: bgGradient,
             padding: '22px',
             borderRadius: '16px',
-            color: '#1e293b', // Darker text for light backgrounds
+            color: '#000000', // Absolute black for best readability
             marginBottom: themeConfig.spacing.elementGap,
             boxShadow: '0 4px 15px rgba(0,0,0, 0.08)',
             maxWidth: '100%',
@@ -78,7 +78,8 @@ export const GradientCard = ({ heading, description, theme = 'blue', children })
                     fontSize: themeConfig.fontSizes.headingMain,
                     fontWeight: '800',
                     marginBottom: description ? '8px' : '0',
-                    lineHeight: '1.3'
+                    lineHeight: '1.3',
+                    color: '#000000'
                 }}>
                     {heading}
                 </h2>
@@ -86,9 +87,10 @@ export const GradientCard = ({ heading, description, theme = 'blue', children })
             {description && (
                 <p style={{
                     fontSize: themeConfig.fontSizes.body,
-                    opacity: '0.95',
+                    opacity: '1',
                     margin: 0,
-                    lineHeight: '1.6'
+                    lineHeight: '1.6',
+                    color: '#000000'
                 }}>
                     {description}
                 </p>
@@ -116,7 +118,7 @@ export const TheorySubHeading = ({ children, bg = '#eff6ff', color = '#1e3a8a', 
     <h4 style={{
         fontSize: themeConfig.fontSizes.headingSub,
         fontWeight: '700',
-        color: glass ? '#1e293b' : color, // Use dark color even if glass on light background
+        color: glass ? '#000000' : color, // Use absolute black for glass
         background: glass ? 'rgba(255, 255, 255, 0.5)' : bg,
         padding: '10px 18px',
         borderRadius: '12px',
@@ -168,7 +170,7 @@ export const TheoryListItem = ({ children, color = 'inherit' }) => (
         fontSize: themeConfig.fontSizes.body
     }}>
         <span style={{
-            color: color === '#ffffff' ? '#ffffff' : '#0d9488',
+            color: color === '#ffffff' ? '#ffffff' : '#000000',
             fontSize: '1.2rem',
             marginTop: '2px',
             opacity: '0.9'

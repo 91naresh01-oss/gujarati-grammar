@@ -22,7 +22,7 @@ export const chapter8Theory = [
                 >
                     <div style={{ marginTop: '15px' }}>
                         <TheorySubHeading glass>સંજ્ઞા એટલે શું?</TheorySubHeading>
-                        <TheoryList color="#ffffff">
+                        <TheoryList color="#000000">
                             <TheoryListItem>
                                 કોઈ પણ વ્યક્તિ, વસ્તુ, સ્થળ કે ખ્યાલનો નિર્દેશ કરતા શબ્દને <strong>સંજ્ઞા</strong> કહે છે.
                             </TheoryListItem>

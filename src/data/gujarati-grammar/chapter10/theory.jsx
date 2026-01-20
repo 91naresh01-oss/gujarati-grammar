@@ -27,7 +27,7 @@ export const chapter10Theory = [
                 >
                     <div style={{ marginTop: '15px' }}>
                         <TheorySubHeading glass>વિશેષણ એટલે શું?</TheorySubHeading>
-                        <TheoryList color="#ffffff">
+                        <TheoryList color="#000000">
                             <TheoryListItem>
                                 જે શબ્દ પ્રાણી કે પદાર્થના <strong>ગુણનું કે સંખ્યાનું વર્ણન</strong> કરી તેના અર્થમાં વધારો કરે તેને <strong>'વિશેષણ'</strong> કહેવાય છે.
                             </TheoryListItem>

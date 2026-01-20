@@ -23,7 +23,7 @@ export const chapter9Theory = [
                 >
                     <div style={{ marginTop: '15px' }}>
                         <TheorySubHeading glass>સર્વનામ એટલે શું?</TheorySubHeading>
-                        <TheoryList color="#ffffff">
+                        <TheoryList color="#000000">
                             <TheoryListItem>
                                 વાતચીતમાં કે વર્ણનમાં એક વાર 'નામ' કે 'સંજ્ઞા' પ્રયોજાય પછી વારંવાર એ 'સંજ્ઞા'નો પ્રયોગ અર્થગ્રહણમાં બાધક બને છે.
                             </TheoryListItem>

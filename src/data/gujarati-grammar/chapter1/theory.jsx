@@ -22,7 +22,7 @@ export const chapter1Theory = [
                 >
                     <div style={{ marginTop: '15px' }}>
                         <TheorySubHeading glass>વ્યાકરણ એટલે શું?</TheorySubHeading>
-                        <TheoryList color="#ffffff">
+                        <TheoryList color="#000000">
                             <TheoryListItem>
                                 <strong>અર્થ:</strong> ‘સ્પષ્ટીકરણ’ (વિ + આ + કૃ + અન)
                             </TheoryListItem>
