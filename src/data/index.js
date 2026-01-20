@@ -18,6 +18,10 @@ import { chapter9Theory } from './gujarati-grammar/chapter9/theory.jsx';
 import { chapter9Tests } from './gujarati-grammar/chapter9/test.js';
 import { chapter10Theory } from './gujarati-grammar/chapter10/theory.jsx';
 import { chapter10Tests } from './gujarati-grammar/chapter10/test.js';
+import { chapter11Theory } from './gujarati-grammar/chapter11/theory.jsx';
+import { chapter11Tests } from './gujarati-grammar/chapter11/test.js';
+import { chapter12Theory } from './gujarati-grammar/chapter12/theory.jsx';
+import { chapter12Tests } from './gujarati-grammar/chapter12/test.js';
 
 export const chaptersData = [
     {
@@ -89,5 +93,19 @@ export const chaptersData = [
         desc: 'વિશેષણની વ્યાખ્યા, તેના પ્રકારો (ગુણવાચક, સંખ્યાવાચક, વગેરે) અને ઉદાહરણો.',
         theory: chapter10Theory,
         tests: chapter10Tests
+    },
+    {
+        id: 11,
+        name: 'ક્રિયાવિશેષણ (Adverb)',
+        desc: ' ક્રિયાવિશેષણનો અર્થ, તેના ૧૧ પ્રકારો (રીતિવાચક, સ્થળવાચક, વગેરે) અને ઉદાહરણો.',
+        theory: chapter11Theory,
+        tests: chapter11Tests
+    },
+    {
+        id: 12,
+        name: 'ક્રિયાપદ (Verb)',
+        desc: 'ક્રિયાપદની વ્યાખ્યા, પ્રકારો, કાળ અને અર્થની વિસ્તૃત સમજૂતી.',
+        theory: chapter12Theory,
+        tests: chapter12Tests
     }
 ];

@@ -13,6 +13,10 @@ function Theory() {
 
     return (
         <div style={{ width: '100%', minHeight: '100vh', position: 'relative' }}>
+            <div className="theory-bg-container">
+                <div className="rainbow-pastel-bg"></div>
+            </div>
+
             <div className="theory-header-outside">
                 <button onClick={() => navigate('/chapters')} className="back-btn-theory-outside">
                     ←
