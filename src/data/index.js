@@ -22,6 +22,22 @@ import { chapter11Theory } from './gujarati-grammar/chapter11/theory.jsx';
 import { chapter11Tests } from './gujarati-grammar/chapter11/test.js';
 import { chapter12Theory } from './gujarati-grammar/chapter12/theory.jsx';
 import { chapter12Tests } from './gujarati-grammar/chapter12/test.js';
+import { chapter13Theory } from './gujarati-grammar/chapter13/theory.jsx';
+import { chapter13Tests } from './gujarati-grammar/chapter13/test.js';
+import { chapter14Theory } from './gujarati-grammar/chapter14/theory.jsx';
+import { chapter14Tests } from './gujarati-grammar/chapter14/test.js';
+import { chapter15Theory } from './gujarati-grammar/chapter15/theory.jsx';
+import { chapter15Tests } from './gujarati-grammar/chapter15/test.js';
+import { chapter16Theory } from './gujarati-grammar/chapter16/theory.jsx';
+import { chapter16Tests } from './gujarati-grammar/chapter16/test.js';
+import { chapter17Theory } from './gujarati-grammar/chapter17/theory.jsx';
+import { chapter17Tests } from './gujarati-grammar/chapter17/test.js';
+import { chapter18Theory } from './gujarati-grammar/chapter18/theory.jsx';
+import { chapter18Tests } from './gujarati-grammar/chapter18/test.js';
+import { chapter19Theory } from './gujarati-grammar/chapter19/theory.jsx';
+import { chapter19Tests } from './gujarati-grammar/chapter19/test.js';
+import { chapter20Theory } from './gujarati-grammar/chapter20/theory.jsx';
+import { chapter20Tests } from './gujarati-grammar/chapter20/test.js';
 
 export const chaptersData = [
     {
@@ -107,5 +123,61 @@ export const chaptersData = [
         desc: 'ક્રિયાપદની વ્યાખ્યા, પ્રકારો, કાળ અને અર્થની વિસ્તૃત સમજૂતી.',
         theory: chapter12Theory,
         tests: chapter12Tests
+    },
+    {
+        id: 13,
+        name: 'કેવળપ્રયોગી (Interjection)',
+        desc: 'મનની લાગણી વ્યક્ત કરતાં સ્વતંત્ર ઉદ્ગાર શબ્દો અને તેના ૧૨ પ્રકારો.',
+        theory: chapter13Theory,
+        tests: chapter13Tests
+    },
+    {
+        id: 14,
+        name: 'નિપાત (Particle)',
+        desc: 'વિશેષ અર્થનો કે ભારનો બોધ કરાવનાર અવ્યય અને તેના ૫ પ્રકારો.',
+        theory: chapter14Theory,
+        tests: chapter14Tests
+    },
+    {
+        id: 15,
+        name: 'કૃદંત (Participles)',
+        desc: 'ક્રિયાપદની જેમ વર્તતા પણ વાક્યનો અર્થ પૂર્ણ ન કરતા પદો અને તેના ૬ પ્રકારો.',
+        theory: chapter15Theory,
+        tests: chapter15Tests
+    },
+    {
+        id: 16,
+        name: 'અનુગ અને નામયોગી (Suffixes & Prepositions)',
+        desc: 'વિભક્તિના પ્રત્યયો (અનુગ) અને વિભક્તિ સંબંધ દર્શાવતા અવ્યયો (નામયોગી).',
+        theory: chapter16Theory,
+        tests: chapter16Tests
+    },
+    {
+        id: 17,
+        name: 'સંયોજક (Conjunction)',
+        desc: 'જુદા જુદા શબ્દો, વાક્યો કે ઉપવાક્યોને જોડતા પદો અને તેના ૯ પ્રકારો.',
+        theory: chapter17Theory,
+        tests: chapter17Tests
+    },
+    {
+        id: 18,
+        name: 'દ્વિરુક્ત અને રવાનુકારી',
+        desc: 'બેવડાતા શબ્દો (દ્વિરુક્ત) અને અવાજ સૂચવતા શબ્દો (રવાનુકારી).',
+        theory: chapter18Theory,
+        tests: chapter18Tests
+    },
+    {
+        id: 19,
+        name: 'પ્રત્યય (Prefix & Suffix)',
+        desc: 'શબ્દની આગળ કે પાછળ લાગતા પ્રત્યયો (પૂર્વગ-પરગ) અને તેના પ્રકારો.',
+        theory: chapter19Theory,
+        tests: chapter19Tests
+    },
+    {
+        id: 20,
+        name: 'જંકચર, સ્વરભાર, કાકુ, પ્લુતિ',
+        desc: 'ભાષાના વિશેષ ઘટકો: જંકચર, સ્વરભાર, કાકુ અને પ્લુતિ વિષે સમજ.',
+        theory: chapter20Theory,
+        tests: chapter20Tests
     }
 ];

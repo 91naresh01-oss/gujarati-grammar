@@ -195,49 +195,66 @@ function Test() {
     // Question Screen
     return (
         <div style={{ maxWidth: '650px', margin: '0 auto', padding: '20px' }}>
-            <div className="theory-header-outside" style={{
-                justifyContent: 'center',
-                marginBottom: '20px',
-                alignItems: 'center',
-                position: 'relative',
+            <div className="theory-title-pill" style={{
+                width: '100%',
+                padding: '10px 15px',
+                borderRadius: '50px',
+                background: '#3b82f6',
+                color: 'white',
                 display: 'flex',
-                width: '100%'
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                boxShadow: '0 4px 15px rgba(59, 130, 246, 0.4)',
+                marginBottom: '20px',
+                border: '2px solid rgba(255, 255, 255, 0.2)'
             }}>
                 <button
-                    className="back-btn-theory-outside"
                     onClick={() => setSelectedTestId(null)}
                     style={{
-                        width: '40px',
-                        height: '40px',
-                        fontSize: '1rem',
-                        position: 'absolute',
-                        left: '0',
-                        top: '50%',
-                        transform: 'translateY(-50%)'
+                        background: 'rgba(255,255,255,0.2)',
+                        border: 'none',
+                        borderRadius: '50%',
+                        width: '35px',
+                        height: '35px',
+                        color: 'white',
+                        fontSize: '1.2rem',
+                        cursor: 'pointer',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        flexShrink: 0
                     }}
                 >
                     ←
                 </button>
-                <div className="theory-title-pill" style={{
-                    padding: '12px 40px',
-                    minWidth: 'auto',
-                    fontSize: '1.1rem',
-                    fontWeight: '800',
+
+                <div style={{
+                    flex: 1,
+                    textAlign: 'center',
+                    padding: '0 10px',
+                    fontSize: '0.95rem',
+                    fontWeight: '700',
+                    lineHeight: '1.2',
                     display: 'flex',
+                    flexDirection: 'column',
                     alignItems: 'center',
-                    gap: '10px',
-                    background: '#3b82f6', // Force Blue Background
-                    color: 'white',        // Force White Text
-                    borderRadius: '50px',
-                    boxShadow: '0 4px 15px rgba(59, 130, 246, 0.4)',
-                    border: '2px solid rgba(255, 255, 255, 0.2)'
+                    justifyContent: 'center'
                 }}>
-                    <span>પ્રકરણ {id} : {chapter.name}</span>
-                    <span style={{ opacity: 0.8 }}>|</span>
-                    <span>{activeTest.name}</span>
+                    <span style={{ opacity: 0.95 }}>પ્રકરણ {id} : {chapter.name}</span>
+                    <span style={{ fontSize: '0.8rem', opacity: 0.8, fontWeight: 'normal', marginTop: '2px' }}>{activeTest.name}</span>
                 </div>
-                <div style={{ position: 'absolute', right: '5px', fontWeight: 'bold', color: '#3b82f6', fontSize: '0.9rem' }}>
-                    {currentQuestionIndex + 1}/{activeTest.questions.length}
+
+                <div style={{
+                    background: 'rgba(255,255,255,0.2)',
+                    padding: '5px 12px',
+                    borderRadius: '20px',
+                    fontSize: '0.9rem',
+                    fontWeight: 'bold',
+                    flexShrink: 0,
+                    minWidth: '60px',
+                    textAlign: 'center'
+                }}>
+                    {currentQuestionIndex + 1} / {activeTest.questions.length}
                 </div>
             </div>
 
