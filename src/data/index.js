@@ -38,6 +38,12 @@ import { chapter19Theory } from './gujarati-grammar/chapter19/theory.jsx';
 import { chapter19Tests } from './gujarati-grammar/chapter19/test.js';
 import { chapter20Theory } from './gujarati-grammar/chapter20/theory.jsx';
 import { chapter20Tests } from './gujarati-grammar/chapter20/test.js';
+import { chapter21Theory } from './gujarati-grammar/chapter21/theory.jsx';
+import { chapter21Tests } from './gujarati-grammar/chapter21/test.js';
+import { chapter22Theory } from './gujarati-grammar/chapter22/theory.jsx';
+import { chapter22Tests } from './gujarati-grammar/chapter22/test.js';
+import { chapter23Theory } from './gujarati-grammar/chapter23/theory.jsx';
+import { chapter23Tests } from './gujarati-grammar/chapter23/test.js';
 
 export const chaptersData = [
     {
@@ -179,5 +185,26 @@ export const chaptersData = [
         desc: 'ભાષાના વિશેષ ઘટકો: જંકચર, સ્વરભાર, કાકુ અને પ્લુતિ વિષે સમજ.',
         theory: chapter20Theory,
         tests: chapter20Tests
+    },
+    {
+        id: 21,
+        name: 'વિરામચિહ્નો (Punctuation)',
+        desc: 'વાક્યમાં અર્થ સ્પષ્ટ કરવા વપરાતા ચિહ્નો જેમ કે પૂર્ણવિરામ, અલ્પવિરામ, પ્રશ્નાર્થ વગેરે.',
+        theory: chapter21Theory,
+        tests: chapter21Tests
+    },
+    {
+        id: 22,
+        name: 'અનુસ્વાર (Anusvar)',
+        desc: 'અનુસ્વારના નિયમો, લિંગ-વચન વ્યવસ્થા અને શબ્દભેદ વિષે વિસ્તૃત સમજ.',
+        theory: chapter22Theory,
+        tests: chapter22Tests
+    },
+    {
+        id: 23,
+        name: 'પ્રૂફરીડિંગ (Proofreading)',
+        desc: 'પ્રૂફવાચનની સમજ, નિયમો અને પ્રૂફ સુધારવા માટેની સંજ્ઞાઓ.',
+        theory: chapter23Theory,
+        tests: chapter23Tests
     }
 ];
