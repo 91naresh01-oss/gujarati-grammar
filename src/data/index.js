@@ -44,6 +44,8 @@ import { chapter22Theory } from './gujarati-grammar/chapter22/theory.jsx';
 import { chapter22Tests } from './gujarati-grammar/chapter22/test.js';
 import { chapter23Theory } from './gujarati-grammar/chapter23/theory.jsx';
 import { chapter23Tests } from './gujarati-grammar/chapter23/test.js';
+import { chapter24Theory } from './gujarati-grammar/chapter24/theory.jsx';
+import { chapter24Tests } from './gujarati-grammar/chapter24/test.js';
 
 export const chaptersData = [
     {
@@ -206,5 +208,12 @@ export const chaptersData = [
         desc: 'પ્રૂફવાચનની સમજ, નિયમો અને પ્રૂફ સુધારવા માટેની સંજ્ઞાઓ.',
         theory: chapter23Theory,
         tests: chapter23Tests
+    },
+    {
+        id: 24,
+        name: 'વાક્યના પ્રકારો અને વાક્યપ્રયોગ (Sentence Types & Voice)',
+        desc: 'વાક્યના અંગો, રચના અને અર્થની દૃષ્ટિએ પ્રકારો, તેમજ કર્તરિ, કર્મણિ, ભાવે અને પ્રેરક પ્રયોગો.',
+        theory: chapter24Theory,
+        tests: chapter24Tests
     }
 ];

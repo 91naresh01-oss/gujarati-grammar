@@ -1,8 +1,10 @@
 export const chapter23Tests = [
     {
+        id: "t23-1",
         name: "Test 1 (Basic)",
         questions: [
             {
+                id: 1,
                 question: "'પ્રૂફ' એટલે શું?",
                 options: [
                     "છાપકામ માટેનું કાચું લખાણ",
@@ -10,9 +12,10 @@ export const chapter23Tests = [
                     "હાથે લખેલો પત્ર",
                     "કોમ્પ્યુટર ફાઇલ"
                 ],
-                answer: 0
+                answer: "છાપકામ માટેનું કાચું લખાણ"
             },
             {
+                id: 2,
                 question: "પ્રૂફરીડિંગ શા માટે કરવામાં આવે છે?",
                 options: [
                     "લખાણ લાંબું કરવા",
@@ -20,9 +23,10 @@ export const chapter23Tests = [
                     "ફોન્ટ બદલવા",
                     "પેજ વધારવા"
                 ],
-                answer: 1
+                answer: "ભૂલો દર્શાવવા અને સુધારવા"
             },
             {
+                id: 3,
                 question: "'λ' નિશાનીનો અર્થ શું થાય છે?",
                 options: [
                     "અક્ષર રદ કરો",
@@ -30,9 +34,10 @@ export const chapter23Tests = [
                     "જગ્યા કરો",
                     "લીટી સીધી કરો"
                 ],
-                answer: 1
+                answer: "અક્ષર ઉમેરો"
             },
             {
+                id: 4,
                 question: "'d' નિશાનીનો અર્થ શું થાય છે?",
                 options: [
                     "અક્ષર ઉમેરો",
@@ -40,9 +45,10 @@ export const chapter23Tests = [
                     "નવો ફકરો",
                     "માત્રા મૂકો"
                 ],
-                answer: 1
+                answer: "અક્ષર રદ કરો"
             },
             {
+                id: 5,
                 question: "'#' નિશાનીનો ઉપયોગ શું છે?",
                 options: [
                     "જગ્યા કરો / અક્ષર છૂટાં પાડો",
@@ -50,9 +56,10 @@ export const chapter23Tests = [
                     "લીટી ભેગી કરો",
                     "ફકરો સમાપ્ત કરો"
                 ],
-                answer: 0
+                answer: "જગ્યા કરો / અક્ષર છૂટાં પાડો"
             },
             {
+                id: 6,
                 question: "'Trans' નિશાનીનો અર્થ શું થાય છે?",
                 options: [
                     "અક્ષર રદ કરો",
@@ -60,9 +67,10 @@ export const chapter23Tests = [
                     "નવો ફકરો",
                     "માત્રા મૂકો"
                 ],
-                answer: 1
+                answer: "અક્ષરો કે શબ્દો અદલાબદલી કરો"
             },
             {
+                id: 7,
                 question: "'State' નિશાનીનો અર્થ શું થાય છે?",
                 options: [
                     "બદલો",
@@ -70,9 +78,10 @@ export const chapter23Tests = [
                     "યથાવત રાખો",
                     "ઉમેરો"
                 ],
-                answer: 2
+                answer: "યથાવત રાખો"
             },
             {
+                id: 8,
                 question: "'n.p' નિશાનીનો અર્થ શું થાય છે?",
                 options: [
                     "નવો ફકરો શરૂ કરો",
@@ -80,9 +89,10 @@ export const chapter23Tests = [
                     "અક્ષર રદ કરો",
                     "લીટી સીધી કરો"
                 ],
-                answer: 0
+                answer: "નવો ફકરો શરૂ કરો"
             },
             {
+                id: 9,
                 question: "'run on' નિશાનીનો ઉપયોગ ક્યારે થાય છે?",
                 options: [
                     "નવો ફકરો શરૂ કરવા",
@@ -90,9 +100,10 @@ export const chapter23Tests = [
                     "અક્ષર ઉમેરવા",
                     "માત્રા મૂકવા"
                 ],
-                answer: 1
+                answer: "લખાણ સળંગ રાખવા (નવો ફકરો નહીં)"
             },
             {
+                id: 10,
                 question: "પ્રૂફમાં નિશાનીઓ ક્યાં દર્શાવવામાં આવે છે?",
                 options: [
                     "ફક્ત ઉપર",
@@ -100,14 +111,16 @@ export const chapter23Tests = [
                     "જમણી કે ડાબી બાજુનાં હાંસિયામાં",
                     "વચ્ચે"
                 ],
-                answer: 2
+                answer: "જમણી કે ડાબી બાજુનાં હાંસિયામાં"
             }
         ]
     },
     {
+        id: "t23-2",
         name: "Test 2 (Advanced)",
         questions: [
             {
+                id: 1,
                 question: "'w.f.' નિશાનીનો અર્થ શું થાય છે?",
                 options: [
                     "ખરા ફોન્ટનો અક્ષર મૂકો",
@@ -115,9 +128,10 @@ export const chapter23Tests = [
                     "નવો ફકરો",
                     "અક્ષર રદ કરો"
                 ],
-                answer: 0
+                answer: "ખરા ફોન્ટનો અક્ષર મૂકો"
             },
             {
+                id: 2,
                 question: "'=' નિશાનીનો ઉપયોગ શું છે?",
                 options: [
                     "સરખા કરો",
@@ -125,9 +139,10 @@ export const chapter23Tests = [
                     "ભેગું કરો",
                     "છૂટું પાડો"
                 ],
-                answer: 1
+                answer: "લીટીઓ સીધી કરો"
             },
             {
+                id: 3,
                 question: "'|-' નિશાનીનો અર્થ શું થાય છે?",
                 options: [
                     "હાઈફન કે ડેશ ઉમેરો",
@@ -135,9 +150,10 @@ export const chapter23Tests = [
                     "નવો ફકરો",
                     "જગ્યા કરો"
                 ],
-                answer: 0
+                answer: "હાઈફન કે ડેશ ઉમેરો"
             },
             {
+                id: 4,
                 question: "'()' નિશાનીનો ઉપયોગ શું છે?",
                 options: [
                     "કૌંસ ઉમેરો",
@@ -145,9 +161,10 @@ export const chapter23Tests = [
                     "નવો ફકરો",
                     "માત્રા મૂકો"
                 ],
-                answer: 1
+                answer: "અક્ષર વચ્ચેની જગ્યા ભેગી કરો"
             },
             {
+                id: 5,
                 question: "'ப' નિશાનીનો અર્થ શું થાય છે?",
                 options: [
                     "અક્ષર ઉપર ચઢાવો",
@@ -155,9 +172,10 @@ export const chapter23Tests = [
                     "અક્ષર રદ કરો",
                     "જગ્યા કરો"
                 ],
-                answer: 1
+                answer: "નીચે ઊતરેલ અક્ષર ઉપર લો"
             },
             {
+                id: 6,
                 question: "'Π' નિશાનીનો અર્થ શું થાય છે?",
                 options: [
                     "ઉપર ચઢેલ અક્ષર નીચે ઊતારો",
@@ -165,9 +183,10 @@ export const chapter23Tests = [
                     "અક્ષર ઉમેરો",
                     "લીટી સીધી કરો"
                 ],
-                answer: 0
+                answer: "ઉપર ચઢેલ અક્ષર નીચે ઊતારો"
             },
             {
+                id: 7,
                 question: "પ્રૂફ કેટલી વખત વાંચવામાં આવે છે?",
                 options: [
                     "ફક્ત એક વાર",
@@ -175,9 +194,10 @@ export const chapter23Tests = [
                     "ત્રણ વાર જ",
                     "ક્યારેય નહીં"
                 ],
-                answer: 1
+                answer: "જરૂર પ્રમાણે એક-બે વાર કે વધારે"
             },
             {
+                id: 8,
                 question: "'/' નિશાનીનો અર્થ શું થાય છે?",
                 options: [
                     "અક્ષરને બદલીને મૂકો",
@@ -185,9 +205,10 @@ export const chapter23Tests = [
                     "નવો ફકરો",
                     "જગ્યા કરો"
                 ],
-                answer: 0
+                answer: "અક્ષરને બદલીને મૂકો"
             },
             {
+                id: 9,
                 question: "મૂળ લખાણમાં 'State' માટે કઈ નિશાની કરવામાં આવે છે?",
                 options: [
                     "λ",
@@ -195,9 +216,10 @@ export const chapter23Tests = [
                     "#",
                     "="
                 ],
-                answer: 1
+                answer: "...."
             },
             {
+                id: 10,
                 question: "પ્રૂફરીડિંગ કોણ કરે છે?",
                 options: [
                     "લેખક",
@@ -205,7 +227,7 @@ export const chapter23Tests = [
                     "વાચક",
                     "પ્રકાશક"
                 ],
-                answer: 1
+                answer: "પ્રૂફરીડર"
             }
         ]
     }
