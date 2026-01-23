@@ -27,14 +27,24 @@ function Theory() {
             </div>
 
             <div className="modern-theory-wrapper">
-                {chapter.theory.map((item, index) => (
-                    <div key={index} className="modern-theory-card">
-                        {item.title && <h2 className="modern-theory-title">{item.title}</h2>}
-                        <div className="modern-theory-content">
-                            {item.content}
-                        </div>
-                    </div>
-                ))}
+                {chapter.theory ? (
+                    Array.isArray(chapter.theory) ? (
+                        chapter.theory.map((item, index) => (
+                            <div key={index} className="modern-theory-card">
+                                {item.title && <h2 className="modern-theory-title">{item.title}</h2>}
+                                <div className="modern-theory-content">
+                                    {item.content}
+                                </div>
+                            </div>
+                        ))
+                    ) : typeof chapter.theory === 'function' || typeof chapter.theory === 'object' ? (
+                        <chapter.theory />
+                    ) : (
+                        <div>Theory content format not recognized.</div>
+                    )
+                ) : (
+                    <div>No theory content available.</div>
+                )}
             </div>
         </div>
     );

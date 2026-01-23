@@ -227,10 +227,10 @@ export const TheoryTable = ({ children }) => (
     </div>
 );
 
-export const TheoryTableHeader = ({ headers }) => (
+export const TheoryTableHeader = ({ headers, children }) => (
     <thead>
         <tr>
-            {headers.map((h, i) => (
+            {headers ? headers.map((h, i) => (
                 <th key={i} style={{
                     background: '#f9fafb',
                     padding: '12px',
@@ -242,14 +242,14 @@ export const TheoryTableHeader = ({ headers }) => (
                 }}>
                     {h}
                 </th>
-            ))}
+            )) : children}
         </tr>
     </thead>
 );
 
-export const TheoryTableRow = ({ cells, isEven = false }) => (
+export const TheoryTableRow = ({ cells, isEven = false, children }) => (
     <tr style={{ background: isEven ? '#f9fafb' : '#fff' }}>
-        {cells.map((c, i) => (
+        {cells ? cells.map((c, i) => (
             <td key={i} style={{
                 padding: '12px',
                 borderBottom: '1px solid #f3f4f6',
@@ -258,7 +258,7 @@ export const TheoryTableRow = ({ cells, isEven = false }) => (
             }}>
                 {c}
             </td>
-        ))}
+        )) : children}
     </tr>
 );
 

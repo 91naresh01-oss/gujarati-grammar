@@ -26,6 +26,10 @@ import { chapter13Theory } from './gujarati-grammar/chapter13/theory.jsx';
 import { chapter13Tests } from './gujarati-grammar/chapter13/test.js';
 import { chapter14Theory } from './gujarati-grammar/chapter14/theory.jsx';
 import { chapter14Tests } from './gujarati-grammar/chapter14/test.js';
+import { chapter25Theory } from './gujarati-grammar/chapter25/theory.jsx';
+import { chapter25Tests } from './gujarati-grammar/chapter25/test.js';
+import { chapter26Theory } from './gujarati-grammar/chapter26/theory.jsx';
+import { chapter26Tests } from './gujarati-grammar/chapter26/test.js';
 import { chapter15Theory } from './gujarati-grammar/chapter15/theory.jsx';
 import { chapter15Tests } from './gujarati-grammar/chapter15/test.js';
 import { chapter16Theory } from './gujarati-grammar/chapter16/theory.jsx';
@@ -46,6 +50,10 @@ import { chapter23Theory } from './gujarati-grammar/chapter23/theory.jsx';
 import { chapter23Tests } from './gujarati-grammar/chapter23/test.js';
 import { chapter24Theory } from './gujarati-grammar/chapter24/theory.jsx';
 import { chapter24Tests } from './gujarati-grammar/chapter24/test.js';
+import { chapter27Theory } from './gujarati-grammar/chapter27/theory.jsx';
+import { chapter27Tests } from './gujarati-grammar/chapter27/test.js';
+import { chapter28Theory } from './gujarati-grammar/chapter28/theory.jsx';
+import { chapter28Tests } from './gujarati-grammar/chapter28/test.js';
 
 export const chaptersData = [
     {
@@ -215,5 +223,33 @@ export const chaptersData = [
         desc: 'વાક્યના અંગો, રચના અને અર્થની દૃષ્ટિએ પ્રકારો, તેમજ કર્તરિ, કર્મણિ, ભાવે અને પ્રેરક પ્રયોગો.',
         theory: chapter24Theory,
         tests: chapter24Tests
+    },
+    {
+        id: 25,
+        name: 'લેખનશુદ્ધિ / ભાષાશુદ્ધિ (Writing Purity)',
+        desc: 'ભાષામાં લખાણ બાબત થતી ભૂલો, ઉચ્ચારણસામ્ય, વર્ણસામ્ય, અનુસ્વાર અને વ્યાકરણના નિયમોની સમજ.',
+        theory: chapter25Theory,
+        tests: chapter25Tests
+    },
+    {
+        id: 26,
+        name: 'જોડણી (Spelling)',
+        desc: 'શબ્દોની સાચી જોડણી, ઉચ્ચારણગત નિયમો, જોડાક્ષર, અનુસ્વાર અને અંગસાધક પ્રત્યયોની સમજ.',
+        theory: chapter26Theory,
+        tests: chapter26Tests
+    },
+    {
+        id: 27,
+        name: 'સંધિ (Sandhi)',
+        desc: 'સંધિની વ્યાખ્યા, વારસાગત લાક્ષણિકતાઓ અને સ્વર, વ્યંજન તથા વિસર્ગ સંધિના નિયમો.',
+        theory: chapter27Theory,
+        tests: chapter27Tests
+    },
+    {
+        id: 28,
+        name: 'વિભક્તિ (Vibhakti)',
+        desc: 'વિભક્તિ એટલે શું, તેના પ્રત્યયો અને ૮ પ્રકારો (કર્તા, કર્મ, વગેરે) ની સમજૂતી.',
+        theory: chapter28Theory,
+        tests: chapter28Tests
     }
 ];
