@@ -54,6 +54,8 @@ import { chapter27Theory } from './gujarati-grammar/chapter27/theory.jsx';
 import { chapter27Tests } from './gujarati-grammar/chapter27/test.js';
 import { chapter28Theory } from './gujarati-grammar/chapter28/theory.jsx';
 import { chapter28Tests } from './gujarati-grammar/chapter28/test.js';
+import { chapter29Theory } from './gujarati-grammar/chapter29/theory.jsx';
+import { chapter29Tests } from './gujarati-grammar/chapter29/test.js';
 
 export const chaptersData = [
     {
@@ -251,5 +253,12 @@ export const chaptersData = [
         desc: 'વિભક્તિ એટલે શું, તેના પ્રત્યયો અને ૮ પ્રકારો (કર્તા, કર્મ, વગેરે) ની સમજૂતી.',
         theory: chapter28Theory,
         tests: chapter28Tests
+    },
+    {
+        id: 29,
+        name: 'અલંકાર (Alankar)',
+        desc: 'કાવ્યની શોભા વધારતા શબ્દાલંકાર અને અર્થાલંકારના પ્રકારોની વિસ્તૃત સમજ.',
+        theory: chapter29Theory,
+        tests: chapter29Tests
     }
 ];

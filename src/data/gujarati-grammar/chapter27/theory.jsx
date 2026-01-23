@@ -23,8 +23,7 @@ export const chapter27Theory = [
                 {/* Header Section */}
                 <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-6 text-white text-center shadow-lg mb-6">
                     <h1 className="text-2xl font-bold mb-2">📚 ગુજરાતી વ્યાકરણ: સંધિ (Sandhi)</h1>
-                    <h2 className="text-xl font-semibold text-yellow-200">🏛️ Van Academy</h2>
-                    <p className="mt-2 opacity-90">Contact No: 87582 77555, 87583 77555</p>
+
                 </div>
 
                 {/* Introduction Section */}
