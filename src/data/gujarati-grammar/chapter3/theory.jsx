@@ -70,7 +70,7 @@ export const chapter3Theory = [
                 <TheoryCard>
                     <TheoryHeading color="#6d28d9">📢 સ્વરોનું ઉચ્ચારણ સ્થાન</TheoryHeading>
                     <TheoryTable>
-                        <TheoryTableHeader headers={["સ્થાન", "સ્વર"]} />
+                        <TheoryTableHeader theme="purple" headers={["સ્થાન", "સ્વર"]} />
                         <tbody>
                             {[
                                 ["કંઠ્ય", "અ, આ"],

@@ -64,7 +64,7 @@ export const chapter23Theory = [
                     <TheoryText>નીચે મુજબની નિશાનીઓ લખાણ સુધારવા માટે વપરાય છે:</TheoryText>
 
                     <TheoryTable>
-                        <TheoryTableHeader headers={['હાંસિયામાં નિશાની', 'નિશાનીનો અર્થ', 'મૂળ લખાણમાં નિશાની']} />
+                        <TheoryTableHeader theme="cyan" headers={['હાંસિયામાં નિશાની', 'નિશાનીનો અર્થ', 'મૂળ લખાણમાં નિશાની']} />
                         <tbody>
                             {[
                                 ['/', 'અક્ષરને બદલીને મૂકો', '—'],

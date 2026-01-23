@@ -101,7 +101,7 @@ export const chapter24Theory = [
                 <TheoryCard>
                     <TheoryHeading color="#db2777">૪. વાક્યના પ્રકારો (અર્થની દૃષ્ટિએ)</TheoryHeading>
                     <TheoryTable>
-                        <TheoryTableHeader headers={['પ્રકાર', 'વર્ણન', 'ઉદાહરણ']} />
+                        <TheoryTableHeader theme="green" headers={['પ્રકાર', 'વર્ણન', 'ઉદાહરણ']} />
                         <tbody>
                             {[
                                 ['૧. વિધાન વાક્ય', 'હકીકતનું સીધું કથન', 'હું કાલે અમદાવાદ આવીશ.'],

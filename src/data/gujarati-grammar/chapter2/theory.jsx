@@ -80,7 +80,7 @@ export const chapter2Theory = [
 
                     <TheorySubHeading>સરખામણી કોષ્ટક</TheorySubHeading>
                     <TheoryTable>
-                        <TheoryTableHeader headers={["તત્સમ (સંસ્કૃત)", "તદ્ભવ (ગુજરાતી)"]} />
+                        <TheoryTableHeader theme="teal" headers={["તત્સમ (સંસ્કૃત)", "તદ્ભવ (ગુજરાતી)"]} />
                         <tbody>
                             {[
                                 ["કર્ણ", "કાન"],

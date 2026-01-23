@@ -51,7 +51,7 @@ export const chapter10Theory = [
                     <TheoryHeading>વિશેષણના પ્રકારો (વર્ગીકરણ)</TheoryHeading>
                     <TheoryText>નીચે મુજબ ત્રણ દૃષ્ટિએ વિશેષણના પ્રકાર પડે છે:</TheoryText>
                     <TheoryTable>
-                        <TheoryTableHeader headers={['અર્થની દૃષ્ટિએ', 'સ્વરૂપની દૃષ્ટિએ', 'સ્થાનની દૃષ્ટિએ']} />
+                        <TheoryTableHeader theme="rose" headers={['અર્થની દૃષ્ટિએ', 'સ્વરૂપની દૃષ્ટિએ', 'સ્થાનની દૃષ્ટિએ']} />
                         <tbody>
                             <TheoryTableRow cells={['૧. ગુણવાચક વિશેષણ', '૧. વિકારી વિશેષણ', '૧. અનુવાદ્ય વિશેષણ']} />
                             <TheoryTableRow cells={['૨. સંખ્યાવાચક વિશેષણ', '૨. અવિકારી વિશેષણ', '૨. વિધેય વિશેષણ']} isEven />
@@ -201,7 +201,7 @@ export const chapter10Theory = [
                     <TheorySubHeading>નામ પરથી બનતા વિશેષણો (યાદી)</TheorySubHeading>
                     <div style={{ maxHeight: '300px', overflowY: 'auto' }}>
                         <TheoryTable>
-                            <TheoryTableHeader headers={['નામ', 'વિશેષણ', 'નામ', 'વિશેષણ']} />
+                            <TheoryTableHeader theme="rose" headers={['નામ', 'વિશેષણ', 'નામ', 'વિશેષણ']} />
                             <tbody>
                                 <TheoryTableRow cells={['જ્ઞાન', 'જ્ઞાની', 'આબરૂ', 'આબરૂદાર']} />
                                 <TheoryTableRow cells={['રસ', 'રસિક', 'માર', 'મારકણું']} isEven />

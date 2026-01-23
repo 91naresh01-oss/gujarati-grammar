@@ -301,7 +301,7 @@ export const chapter25Theory = [
             <div className="modern-theory-wrapper">
                 <GradientCard heading="૧૭. સમાન અર્થ ધરાવતા અલગ-અલગ શબ્દો" theme="red" icon="❌">
                     <TheoryTable>
-                        <TheoryTableHeader headers={['અશુદ્ધ', 'શુદ્ધ']} />
+                        <TheoryTableHeader theme="rose" headers={['અશુદ્ધ', 'શુદ્ધ']} />
                         <tbody>
                             <TheoryTableRow cells={['અંજળપાણી', 'અંજળ']} />
                             <TheoryTableRow cells={['યથાશક્તિપ્રમાણે', 'યથાશક્તિ; શક્તિ પ્રમાણે']} isEven />
@@ -323,7 +323,7 @@ export const chapter25Theory = [
                         વાક્ય વ્યાકરણની દૃષ્ટિએ સાચું હોય પણ વ્યવહારમાં તે પ્રયોગ ખોટો હોય તો વ્યવહારમાં સ્વીકાર્ય હોય તે પ્રયોગ અપનાવવો.
                     </TheoryText>
                     <TheoryTable>
-                        <TheoryTableHeader headers={['ખોટું (વ્યવહારમાં અસ્વીકાર્ય)', 'ખરું (વ્યવહારમાં સ્વીકાર્ય)']} />
+                        <TheoryTableHeader theme="rose" headers={['ખોટું (વ્યવહારમાં અસ્વીકાર્ય)', 'ખરું (વ્યવહારમાં સ્વીકાર્ય)']} />
                         <tbody>
                             <TheoryTableRow cells={['મેં નાળિયેર ફોડયું', 'મેં શ્રીફળ વધેર્યું']} />
                             <TheoryTableRow cells={['મરણનું સરઘસ', 'સ્મશાનયાત્રા']} isEven />

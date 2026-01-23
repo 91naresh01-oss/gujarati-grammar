@@ -67,7 +67,7 @@ export const chapter5Theory = [
 
                     <TheorySubHeading color="#9f1239" bg="#fff1f2">૧. 'દ' ના જોડાક્ષર</TheorySubHeading>
                     <TheoryTable>
-                        <TheoryTableHeader headers={["જોડ", "ઉદાહરણ", "વિગ્રહ"]} />
+                        <TheoryTableHeader theme="amber" headers={["જોડ", "ઉદાહરણ", "વિગ્રહ"]} />
                         <tbody>
                             {[
                                 ["દ+દ=દ્દ", "મુદ્દો", "મ્+ઉ+દ્+દ્+ઓ"],
@@ -83,7 +83,7 @@ export const chapter5Theory = [
 
                     <TheorySubHeading color="#9f1239" bg="#fff1f2">૨. 'ધ' ના જોડાક્ષર</TheorySubHeading>
                     <TheoryTable>
-                        <TheoryTableHeader headers={["જોડ", "ઉદાહરણ", "વિગ્રહ"]} />
+                        <TheoryTableHeader theme="amber" headers={["જોડ", "ઉદાહરણ", "વિગ્રહ"]} />
                         <tbody>
                             {[
                                 ["ધ+ય=ધ્ય", "સંધ્યા", "સ+અં+ધ્+ય્+આ"],

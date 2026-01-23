@@ -60,7 +60,7 @@ export const chapter19Theory = [
                 <TheoryCard>
                     <TheoryHeading color="#7c3aed">૧. તત્સમ પ્રત્યય (Sanskrit Prefixes)</TheoryHeading>
                     <TheoryTable>
-                        <TheoryTableHeader headers={['પ્રત્યય', 'ઉદાહરણ']} />
+                        <TheoryTableHeader theme="indigo" headers={['પ્રત્યય', 'ઉદાહરણ']} />
                         <tbody>
                             {[
                                 ['કુ', 'કુપુત્ર, કુસંસ્કાર, કુછંદ'],
@@ -96,7 +96,7 @@ export const chapter19Theory = [
                     <TheoryCard>
                         <TheoryHeading color="#db2777">૨. તત્સમ પરપ્રત્યય</TheoryHeading>
                         <TheoryTable>
-                            <TheoryTableHeader headers={['પ્રત્યય', 'ઉદાહરણ']} />
+                            <TheoryTableHeader theme="indigo" headers={['પ્રત્યય', 'ઉદાહરણ']} />
                             <tbody>
                                 {[
                                     ['(ઈ)', 'જ્ઞાની, પંથી'],
@@ -128,7 +128,7 @@ export const chapter19Theory = [
                     <TheoryCard>
                         <TheoryHeading color="#059669">૩. તદ્ભવ પ્રત્યય 🌿</TheoryHeading>
                         <TheoryTable>
-                            <TheoryTableHeader headers={['પ્રત્યય', 'ઉદાહરણ']} />
+                            <TheoryTableHeader theme="indigo" headers={['પ્રત્યય', 'ઉદાહરણ']} />
                             <tbody>
                                 {[
                                     ['ક', 'ઢોલક, દંડીક, છૂટક, નાનક'],
@@ -153,7 +153,7 @@ export const chapter19Theory = [
                     <TheoryCard>
                         <TheoryHeading color="#d97706">૪. અરબી-ફારસી પ્રત્યય 🕌</TheoryHeading>
                         <TheoryTable>
-                            <TheoryTableHeader headers={['પ્રત્યય', 'ઉદાહરણ']} />
+                            <TheoryTableHeader theme="indigo" headers={['પ્રત્યય', 'ઉદાહરણ']} />
                             <tbody>
                                 {[
                                     ['કમ', 'કમજોર'],
@@ -188,7 +188,7 @@ export const chapter19Theory = [
                 <GradientCard heading="૪. વિશેષ પૂર્વગ: શબ્દની પૂર્વે લાગતા પ્રત્યય" theme="amber" icon="⬅️">
                     <div style={{ marginTop: '15px' }}>
                         <TheoryTable>
-                            <TheoryTableHeader headers={['પ્રત્યય', 'ઉદાહરણ']} />
+                            <TheoryTableHeader theme="indigo" headers={['પ્રત્યય', 'ઉદાહરણ']} />
                             <tbody>
                                 {[
                                     ['અ', 'અસત્ય, અવ્યવહારુ, અરાજકતા'],

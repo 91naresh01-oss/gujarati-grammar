@@ -28,7 +28,7 @@ export const chapter20Theory = [
 
                         <TheorySubHeading glass>ઉદાહરણો (સીમાસંધિનો પ્રભાવ)</TheorySubHeading>
                         <TheoryTable>
-                            <TheoryTableHeader headers={['ક્રમ', 'વાક્ય ૧ (સામાન્ય)', 'વાક્ય ૨ (જંકચર સાથે)']} />
+                            <TheoryTableHeader theme="orange" headers={['ક્રમ', 'વાક્ય ૧ (સામાન્ય)', 'વાક્ય ૨ (જંકચર સાથે)']} />
                             <tbody>
                                 {[
                                     ['૧', 'પોપટલાલ મરચૂ ખાય છે.', 'પોપટ લાલ મરચુ ખાય છે.'],
@@ -66,7 +66,7 @@ export const chapter20Theory = [
                     </HighlightBox>
 
                     <TheoryTable>
-                        <TheoryTableHeader headers={['ક્રમ', 'વાક્ય', 'ભાવ / અર્થ']} />
+                        <TheoryTableHeader theme="orange" headers={['ક્રમ', 'વાક્ય', 'ભાવ / અર્થ']} />
                         <tbody>
                             {[
                                 ['૧', 'બહેન મંદિર પાછળ છે.', '(‘બહેન ક્યાં છે’ નો જવાબ)'],

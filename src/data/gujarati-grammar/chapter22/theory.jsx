@@ -75,7 +75,7 @@ export const chapter22Theory = [
                     <TheoryText>અનુસ્વાર હોવાથી કે ન હોવાથી શબ્દના અર્થમાં થતો ફેરફાર:</TheoryText>
 
                     <TheoryTable>
-                        <TheoryTableHeader headers={['અનુસ્વાર વગર', 'અર્થ', 'અનુસ્વાર સાથે', 'અર્થ']} />
+                        <TheoryTableHeader theme="pink" headers={['અનુસ્વાર વગર', 'અર્થ', 'અનુસ્વાર સાથે', 'અર્થ']} />
                         <tbody>
                             {[
                                 ["આખુ", "ઉંદર", "આખું", "બધું"],
@@ -117,7 +117,7 @@ export const chapter22Theory = [
 
                     <div style={{ marginTop: '20px' }}>
                         <TheoryTable>
-                            <TheoryTableHeader headers={['શબ્દ પ્રકાર', 'પુંલ્લિંગ', 'સ્ત્રીલિંગ', 'નપું. (એકવચન)', 'નપું. (બહુવચન)']} />
+                            <TheoryTableHeader theme="pink" headers={['શબ્દ પ્રકાર', 'પુંલ્લિંગ', 'સ્ત્રીલિંગ', 'નપું. (એકવચન)', 'નપું. (બહુવચન)']} />
                             <tbody>
                                 {[
                                     ['વિશેષણ', 'મોટો / મોટા', 'મોટી', 'મોટું', 'મોટાં'],

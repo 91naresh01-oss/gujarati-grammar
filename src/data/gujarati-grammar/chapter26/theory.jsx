@@ -143,7 +143,7 @@ export const chapter26Theory = [
                     <TheoryHeading>૩. જોડાક્ષર</TheoryHeading>
                     <TheoryText>મૂળ શબ્દમાં જોડાક્ષર પહેલાંના <strong>'ઈ' કે ‘ઉ’ હ્રસ્વ</strong> હોય છે.</TheoryText>
                     <TheoryTable>
-                        <TheoryTableHeader headers={['ઈ (હ્રસ્વ)', 'ઉ (હ્રસ્વ)']} />
+                        <TheoryTableHeader theme="blue" headers={['ઈ (હ્રસ્વ)', 'ઉ (હ્રસ્વ)']} />
                         <tbody>
                             <TheoryTableRow cells={['ઈસ્ત્રી, ચિઠ્ઠી, ડિગ્રી, રિક્ષા, લિજ્જત, પિસ્તાળીસ, બિસ્તરો', 'ઉલ્લુ, તુક્કો, હુન્નર, ભુટ્ટો, કુપ્પી, મુન્નો, શુદ્ધ']} />
                             <TheoryTableRow cells={['કિસ્સો, જિલ્લો, પિસ્તા, લિફ્ટ, નિશ્વાસ, શિસ્ત, ઇસ્તરી', 'કુસ્તી, સુધ્ધાં, ઉશ્કેરાટ, ઘુમ્મટ, ગુચ્છો, હુક્કો, રુક્કો']} isEven />
@@ -293,7 +293,7 @@ export const chapter26Theory = [
             <div className="modern-theory-wrapper">
                 <GradientCard heading="જોડણીમાં સામાન્ય રીતે થતી ભૂલો" theme="red" icon="❌">
                     <TheoryTable>
-                        <TheoryTableHeader headers={['અશુદ્ધ', 'શુદ્ધ', 'અશુદ્ધ', 'શુદ્ધ']} />
+                        <TheoryTableHeader theme="blue" headers={['અશુદ્ધ', 'શુદ્ધ', 'અશુદ્ધ', 'શુદ્ધ']} />
                         <tbody>
                             <TheoryTableRow cells={['નિવીદા', 'નિવિદા', 'લાયબ્રેરી', 'લાઈબ્રેરી']} />
                             <TheoryTableRow cells={['નીતિવાન', 'નીતિમાન', 'લાયસન્સ', 'લાઈસન્સ']} isEven />

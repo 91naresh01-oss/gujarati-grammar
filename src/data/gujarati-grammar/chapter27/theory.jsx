@@ -94,7 +94,7 @@ export const chapter27Theory = [
                         <TheorySubHeading>(ક) સજાતીય દીર્ઘ સંધિ</TheorySubHeading>
                         <TheoryText>જ્યારે બે સજાતીય સ્વરો મળે છે ત્યારે તે દીર્ઘ બને છે.</TheoryText>
                         <TheoryTable>
-                            <TheoryTableHeader headers={['સ્વર (જોડાણ)', 'સંધિસ્વર', 'ઉદાહરણ (છૂટા પાડો)', 'ઉદાહરણ (જોડો)']} />
+                            <TheoryTableHeader theme="teal" headers={['સ્વર (જોડાણ)', 'સંધિસ્વર', 'ઉદાહરણ (છૂટા પાડો)', 'ઉદાહરણ (જોડો)']} />
                             <tbody>
                                 <TheoryTableRow cells={['અ + અ', 'આ', 'સૂર્ય + અસ્ત', 'સૂર્યાસ્ત']} />
                                 <TheoryTableRow cells={['અ + આ', 'આ', 'વાત + આવરણ', 'વાતાવરણ']} isEven />
@@ -115,7 +115,7 @@ export const chapter27Theory = [
                     <div className="mt-6">
                         <TheorySubHeading>(ખ) વૃદ્ધિ સંધિ (સંયુક્ત સ્વર)</TheorySubHeading>
                         <TheoryTable>
-                            <TheoryTableHeader headers={['સ્વર', 'સંધિસ્વર', 'ઉદાહરણ']} />
+                            <TheoryTableHeader theme="teal" headers={['સ્વર', 'સંધિસ્વર', 'ઉદાહરણ']} />
                             <tbody>
                                 <TheoryTableRow cells={['અ + એ', 'ઐ', 'પુત્ર + એષણા = પુત્રૈષણા']} />
                                 <TheoryTableRow cells={['આ + એ', 'ઐ', 'તથા + એવ = તથૈવ']} isEven />
@@ -132,7 +132,7 @@ export const chapter27Theory = [
                     <div className="mt-6">
                         <TheorySubHeading>(ગ) ગુણ સંધિ (વિજાતીય સંધિનો પ્રકાર)</TheorySubHeading>
                         <TheoryTable>
-                            <TheoryTableHeader headers={['સ્વર', 'પરિણામ', 'ઉદાહરણ']} />
+                            <TheoryTableHeader theme="teal" headers={['સ્વર', 'પરિણામ', 'ઉદાહરણ']} />
                             <tbody>
                                 <TheoryTableRow cells={['અ/આ + ઈ/ઈ', 'એ', 'સ્વ + ઈચ્છા = સ્વેચ્છા, ગણ + ઈશ = ગણેશ, યથા + ઈષ્ટ = યથેષ્ટ']} />
                                 <TheoryTableRow cells={['અ/આ + ઉ/ઊ', 'ઓ', 'વન + ઉત્સવ = વનોત્સવ, નવ + ઊઢા = નવોઢા, ગંગા + ઊર્મિ = ગંગોર્મિ']} isEven />
@@ -144,7 +144,7 @@ export const chapter27Theory = [
                     <div className="mt-6">
                         <TheorySubHeading>(ઘ) યણ સંધિ</TheorySubHeading>
                         <TheoryTable>
-                            <TheoryTableHeader headers={['સ્વર', 'પરિવર્તન', 'ઉદાહરણ']} />
+                            <TheoryTableHeader theme="teal" headers={['સ્વર', 'પરિવર્તન', 'ઉદાહરણ']} />
                             <tbody>
                                 <TheoryTableRow cells={['ઈ/ઈ + અ/આ', 'ય', 'ઇતિ + આદિ = ઇત્યાદિ']} />
                                 <TheoryTableRow cells={['ઉ/ઊ + અ/આ', 'વ', 'સુ + આગત = સ્વાગત']} isEven />
@@ -156,7 +156,7 @@ export const chapter27Theory = [
                     <div className="mt-6">
                         <TheorySubHeading>(ચ) અયાદિ સંધિ</TheorySubHeading>
                         <TheoryTable>
-                            <TheoryTableHeader headers={['સ્વર', 'પરિવર્તન', 'ઉદાહરણ']} />
+                            <TheoryTableHeader theme="teal" headers={['સ્વર', 'પરિવર્તન', 'ઉદાહરણ']} />
                             <tbody>
                                 <TheoryTableRow cells={['એ + અ', 'અય', 'ને + અન = નયન']} />
                                 <TheoryTableRow cells={['ઐ + અ', 'આય', 'ગૈ + અક = ગાયક']} isEven />
@@ -368,7 +368,7 @@ export const chapter27Theory = [
                     <TheoryText>પરીક્ષામાં પૂછાયેલા કેટલાક મહત્વના સંધિ ઉદાહરણો:</TheoryText>
                     <div className="h-[600px] overflow-y-auto pr-2 custom-scrollbar">
                         <TheoryTable>
-                            <TheoryTableHeader headers={['શબ્દ', 'સંધિ વિગ્રહ']} />
+                            <TheoryTableHeader theme="teal" headers={['શબ્દ', 'સંધિ વિગ્રહ']} />
                             <tbody>
                                 {[
                                     ['સત્યાગ્રહ', 'સત્ય + આગ્રહ'],
