@@ -56,6 +56,8 @@ import { chapter28Theory } from './gujarati-grammar/chapter28/theory.jsx';
 import { chapter28Tests } from './gujarati-grammar/chapter28/test.js';
 import { chapter29Theory } from './gujarati-grammar/chapter29/theory.jsx';
 import { chapter29Tests } from './gujarati-grammar/chapter29/test.js';
+import { chapter30Theory } from './gujarati-grammar/chapter30/theory.jsx';
+import { chapter30Tests } from './gujarati-grammar/chapter30/test.js';
 
 export const chaptersData = [
     {
@@ -260,5 +262,12 @@ export const chaptersData = [
         desc: 'કાવ્યની શોભા વધારતા શબ્દાલંકાર અને અર્થાલંકારના પ્રકારોની વિસ્તૃત સમજ.',
         theory: chapter29Theory,
         tests: chapter29Tests
+    },
+    {
+        id: 30,
+        name: 'છંદ (Chhand)',
+        desc: 'અક્ષરમેળ અને માત્રામેળ છંદની સંપૂર્ણ સમજૂતી, ગણરચના અને લઘુ-ગુરુના નિયમો.',
+        theory: chapter30Theory,
+        tests: chapter30Tests
     }
 ];

@@ -112,15 +112,7 @@ export const TheoryCard = ({ title, icon, children, theme = 'indigo', style = {}
                     e.currentTarget.style.transform = 'translateY(0)';
                     e.currentTarget.style.boxShadow = themeConfig.shadows.card;
                 }}>
-                {/* Top Border Accent (Synchronized) */}
-                <div style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    height: '6px',
-                    background: activeTheme.grad
-                }} />
+
 
                 {(icon || title) && (
                     <div style={{ marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '18px' }}>
@@ -169,14 +161,16 @@ export const GradientCard = ({ title, heading, icon, description, theme = 'indig
     return (
         <TheoryThemeContext.Provider value={theme}>
             <div style={{
-                background: bgGradient,
+                background: 'rgba(255, 255, 255, 0.7)', // White Glosy
+                backdropFilter: 'blur(20px)',
+                WebkitBackdropFilter: 'blur(20px)',
                 padding: themeConfig.spacing.cardPadding,
                 borderRadius: themeConfig.radius.card,
                 marginBottom: themeConfig.spacing.elementGap,
-                boxShadow: '0 20px 40px -10px rgba(0,0,0,0.1)',
+                boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
                 position: 'relative',
                 overflow: 'hidden',
-                border: '1px solid rgba(255,255,255,0.4)'
+                border: '1px solid rgba(255, 255, 255, 0.8)'
             }}>
                 {/* Background Texture Circles */}
                 <div style={{
@@ -474,12 +468,22 @@ export const TheoryTable = ({ children, theme: explicitTheme }) => {
                 borderCollapse: 'collapse',
                 fontSize: themeConfig.fontSizes.tableCell
             }}>
+                {/* Render Header if exists */}
                 {React.Children.map(children, child => {
                     if (React.isValidElement(child) && child.type === TheoryTableHeader) {
                         return React.cloneElement(child, { theme: child.props.theme || theme });
                     }
-                    return child;
+                    return null;
                 })}
+                {/* Render Rows in TBody */}
+                <tbody>
+                    {React.Children.map(children, child => {
+                        if (React.isValidElement(child) && child.type !== TheoryTableHeader) {
+                            return child;
+                        }
+                        return null;
+                    })}
+                </tbody>
             </table>
         </div>
     );
