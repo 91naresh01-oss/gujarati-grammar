@@ -1,5 +1,20 @@
 import React, { createContext, useContext } from 'react';
 
+// --- 🕵️ Debug Helper: Safe Style Validator ---
+const safeStyle = (style, componentName) => {
+    if (!style) return {};
+    if (typeof style === 'string') {
+        console.error(`[CRITICAL STYLE ERROR] in <${componentName}>: style prop is a string!`, style);
+        console.trace(); // This prints the stack trace!
+        return { border: '5px solid red', position: 'relative' }; // Visual indicator
+    }
+    if (typeof style !== 'object') {
+        console.error(`[CRITICAL STYLE ERROR] in <${componentName}>: style prop is not an object!`, style);
+        return {};
+    }
+    return style;
+};
+
 // --- 🎯 Context for Automatic Theme Propagation ---
 const TheoryThemeContext = createContext('indigo');
 
@@ -90,6 +105,8 @@ const getTheme = (theme) => themePalette[theme] || themePalette.indigo;
 // 1. ✨ Theory Card (Unified Theme)
 export const TheoryCard = ({ title, icon, children, theme = 'indigo', style = {} }) => {
     const activeTheme = getTheme(theme);
+    const validStyle = safeStyle(style, 'TheoryCard'); // Validate
+
     return (
         <TheoryThemeContext.Provider value={theme}>
             <div style={{
@@ -102,7 +119,7 @@ export const TheoryCard = ({ title, icon, children, theme = 'indigo', style = {}
                 position: 'relative',
                 transition: 'transform 0.3s ease, box-shadow 0.3s ease',
                 overflow: 'hidden',
-                ...style
+                ...validStyle
             }}
                 onMouseEnter={(e) => {
                     e.currentTarget.style.transform = 'translateY(-4px)';
@@ -327,7 +344,7 @@ export const TheoryText = ({ children, highlight = false, color: customColor }) 
 );
 
 // --- ✅ List Components (Custom Checkmarks) ---
-export const TheoryList = ({ children }) => (
+export const TheoryList = ({ children, color }) => (
     <ul style={{ listStyle: 'none', padding: '0', margin: '12px 0' }}>
         {children}
     </ul>
