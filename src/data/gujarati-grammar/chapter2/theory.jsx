@@ -81,17 +81,15 @@ export const chapter2Theory = [
                     <TheorySubHeading>સરખામણી કોષ્ટક</TheorySubHeading>
                     <TheoryTable>
                         <TheoryTableHeader theme="teal" headers={["તત્સમ (સંસ્કૃત)", "તદ્ભવ (ગુજરાતી)"]} />
-                        <tbody>
-                            {[
-                                ["કર્ણ", "કાન"],
-                                ["દુગ્ધ", "દૂધ"],
-                                ["કર્મ", "કામ"],
-                                ["નિદ્રા", "ઊંઘ"],
-                                ["સર્પ", "સાપ"]
-                            ].map((row, i) => (
-                                <TheoryTableRow key={i} cells={row} isEven={i % 2 !== 0} />
-                            ))}
-                        </tbody>
+                        {[
+                            ["કર્ણ", "કાન"],
+                            ["દુગ્ધ", "દૂધ"],
+                            ["કર્મ", "કામ"],
+                            ["નિદ્રા", "ઊંઘ"],
+                            ["સર્પ", "સાપ"]
+                        ].map((row, i) => (
+                            <TheoryTableRow key={i} cells={row} isEven={i % 2 !== 0} />
+                        ))}
                     </TheoryTable>
                 </TheoryCard>
 

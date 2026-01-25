@@ -302,18 +302,16 @@ export const chapter25Theory = [
                 <GradientCard heading="૧૭. સમાન અર્થ ધરાવતા અલગ-અલગ શબ્દો" theme="red" icon="❌">
                     <TheoryTable>
                         <TheoryTableHeader theme="rose" headers={['અશુદ્ધ', 'શુદ્ધ']} />
-                        <tbody>
-                            <TheoryTableRow cells={['અંજળપાણી', 'અંજળ']} />
-                            <TheoryTableRow cells={['યથાશક્તિપ્રમાણે', 'યથાશક્તિ; શક્તિ પ્રમાણે']} isEven />
-                            <TheoryTableRow cells={['સહકુટુંબ સાથે', 'સહકુટુંબ']} />
-                            <TheoryTableRow cells={['સજ્જન માણસ', 'સજજન']} isEven />
-                            <TheoryTableRow cells={['દુર્જન પુરુષ', 'દુર્જન']} />
-                            <TheoryTableRow cells={['સુસ્વાગતમ્', 'સ્વાગત']} isEven />
-                            <TheoryTableRow cells={['એલિસબ્રિજ પુલ', 'એલિસબ્રિજ']} />
-                            <TheoryTableRow cells={['સવિનય સાથે', 'સવિનય']} isEven />
-                            <TheoryTableRow cells={['સાદર સહ', 'સાદર']} />
-                            <TheoryTableRow cells={['ગુલાબજળનું પાણી', 'ગુલાબજળ']} isEven />
-                        </tbody>
+                        <TheoryTableRow cells={['અંજળપાણી', 'અંજળ']} />
+                        <TheoryTableRow cells={['યથાશક્તિપ્રમાણે', 'યથાશક્તિ; શક્તિ પ્રમાણે']} isEven />
+                        <TheoryTableRow cells={['સહકુટુંબ સાથે', 'સહકુટુંબ']} />
+                        <TheoryTableRow cells={['સજ્જન માણસ', 'સજજન']} isEven />
+                        <TheoryTableRow cells={['દુર્જન પુરુષ', 'દુર્જન']} />
+                        <TheoryTableRow cells={['સુસ્વાગતમ્', 'સ્વાગત']} isEven />
+                        <TheoryTableRow cells={['એલિસબ્રિજ પુલ', 'એલિસબ્રિજ']} />
+                        <TheoryTableRow cells={['સવિનય સાથે', 'સવિનય']} isEven />
+                        <TheoryTableRow cells={['સાદર સહ', 'સાદર']} />
+                        <TheoryTableRow cells={['ગુલાબજળનું પાણી', 'ગુલાબજળ']} isEven />
                     </TheoryTable>
                 </GradientCard>
 
@@ -324,12 +322,10 @@ export const chapter25Theory = [
                     </TheoryText>
                     <TheoryTable>
                         <TheoryTableHeader theme="rose" headers={['ખોટું (વ્યવહારમાં અસ્વીકાર્ય)', 'ખરું (વ્યવહારમાં સ્વીકાર્ય)']} />
-                        <tbody>
-                            <TheoryTableRow cells={['મેં નાળિયેર ફોડયું', 'મેં શ્રીફળ વધેર્યું']} />
-                            <TheoryTableRow cells={['મરણનું સરઘસ', 'સ્મશાનયાત્રા']} isEven />
-                            <TheoryTableRow cells={['ભાઈની પત્ની', 'ભાભી']} />
-                            <TheoryTableRow cells={['ધાર્મિક સરઘસ', 'શોભાયાત્રા']} isEven />
-                        </tbody>
+                        <TheoryTableRow cells={['મેં નાળિયેર ફોડયું', 'મેં શ્રીફળ વધેર્યું']} />
+                        <TheoryTableRow cells={['મરણનું સરઘસ', 'સ્મશાનયાત્રા']} isEven />
+                        <TheoryTableRow cells={['ભાઈની પત્ની', 'ભાભી']} />
+                        <TheoryTableRow cells={['ધાર્મિક સરઘસ', 'શોભાયાત્રા']} isEven />
                     </TheoryTable>
                 </TheoryCard>
 

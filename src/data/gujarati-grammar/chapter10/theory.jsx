@@ -52,14 +52,12 @@ export const chapter10Theory = [
                     <TheoryText>નીચે મુજબ ત્રણ દૃષ્ટિએ વિશેષણના પ્રકાર પડે છે:</TheoryText>
                     <TheoryTable>
                         <TheoryTableHeader theme="rose" headers={['અર્થની દૃષ્ટિએ', 'સ્વરૂપની દૃષ્ટિએ', 'સ્થાનની દૃષ્ટિએ']} />
-                        <tbody>
-                            <TheoryTableRow cells={['૧. ગુણવાચક વિશેષણ', '૧. વિકારી વિશેષણ', '૧. અનુવાદ્ય વિશેષણ']} />
-                            <TheoryTableRow cells={['૨. સંખ્યાવાચક વિશેષણ', '૨. અવિકારી વિશેષણ', '૨. વિધેય વિશેષણ']} isEven />
-                            <TheoryTableRow cells={['૩. પરિમાણવાચક વિશેષણ', '', '']} />
-                            <TheoryTableRow cells={['૪. સાર્વનામિક વિશેષણ', '', '']} isEven />
-                            <TheoryTableRow cells={['૫. સંબંધવાચક વિશેષણ', '', '']} />
-                            <TheoryTableRow cells={['૬. વિશેષણનું વિશેષણ', '', '']} isEven />
-                        </tbody>
+                        <TheoryTableRow cells={['૧. ગુણવાચક વિશેષણ', '૧. વિકારી વિશેષણ', '૧. અનુવાદ્ય વિશેષણ']} />
+                        <TheoryTableRow cells={['૨. સંખ્યાવાચક વિશેષણ', '૨. અવિકારી વિશેષણ', '૨. વિધેય વિશેષણ']} isEven />
+                        <TheoryTableRow cells={['૩. પરિમાણવાચક વિશેષણ', '', '']} />
+                        <TheoryTableRow cells={['૪. સાર્વનામિક વિશેષણ', '', '']} isEven />
+                        <TheoryTableRow cells={['૫. સંબંધવાચક વિશેષણ', '', '']} />
+                        <TheoryTableRow cells={['૬. વિશેષણનું વિશેષણ', '', '']} isEven />
                     </TheoryTable>
                 </TheoryCard>
 
@@ -202,24 +200,22 @@ export const chapter10Theory = [
                     <div style={{ maxHeight: '300px', overflowY: 'auto' }}>
                         <TheoryTable>
                             <TheoryTableHeader theme="rose" headers={['નામ', 'વિશેષણ', 'નામ', 'વિશેષણ']} />
-                            <tbody>
-                                <TheoryTableRow cells={['જ્ઞાન', 'જ્ઞાની', 'આબરૂ', 'આબરૂદાર']} />
-                                <TheoryTableRow cells={['રસ', 'રસિક', 'માર', 'મારકણું']} isEven />
-                                <TheoryTableRow cells={['સમાજ', 'સામાજિક', 'રાષ્ટ્ર', 'રાષ્ટ્રીય']} />
-                                <TheoryTableRow cells={['કૃપા', 'કૃપાળુ', 'શરીર', 'શારીરિક']} isEven />
-                                <TheoryTableRow cells={['રીસ', 'રિસાળ', 'લોક', 'લૌકિક']} />
-                                <TheoryTableRow cells={['ચિંતન', 'ચિંતનીય', 'મનન', 'મનનીય']} isEven />
-                                <TheoryTableRow cells={['માનસ', 'માનસિક', 'માણસ', 'માણસાઇ']} />
-                                <TheoryTableRow cells={['હિન્દુસ્તાન', 'હિન્દુસ્તાની', 'નગર', 'નાગરિક']} isEven />
-                                <TheoryTableRow cells={['પક્ષ', 'પાક્ષિક', 'ભાગ્ય', 'ભાગ્યશાળી']} />
-                                <TheoryTableRow cells={['ગુજરાત', 'ગુજરાતી', 'પ્રારંભ', 'પ્રારંભિક']} isEven />
-                                <TheoryTableRow cells={['નીતિ', 'નૈતિક', 'ભાષા', 'ભાષાકીય']} />
-                                <TheoryTableRow cells={['નિશ્ચય', 'નિશ્ચિત', 'વિશ્વ', 'વૈશ્વિક']} isEven />
-                                <TheoryTableRow cells={['ઉપયોગ', 'ઉપયોગી', 'માન', 'માનનીય']} />
-                                <TheoryTableRow cells={['પૈસા', 'પૈસાદાર', 'પ્રસ્તાવ', 'પ્રાસ્તાવિક']} isEven />
-                                <TheoryTableRow cells={['ધન', 'ધનિક', 'વ્યવસ્થા', 'વ્યવસ્થિત']} />
-                                <TheoryTableRow cells={['કુટુંબ', 'કૌટુંબિક', '-', '-']} isEven />
-                            </tbody>
+                            <TheoryTableRow cells={['જ્ઞાન', 'જ્ઞાની', 'આબરૂ', 'આબરૂદાર']} />
+                            <TheoryTableRow cells={['રસ', 'રસિક', 'માર', 'મારકણું']} isEven />
+                            <TheoryTableRow cells={['સમાજ', 'સામાજિક', 'રાષ્ટ્ર', 'રાષ્ટ્રીય']} />
+                            <TheoryTableRow cells={['કૃપા', 'કૃપાળુ', 'શરીર', 'શારીરિક']} isEven />
+                            <TheoryTableRow cells={['રીસ', 'રિસાળ', 'લોક', 'લૌકિક']} />
+                            <TheoryTableRow cells={['ચિંતન', 'ચિંતનીય', 'મનન', 'મનનીય']} isEven />
+                            <TheoryTableRow cells={['માનસ', 'માનસિક', 'માણસ', 'માણસાઇ']} />
+                            <TheoryTableRow cells={['હિન્દુસ્તાન', 'હિન્દુસ્તાની', 'નગર', 'નાગરિક']} isEven />
+                            <TheoryTableRow cells={['પક્ષ', 'પાક્ષિક', 'ભાગ્ય', 'ભાગ્યશાળી']} />
+                            <TheoryTableRow cells={['ગુજરાત', 'ગુજરાતી', 'પ્રારંભ', 'પ્રારંભિક']} isEven />
+                            <TheoryTableRow cells={['નીતિ', 'નૈતિક', 'ભાષા', 'ભાષાકીય']} />
+                            <TheoryTableRow cells={['નિશ્ચય', 'નિશ્ચિત', 'વિશ્વ', 'વૈશ્વિક']} isEven />
+                            <TheoryTableRow cells={['ઉપયોગ', 'ઉપયોગી', 'માન', 'માનનીય']} />
+                            <TheoryTableRow cells={['પૈસા', 'પૈસાદાર', 'પ્રસ્તાવ', 'પ્રાસ્તાવિક']} isEven />
+                            <TheoryTableRow cells={['ધન', 'ધનિક', 'વ્યવસ્થા', 'વ્યવસ્થિત']} />
+                            <TheoryTableRow cells={['કુટુંબ', 'કૌટુંબિક', '-', '-']} isEven />
                         </TheoryTable>
                     </div>
                 </TheoryCard>

@@ -144,12 +144,10 @@ export const chapter26Theory = [
                     <TheoryText>મૂળ શબ્દમાં જોડાક્ષર પહેલાંના <strong>'ઈ' કે ‘ઉ’ હ્રસ્વ</strong> હોય છે.</TheoryText>
                     <TheoryTable>
                         <TheoryTableHeader theme="blue" headers={['ઈ (હ્રસ્વ)', 'ઉ (હ્રસ્વ)']} />
-                        <tbody>
-                            <TheoryTableRow cells={['ઈસ્ત્રી, ચિઠ્ઠી, ડિગ્રી, રિક્ષા, લિજ્જત, પિસ્તાળીસ, બિસ્તરો', 'ઉલ્લુ, તુક્કો, હુન્નર, ભુટ્ટો, કુપ્પી, મુન્નો, શુદ્ધ']} />
-                            <TheoryTableRow cells={['કિસ્સો, જિલ્લો, પિસ્તા, લિફ્ટ, નિશ્વાસ, શિસ્ત, ઇસ્તરી', 'કુસ્તી, સુધ્ધાં, ઉશ્કેરાટ, ઘુમ્મટ, ગુચ્છો, હુક્કો, રુક્કો']} isEven />
-                            <TheoryTableRow cells={['ઈજજત, કિસ્મત, વિશ્વ, મિસ્ટર, લિસ્ટ, ખિસ્સુ, પિસ્તોલ', 'ગુસ્સો, સુસ્તી, જુસ્સો, ધુમ્મસ, ગુસ્તી, કુત્તો, ખુલ્લું']} />
-                            <TheoryTableRow cells={['ફિક્કું, બિલ્લો, સિક્કલ, હિમ્મત', 'ફુગ્ગો, મુશ્કેલી, ઉસ્તાદ, હુલ્લડ, બુટ્ટી, મુઠ્ઠી, બુઠું, લુચ્ચો']} isEven />
-                        </tbody>
+                        <TheoryTableRow cells={['ઈસ્ત્રી, ચિઠ્ઠી, ડિગ્રી, રિક્ષા, લિજ્જત, પિસ્તાળીસ, બિસ્તરો', 'ઉલ્લુ, તુક્કો, હુન્નર, ભુટ્ટો, કુપ્પી, મુન્નો, શુદ્ધ']} />
+                        <TheoryTableRow cells={['કિસ્સો, જિલ્લો, પિસ્તા, લિફ્ટ, નિશ્વાસ, શિસ્ત, ઇસ્તરી', 'કુસ્તી, સુધ્ધાં, ઉશ્કેરાટ, ઘુમ્મટ, ગુચ્છો, હુક્કો, રુક્કો']} isEven />
+                        <TheoryTableRow cells={['ઈજજત, કિસ્મત, વિશ્વ, મિસ્ટર, લિસ્ટ, ખિસ્સુ, પિસ્તોલ', 'ગુસ્સો, સુસ્તી, જુસ્સો, ધુમ્મસ, ગુસ્તી, કુત્તો, ખુલ્લું']} />
+                        <TheoryTableRow cells={['ફિક્કું, બિલ્લો, સિક્કલ, હિમ્મત', 'ફુગ્ગો, મુશ્કેલી, ઉસ્તાદ, હુલ્લડ, બુટ્ટી, મુઠ્ઠી, બુઠું, લુચ્ચો']} isEven />
                     </TheoryTable>
                 </TheoryCard>
 
@@ -294,54 +292,52 @@ export const chapter26Theory = [
                 <GradientCard heading="જોડણીમાં સામાન્ય રીતે થતી ભૂલો" theme="red" icon="❌">
                     <TheoryTable>
                         <TheoryTableHeader theme="blue" headers={['અશુદ્ધ', 'શુદ્ધ', 'અશુદ્ધ', 'શુદ્ધ']} />
-                        <tbody>
-                            <TheoryTableRow cells={['નિવીદા', 'નિવિદા', 'લાયબ્રેરી', 'લાઈબ્રેરી']} />
-                            <TheoryTableRow cells={['નીતિવાન', 'નીતિમાન', 'લાયસન્સ', 'લાઈસન્સ']} isEven />
-                            <TheoryTableRow cells={['અખત્રો', 'અખતરો', 'નુકશાન', 'નુકસાન']} />
-                            <TheoryTableRow cells={['લેખિત', 'લિખિત', 'ઉઠાવગીર', 'ઉઠાઉગીર']} isEven />
-                            <TheoryTableRow cells={['નૈઋત્ય', 'નૈર્ઋત્ય', 'લોટ્રી', 'લોટરી']} />
-                            <TheoryTableRow cells={['અગત્યતા', 'અગત્ય', 'ઉપજ', 'ઊપજ']} isEven />
-                            <TheoryTableRow cells={['પત્થર', 'પથ્થર', 'વૈવિધ', 'વૈવિધ્ય']} />
-                            <TheoryTableRow cells={['અગવડતા', 'અગવડ', 'ઉપયોગી', 'ઉપયોગી']} isEven />
-                            <TheoryTableRow cells={['પત્રકારિત્વ', 'પત્રકારત્વ', 'વ્યાજબી', 'વાજબી']} />
-                            <TheoryTableRow cells={['અદ્ભૂત', 'અદ્ભુત', 'પધ્ધતિ', 'પદ્ધતિ']} isEven />
-                            <TheoryTableRow cells={['શિવણ', 'સીવણ', 'અધિક્ષક', 'અધીક્ષક']} />
-                            <TheoryTableRow cells={['ઓગસ્ટ', 'ઑગસ્ટ', 'પરીવર્તનશીલ', ' પરિવર્તનશીલ']} isEven />
-                            <TheoryTableRow cells={['સમીતિ', 'સમિતિ', 'અતર્ધ્યાન', 'અંતર્ધાન']} />
-                            <TheoryTableRow cells={['સર્કસ', 'સરકસ', 'આધ્ય', 'આદ્ય']} isEven />
-                            <TheoryTableRow cells={['કનિષ્ટ', 'કનિષ્ઠ', 'પુનરોધ્ધર', 'પુનરુદ્ધાર']} />
-                            <TheoryTableRow cells={['સાયકલ', 'સાઈકલ', 'આયુર્વેદિ', 'આયુર્વેદિક']} isEven />
-                            <TheoryTableRow cells={['કમિશ્રર', 'કમિશનર', 'પોષ્ટ', 'પોસ્ટ']} />
-                            <TheoryTableRow cells={['સીનેમા', 'સિનેમા', 'આરઝૂ', 'આરજૂ']} isEven />
-                            <TheoryTableRow cells={['કાર્ટૂન', ' કારટૂન', 'પ્રલ્હાદ', 'પ્રહલાદ']} />
-                            <TheoryTableRow cells={['હુંડી', 'હૂંડી', 'આલ્હાદ', 'આહ્લાદ']} isEven />
-                            <TheoryTableRow cells={['કાવત્રુ', 'કાવતરું', 'પ્રિયવંદા', 'પ્રિયંવદા']} />
-                            <TheoryTableRow cells={['બહેન (બેન)', 'બહેન', 'ઈલ્મી', 'ઈલમી']} isEven />
-                            <TheoryTableRow cells={['જાગ્રતિ', 'જાગૃતિ', 'મંજુરી', 'મંજૂરી']} />
-                            <TheoryTableRow cells={['મંઝિલ', 'મંજિલ', 'કિલ્લોલ', 'કલ્લોલ']} isEven />
-                            <TheoryTableRow cells={['જીંદગી', 'જિંદગી', 'મનોરમ્ય', 'મનોરમા']} />
-                            <TheoryTableRow cells={['માપબંદી', 'માપબંધી', 'કોષ્ટક', 'કોષ્ઠક']} isEven />
-                            <TheoryTableRow cells={['જીલ્લો', 'જિલ્લો', 'મુલ્તવી', 'મુલતવી']} />
-                            <TheoryTableRow cells={['ખાતુ', 'ખાતું', 'જુથબંદી', 'જૂથબંધી']} isEven />
-                            <TheoryTableRow cells={['ખાત્રી', 'ખાતરી', 'જૂબાની', 'જુબાની']} />
-                            <TheoryTableRow cells={['ખિસ્સાકાત્રુ', 'ખિસ્સાકાતરું', 'ટિકીટ', 'ટિકિટ']} isEven />
-                            <TheoryTableRow cells={['ગણત્રી', 'ગણતરી', 'ગર્વનર', ' ગવર્નર']} />
-                            <TheoryTableRow cells={['ડ્રાયવર', 'ડ્રાઈવર', 'ગિર્દી', 'ગિરદી']} isEven />
-                            <TheoryTableRow cells={['તંગદીલી', 'તંગદિલી', 'ગ્રહપતિ', 'ગૃહપતિ']} />
-                            <TheoryTableRow cells={['તત્વ', 'તત્ત્વ', 'ગ્રહસ્થ', 'ગૃહસ્થ']} isEven />
-                            <TheoryTableRow cells={['તાલિમ', 'તાલીમ', 'ગ્રેચ્યુઇટી', 'ગ્રેજ્યુઇટી']} />
-                            <TheoryTableRow cells={['ત્યા', 'તથા', 'ઘેરહાજર', 'ગેરહાજર']} isEven />
-                            <TheoryTableRow cells={['દિવાનીકોર્ટ', 'દીવાનીકોર્ટ', 'ચિન્હ', 'ચિહ્ન']} />
-                            <TheoryTableRow cells={['નસત્તર', ' મસ્તર', 'ચૂકવણી', 'ચુકવણી']} isEven />
-                            <TheoryTableRow cells={['નર્ક', 'નરક', 'ચોકખું', 'ચોખ્ખું']} />
-                            <TheoryTableRow cells={['નહિં', 'નહીં', 'જનમટીપ', 'જન્મટીપ']} isEven />
-                            <TheoryTableRow cells={['નાકાબંદી', ' નાકાબંધી', 'જમાબંધી', ' જમાબંદી']} />
-                            <TheoryTableRow cells={['નાણાંકીય', 'નાણાકીય', 'જયંતિ', ' જયંતી']} isEven />
-                            <TheoryTableRow cells={['નિંદ્રા', 'નિદ્રા', 'જલ્દી', 'જલદી']} />
-                            <TheoryTableRow cells={['મોજાર', 'મોઝાર', 'નિધી', 'નિધિ']} isEven />
-                            <TheoryTableRow cells={['રુષિ', 'ઋષિ', 'નિરસ', 'નીરસ']} />
-                            <TheoryTableRow cells={['રુતુ', 'ઋતુ', 'નિરિક્ષક', 'નિરીક્ષક']} isEven />
-                        </tbody>
+                        <TheoryTableRow cells={['નિવીદા', 'નિવિદા', 'લાયબ્રેરી', 'લાઈબ્રેરી']} />
+                        <TheoryTableRow cells={['નીતિવાન', 'નીતિમાન', 'લાયસન્સ', 'લાઈસન્સ']} isEven />
+                        <TheoryTableRow cells={['અખત્રો', 'અખતરો', 'નુકશાન', 'નુકસાન']} />
+                        <TheoryTableRow cells={['લેખિત', 'લિખિત', 'ઉઠાવગીર', 'ઉઠાઉગીર']} isEven />
+                        <TheoryTableRow cells={['નૈઋત્ય', 'નૈર્ઋત્ય', 'લોટ્રી', 'લોટરી']} />
+                        <TheoryTableRow cells={['અગત્યતા', 'અગત્ય', 'ઉપજ', 'ઊપજ']} isEven />
+                        <TheoryTableRow cells={['પત્થર', 'પથ્થર', 'વૈવિધ', 'વૈવિધ્ય']} />
+                        <TheoryTableRow cells={['અગવડતા', 'અગવડ', 'ઉપયોગી', 'ઉપયોગી']} isEven />
+                        <TheoryTableRow cells={['પત્રકારિત્વ', 'પત્રકારત્વ', 'વ્યાજબી', 'વાજબી']} />
+                        <TheoryTableRow cells={['અદ્ભૂત', 'અદ્ભુત', 'પધ્ધતિ', 'પદ્ધતિ']} isEven />
+                        <TheoryTableRow cells={['શિવણ', 'સીવણ', 'અધિક્ષક', 'અધીક્ષક']} />
+                        <TheoryTableRow cells={['ઓગસ્ટ', 'ઑગસ્ટ', 'પરીવર્તનશીલ', ' પરિવર્તનશીલ']} isEven />
+                        <TheoryTableRow cells={['સમીતિ', 'સમિતિ', 'અતર્ધ્યાન', 'અંતર્ધાન']} />
+                        <TheoryTableRow cells={['સર્કસ', 'સરકસ', 'આધ્ય', 'આદ્ય']} isEven />
+                        <TheoryTableRow cells={['કનિષ્ટ', 'કનિષ્ઠ', 'પુનરોધ્ધર', 'પુનરુદ્ધાર']} />
+                        <TheoryTableRow cells={['સાયકલ', 'સાઈકલ', 'આયુર્વેદિ', 'આયુર્વેદિક']} isEven />
+                        <TheoryTableRow cells={['કમિશ્રર', 'કમિશનર', 'પોષ્ટ', 'પોસ્ટ']} />
+                        <TheoryTableRow cells={['સીનેમા', 'સિનેમા', 'આરઝૂ', 'આરજૂ']} isEven />
+                        <TheoryTableRow cells={['કાર્ટૂન', ' કારટૂન', 'પ્રલ્હાદ', 'પ્રહલાદ']} />
+                        <TheoryTableRow cells={['હુંડી', 'હૂંડી', 'આલ્હાદ', 'આહ્લાદ']} isEven />
+                        <TheoryTableRow cells={['કાવત્રુ', 'કાવતરું', 'પ્રિયવંદા', 'પ્રિયંવદા']} />
+                        <TheoryTableRow cells={['બહેન (બેન)', 'બહેન', 'ઈલ્મી', 'ઈલમી']} isEven />
+                        <TheoryTableRow cells={['જાગ્રતિ', 'જાગૃતિ', 'મંજુરી', 'મંજૂરી']} />
+                        <TheoryTableRow cells={['મંઝિલ', 'મંજિલ', 'કિલ્લોલ', 'કલ્લોલ']} isEven />
+                        <TheoryTableRow cells={['જીંદગી', 'જિંદગી', 'મનોરમ્ય', 'મનોરમા']} />
+                        <TheoryTableRow cells={['માપબંદી', 'માપબંધી', 'કોષ્ટક', 'કોષ્ઠક']} isEven />
+                        <TheoryTableRow cells={['જીલ્લો', 'જિલ્લો', 'મુલ્તવી', 'મુલતવી']} />
+                        <TheoryTableRow cells={['ખાતુ', 'ખાતું', 'જુથબંદી', 'જૂથબંધી']} isEven />
+                        <TheoryTableRow cells={['ખાત્રી', 'ખાતરી', 'જૂબાની', 'જુબાની']} />
+                        <TheoryTableRow cells={['ખિસ્સાકાત્રુ', 'ખિસ્સાકાતરું', 'ટિકીટ', 'ટિકિટ']} isEven />
+                        <TheoryTableRow cells={['ગણત્રી', 'ગણતરી', 'ગર્વનર', ' ગવર્નર']} />
+                        <TheoryTableRow cells={['ડ્રાયવર', 'ડ્રાઈવર', 'ગિર્દી', 'ગિરદી']} isEven />
+                        <TheoryTableRow cells={['તંગદીલી', 'તંગદિલી', 'ગ્રહપતિ', 'ગૃહપતિ']} />
+                        <TheoryTableRow cells={['તત્વ', 'તત્ત્વ', 'ગ્રહસ્થ', 'ગૃહસ્થ']} isEven />
+                        <TheoryTableRow cells={['તાલિમ', 'તાલીમ', 'ગ્રેચ્યુઇટી', 'ગ્રેજ્યુઇટી']} />
+                        <TheoryTableRow cells={['ત્યા', 'તથા', 'ઘેરહાજર', 'ગેરહાજર']} isEven />
+                        <TheoryTableRow cells={['દિવાનીકોર્ટ', 'દીવાનીકોર્ટ', 'ચિન્હ', 'ચિહ્ન']} />
+                        <TheoryTableRow cells={['નસત્તર', ' મસ્તર', 'ચૂકવણી', 'ચુકવણી']} isEven />
+                        <TheoryTableRow cells={['નર્ક', 'નરક', 'ચોકખું', 'ચોખ્ખું']} />
+                        <TheoryTableRow cells={['નહિં', 'નહીં', 'જનમટીપ', 'જન્મટીપ']} isEven />
+                        <TheoryTableRow cells={['નાકાબંદી', ' નાકાબંધી', 'જમાબંધી', ' જમાબંદી']} />
+                        <TheoryTableRow cells={['નાણાંકીય', 'નાણાકીય', 'જયંતિ', ' જયંતી']} isEven />
+                        <TheoryTableRow cells={['નિંદ્રા', 'નિદ્રા', 'જલ્દી', 'જલદી']} />
+                        <TheoryTableRow cells={['મોજાર', 'મોઝાર', 'નિધી', 'નિધિ']} isEven />
+                        <TheoryTableRow cells={['રુષિ', 'ઋષિ', 'નિરસ', 'નીરસ']} />
+                        <TheoryTableRow cells={['રુતુ', 'ઋતુ', 'નિરિક્ષક', 'નિરીક્ષક']} isEven />
                     </TheoryTable>
                 </GradientCard>
 

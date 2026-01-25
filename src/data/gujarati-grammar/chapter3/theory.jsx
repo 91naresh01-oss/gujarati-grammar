@@ -71,18 +71,16 @@ export const chapter3Theory = [
                     <TheoryHeading color="#6d28d9">📢 સ્વરોનું ઉચ્ચારણ સ્થાન</TheoryHeading>
                     <TheoryTable>
                         <TheoryTableHeader theme="purple" headers={["સ્થાન", "સ્વર"]} />
-                        <tbody>
-                            {[
-                                ["કંઠ્ય", "અ, આ"],
-                                ["તાલવ્ય", "ઇ, ઈ"],
-                                ["ઓષ્ઠય", "ઉ, ઊ"],
-                                ["મૂર્ધન્ય", "ઋ"],
-                                ["કંઠ્યતાલવ્ય", "એ, ઐ"],
-                                ["કંઠ્યૌષ્ઠય", "ઓ, ઔ"]
-                            ].map((row, i) => (
-                                <TheoryTableRow key={i} cells={row} isEven={i % 2 !== 0} />
-                            ))}
-                        </tbody>
+                        {[
+                            ["કંઠ્ય", "અ, આ"],
+                            ["તાલવ્ય", "ઇ, ઈ"],
+                            ["ઓષ્ઠય", "ઉ, ઊ"],
+                            ["મૂર્ધન્ય", "ઋ"],
+                            ["કંઠ્યતાલવ્ય", "એ, ઐ"],
+                            ["કંઠ્યૌષ્ઠય", "ઓ, ઔ"]
+                        ].map((row, i) => (
+                            <TheoryTableRow key={i} cells={row} isEven={i % 2 !== 0} />
+                        ))}
                     </TheoryTable>
                 </TheoryCard>
 
@@ -115,32 +113,28 @@ export const chapter3Theory = [
                     </div>
 
                     <TheoryTable>
-                        <thead>
-                            <tr>
-                                <th style={{ background: '#f3f4f6', padding: '10px', borderBottom: '2px solid #e5e7eb', textAlign: 'left', fontWeight: '700' }}>વર્ગ</th>
-                                <th style={{ background: '#f3f4f6', padding: '10px', borderBottom: '2px solid #e5e7eb', textAlign: 'left', fontWeight: '700' }}>અઘોષ<br /><span style={{ fontSize: '0.85rem' }}>અલ્પ</span></th>
-                                <th style={{ background: '#f3f4f6', padding: '10px', borderBottom: '2px solid #e5e7eb', textAlign: 'left', fontWeight: '700' }}>અઘોષ<br /><span style={{ fontSize: '0.85rem' }}>મહા</span></th>
-                                <th style={{ background: '#f3f4f6', padding: '10px', borderBottom: '2px solid #e5e7eb', textAlign: 'left', fontWeight: '700' }}>ઘોષ<br /><span style={{ fontSize: '0.85rem' }}>અલ્પ</span></th>
-                                <th style={{ background: '#f3f4f6', padding: '10px', borderBottom: '2px solid #e5e7eb', textAlign: 'left', fontWeight: '700' }}>ઘોષ<br /><span style={{ fontSize: '0.85rem' }}>મહા</span></th>
-                                <th style={{ background: '#f3f4f6', padding: '10px', borderBottom: '2px solid #e5e7eb', textAlign: 'left', fontWeight: '700' }}>અનુનાસિક</th>
+                        <TheoryTableHeader>
+                            <th style={{ background: '#f3f4f6', padding: '10px', borderBottom: '2px solid #e5e7eb', textAlign: 'left', fontWeight: '700' }}>વર્ગ</th>
+                            <th style={{ background: '#f3f4f6', padding: '10px', borderBottom: '2px solid #e5e7eb', textAlign: 'left', fontWeight: '700' }}>અઘોષ<br /><span style={{ fontSize: '0.85rem' }}>અલ્પ</span></th>
+                            <th style={{ background: '#f3f4f6', padding: '10px', borderBottom: '2px solid #e5e7eb', textAlign: 'left', fontWeight: '700' }}>અઘોષ<br /><span style={{ fontSize: '0.85rem' }}>મહા</span></th>
+                            <th style={{ background: '#f3f4f6', padding: '10px', borderBottom: '2px solid #e5e7eb', textAlign: 'left', fontWeight: '700' }}>ઘોષ<br /><span style={{ fontSize: '0.85rem' }}>અલ્પ</span></th>
+                            <th style={{ background: '#f3f4f6', padding: '10px', borderBottom: '2px solid #e5e7eb', textAlign: 'left', fontWeight: '700' }}>ઘોષ<br /><span style={{ fontSize: '0.85rem' }}>મહા</span></th>
+                            <th style={{ background: '#f3f4f6', padding: '10px', borderBottom: '2px solid #e5e7eb', textAlign: 'left', fontWeight: '700' }}>અનુનાસિક</th>
+                        </TheoryTableHeader>
+                        {[
+                            ["કંઠ્ય", "ક", "ખ", "ગ", "ઘ", "ઙ"],
+                            ["તાલવ્ય", "ચ", "છ", "જ", "ઝ", "ઞ"],
+                            ["મૂર્ધન્ય", "ટ", "ઠ", "ડ", "ઢ", "ણ"],
+                            ["દંત્ય", "ત", "થ", "દ", "ધ", "ન"],
+                            ["ઓષ્ઠય", "પ", "ફ", "બ", "ભ", "મ"]
+                        ].map((row, i) => (
+                            <tr key={i} style={{ background: i % 2 !== 0 ? '#f0f9ff' : '#fff' }}>
+                                <td style={{ padding: '12px', fontWeight: '800', background: '#f8fafc', borderBottom: '1px solid #f1f5f9' }}>{row[0]}</td>
+                                {row.slice(1).map((cell, j) => (
+                                    <td key={j} style={{ padding: '12px', fontWeight: j === 4 ? '800' : '600', color: j === 4 ? '#0369a1' : '#1f2937', fontSize: '1.25rem', borderBottom: '1px solid #f1f5f9' }}>{cell}</td>
+                                ))}
                             </tr>
-                        </thead>
-                        <tbody>
-                            {[
-                                ["કંઠ્ય", "ક", "ખ", "ગ", "ઘ", "ઙ"],
-                                ["તાલવ્ય", "ચ", "છ", "જ", "ઝ", "ઞ"],
-                                ["મૂર્ધન્ય", "ટ", "ઠ", "ડ", "ઢ", "ણ"],
-                                ["દંત્ય", "ત", "થ", "દ", "ધ", "ન"],
-                                ["ઓષ્ઠય", "પ", "ફ", "બ", "ભ", "મ"]
-                            ].map((row, i) => (
-                                <tr key={i} style={{ background: i % 2 !== 0 ? '#f0f9ff' : '#fff' }}>
-                                    <td style={{ padding: '12px', fontWeight: '800', background: '#f8fafc', borderBottom: '1px solid #f1f5f9' }}>{row[0]}</td>
-                                    {row.slice(1).map((cell, j) => (
-                                        <td key={j} style={{ padding: '12px', fontWeight: j === 4 ? '800' : '600', color: j === 4 ? '#0369a1' : '#1f2937', fontSize: '1.25rem', borderBottom: '1px solid #f1f5f9' }}>{cell}</td>
-                                    ))}
-                                </tr>
-                            ))}
-                        </tbody>
+                        ))}
                     </TheoryTable>
                 </TheoryCard>
 
