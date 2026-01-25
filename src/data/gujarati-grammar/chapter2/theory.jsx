@@ -137,7 +137,7 @@ export const chapter2Theory = [
                             { name: "સુરતી", area: "દક્ષિણ ગુજરાત", detail: "હ-કાર નો લોપ, લહેકો (સુરત, વલસાડ)" },
                             { name: "સૌરાષ્ટ્રી", area: "સૌરાષ્ટ્ર/કાઠિયાવાડ", detail: "ખરબચડી પણ મધુર, સ્પષ્ટ ઉચ્ચાર (રાજકોટ, ભાવનગર)" }
                         ].map((item, i) => (
-                            <div key={i} style={{ background: '#fffbeb', padding: '15px', borderRadius: '10px', border: '1px solid #fehm74' }}>
+                            <div key={i} style={{ background: '#fffbeb', padding: '15px', borderRadius: '10px', border: '1px solid #fed7aa' }}>
                                 <div style={{ fontSize: '1.2rem', fontWeight: '800', color: '#92400e' }}>{item.name}</div>
                                 <div style={{ fontSize: '1rem', fontWeight: '600', color: '#b45309', marginBottom: '4px' }}>📍 {item.area}</div>
                                 <div style={{ fontSize: '1rem', color: '#78350f' }}>{item.detail}</div>

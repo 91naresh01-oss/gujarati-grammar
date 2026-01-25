@@ -37,8 +37,10 @@ function Theory() {
                                 </div>
                             </div>
                         ))
-                    ) : typeof chapter.theory === 'function' || typeof chapter.theory === 'object' ? (
+                    ) : typeof chapter.theory === 'function' ? (
                         <chapter.theory />
+                    ) : React.isValidElement(chapter.theory) ? (
+                        chapter.theory
                     ) : (
                         <div>Theory content format not recognized.</div>
                     )
