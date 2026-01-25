@@ -58,6 +58,11 @@ import { chapter29Theory } from './gujarati-grammar/chapter29/theory.jsx';
 import { chapter29Tests } from './gujarati-grammar/chapter29/test.js';
 import { chapter30Theory } from './gujarati-grammar/chapter30/theory.jsx';
 import { chapter30Tests } from './gujarati-grammar/chapter30/test.js';
+import { chapter31Theory } from './gujarati-grammar/chapter31/theory.jsx';
+import { chapter31Tests } from './gujarati-grammar/chapter31/test.js';
+import { chapter32Theory } from './gujarati-grammar/chapter32/theory.jsx';
+import { chapter32Tests } from './gujarati-grammar/chapter32/test.js';
+
 
 export const chaptersData = [
     {
@@ -269,5 +274,21 @@ export const chaptersData = [
         desc: 'અક્ષરમેળ અને માત્રામેળ છંદની સંપૂર્ણ સમજૂતી, ગણરચના અને લઘુ-ગુરુના નિયમો.',
         theory: chapter30Theory,
         tests: chapter30Tests
+    },
+    {
+        id: 31,
+        name: 'સમાસ (Samas)',
+        desc: 'સમાસનો અર્થ, વિગ્રહ અને તેના ૮ મુખ્ય પ્રકારોની ઉદાહરણ સહિત સમજૂતી.',
+        theory: chapter31Theory,
+        tests: chapter31Tests
+    },
+
+
+    {
+        id: 32,
+        name: 'સમાનાર્થી શબ્દો (Synonyms)',
+        desc: 'મહત્વપૂર્ણ સમાનાર્થી શબ્દોની યાદી અને અભ્યાસ.',
+        theory: chapter32Theory,
+        tests: chapter32Tests
     }
 ];
