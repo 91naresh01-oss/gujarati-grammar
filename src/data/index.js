@@ -62,7 +62,18 @@ import { chapter31Theory } from './gujarati-grammar/chapter31/theory.jsx';
 import { chapter31Tests } from './gujarati-grammar/chapter31/test.js';
 import { chapter32Theory } from './gujarati-grammar/chapter32/theory.jsx';
 import { chapter32Tests } from './gujarati-grammar/chapter32/test.js';
-
+import { chapter33Theory } from './gujarati-grammar/chapter33/theory.jsx';
+import { chapter33Tests } from './gujarati-grammar/chapter33/test.js';
+import { chapter34Theory } from './gujarati-grammar/chapter34/theory.jsx';
+import { chapter34Tests } from './gujarati-grammar/chapter34/test.js';
+import { chapter35Theory } from './gujarati-grammar/chapter35/theory.jsx';
+import { chapter35Tests } from './gujarati-grammar/chapter35/test.js';
+import { chapter36Theory } from './gujarati-grammar/chapter36/theory.jsx';
+import { chapter36Tests } from './gujarati-grammar/chapter36/test.js';
+import { chapter37Theory } from './gujarati-grammar/chapter37/theory.jsx';
+import { chapter37Tests } from './gujarati-grammar/chapter37/test.js';
+import { chapter38Theory } from './gujarati-grammar/chapter38/theory.jsx';
+import { chapter38Tests } from './gujarati-grammar/chapter38/test.js';
 
 export const chaptersData = [
     {
@@ -290,5 +301,47 @@ export const chaptersData = [
         desc: 'મહત્વપૂર્ણ સમાનાર્થી શબ્દોની યાદી અને અભ્યાસ.',
         theory: chapter32Theory,
         tests: chapter32Tests
+    },
+    {
+        id: 33,
+        name: 'વિરૂદ્ધાર્થી શબ્દો (Antonyms)',
+        desc: 'મહત્વપૂર્ણ વિરૂદ્ધાર્થી શબ્દોની યાદી અને અભ્યાસ.',
+        theory: chapter33Theory,
+        tests: chapter33Tests
+    },
+    {
+        id: 34,
+        name: 'અનેકાર્થી શબ્દો (Polysemy)',
+        desc: 'એક જ શબ્દના એકથી વધુ અર્થ ધરાવતા શબ્દોની યાદી અને અભ્યાસ.',
+        theory: chapter34Theory,
+        tests: chapter34Tests
+    },
+    {
+        id: 35,
+        name: 'તળપદા શબ્દો (Dialect Words)',
+        desc: 'સ્થાનિક બોલીના શબ્દો અને તેમના શિષ્ટ રૂપો.',
+        theory: chapter35Theory,
+        tests: chapter35Tests
+    },
+    {
+        id: 36,
+        name: 'શબ્દસમૂહ માટે એક શબ્દ (One Word Substitution)',
+        desc: 'વાક્ય કે શબ્દસમૂહ માટે વપરાતો એક સચોટ શબ્દ.',
+        theory: chapter36Theory,
+        tests: chapter36Tests
+    },
+    {
+        id: 37,
+        name: 'ક્લિષ્ટ શબ્દાવલી (Complex Vocabulary)',
+        desc: 'કવિતા અને સાહિત્યમાં વપરાતા કઠિન શબ્દો અને તેમના અર્થ.',
+        theory: chapter37Theory,
+        tests: chapter37Tests
+    },
+    {
+        id: 38,
+        name: 'રૂઢિપ્રયોગો (Idioms)',
+        desc: 'ભાષામાં વપરાતા રૂઢિપ્રયોગો અને તેમના અર્થની સમજ.',
+        theory: chapter38Theory,
+        tests: chapter38Tests
     }
 ];
