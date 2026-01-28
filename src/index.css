@@ -91,14 +91,23 @@ body {
 }
 
 /* Home Footer Links - Outside Card */
+/* Home Footer Links - Fixed Bottom */
 .home-footer-links {
-  margin-top: 1.5rem;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
   gap: 12px;
   color: #6b7280;
   font-size: 0.9rem;
   font-weight: 500;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 8px 16px;
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
 }
 
 .home-footer-links span {
