@@ -15,9 +15,7 @@ function Home() {
                 <button className="btn-primary" onClick={() => navigate('/chapters')} style={{ marginTop: '10px' }}>
                     <span>શરૂ કરો (Start)</span>
                 </button>
-                <div style={{ marginTop: '2rem', fontSize: '0.8rem', color: '#9ca3af' }}>
-                    Version: {__COMMIT_MESSAGE__} (Deployed)
-                </div>
+
             </div>
             <div className="home-footer-links">
                 <span onClick={() => navigate('/about')}>About Us</span>
