@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Chapters from './pages/Chapters';
 import Theory from './pages/Theory';
-
+import AboutUs from './pages/AboutUs';
+import ContactUs from './pages/ContactUs';
 import Test from './pages/Test';
 import BackgroundBlobs from './components/BackgroundBlobs';
 import Navbar from './components/Navbar';
@@ -25,6 +26,8 @@ function App() {
             <Route path="/chapters" element={<Chapters />} />
             <Route path="/theory/:id" element={<Theory />} />
             <Route path="/test/:id" element={<Test />} />
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/contact" element={<ContactUs />} />
           </Routes>
         </div>
       </Router>
