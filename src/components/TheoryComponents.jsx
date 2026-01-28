@@ -533,8 +533,7 @@ export const TheoryTableHeader = ({ headers, children, theme }) => {
 };
 
 export const TheoryTableRow = ({ cells, isEven = false, children }) => (
-    <tr style={{
-        background: isEven ? '#f8fafc' : '#ffffff',
+    <tr className="theory-table-row" style={{
         transition: 'background 0.2s'
     }}>
         {cells ? cells.map((c, i) => (

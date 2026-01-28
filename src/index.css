@@ -637,6 +637,19 @@ body {
   line-height: 1.7;
 }
 
+/* Alternating row colors for tables (zebra stripes) */
+.modern-theory-content table tbody tr:nth-child(odd),
+.theory-table-row:nth-child(odd) {
+  background-color: #f1f5f9 !important;
+  /* Light gray for odd rows */
+}
+
+.modern-theory-content table tbody tr:nth-child(even),
+.theory-table-row:nth-child(even) {
+  background-color: #ffffff !important;
+  /* White for even rows */
+}
+
 /* Highlighting keywords (optional helper) */
 .highlight-text {
   background: linear-gradient(120deg, #dbeafe 0%, #eff6ff 100%);
@@ -899,7 +912,7 @@ body {
     display: table;
     width: 100% !important;
     min-width: unset !important;
-    table-layout: fixed;
+    table-layout: auto;
   }
 
   .modern-theory-content td,
@@ -908,6 +921,15 @@ body {
     font-size: 1rem !important;
     white-space: normal;
     word-wrap: break-word;
+  }
+
+  /* First column (number/serial) - auto width based on content */
+  .modern-theory-content td:first-child,
+  .modern-theory-content th:first-child {
+    width: auto !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+    padding: 8px 6px !important;
   }
 
   /* Smaller headings in cards - COMPACT */
