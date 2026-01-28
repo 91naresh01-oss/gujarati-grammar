@@ -74,6 +74,8 @@ import { chapter37Theory } from './gujarati-grammar/chapter37/theory.jsx';
 import { chapter37Tests } from './gujarati-grammar/chapter37/test.js';
 import { chapter38Theory } from './gujarati-grammar/chapter38/theory.jsx';
 import { chapter38Tests } from './gujarati-grammar/chapter38/test.js';
+import { chapter39Theory } from './gujarati-grammar/chapter39/theory.jsx';
+import { chapter39Tests } from './gujarati-grammar/chapter39/test.js';
 
 export const chaptersData = [
     {
@@ -343,5 +345,12 @@ export const chaptersData = [
         desc: 'ભાષામાં વપરાતા રૂઢિપ્રયોગો અને તેમના અર્થની સમજ.',
         theory: chapter38Theory,
         tests: chapter38Tests
+    },
+    {
+        id: 39,
+        name: 'કહેવતો (Sayings)',
+        desc: 'ગુજરાતી કહેવતો અને તેમના અર્થની સમજ.',
+        theory: chapter39Theory,
+        tests: chapter39Tests
     }
 ];
