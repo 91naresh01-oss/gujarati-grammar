@@ -12,7 +12,6 @@ const Navbar = () => {
             <nav className="top-navbar">
                 <div className="navbar-brand" onClick={() => navigate('/')}>
                     <img src="/app-icon.png" alt="App Logo" className="brand-icon" style={{ width: '28px', height: '28px', objectFit: 'contain' }} />
-                    <span className="brand-text">ગુજરાતી વ્યાકરણ</span>
                 </div>
 
                 <div className="nav-actions" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>

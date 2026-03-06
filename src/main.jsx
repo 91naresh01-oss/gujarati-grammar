@@ -4,7 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import ErrorBoundary from './components/ErrorBoundary.jsx'
 
-console.log("main.jsx executing...");
+
 
 createRoot(document.getElementById('root')).render(
   <ErrorBoundary>

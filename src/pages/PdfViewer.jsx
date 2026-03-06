@@ -7,7 +7,10 @@ function PdfViewer() {
     const [searchParams] = useSearchParams();
     const pdfUrl = searchParams.get('file');
     const title = searchParams.get('title') || 'PDF Viewer';
+    const [zoomLevel, setZoomLevel] = React.useState(100);
 
+    const handleZoomIn = () => setZoomLevel(prev => Math.min(prev + 25, 300));
+    const handleZoomOut = () => setZoomLevel(prev => Math.max(prev - 25, 50));
     useEffect(() => {
         // Block keyboard shortcuts for print, save, copy
         const handleKeyDown = (e) => {
@@ -122,24 +125,111 @@ function PdfViewer() {
                 }}>
                     📄 {title}
                 </h3>
-                <div style={{ width: '120px' }}></div>
+
+                {/* Zoom Controls */}
+                <div style={{ display: 'flex', gap: '8px', minWidth: '120px', justifyContent: 'flex-end' }}>
+                    <button
+                        onClick={handleZoomOut}
+                        title="Zoom Out"
+                        style={{
+                            background: 'rgba(255,255,255,0.15)',
+                            border: '1px solid rgba(255,255,255,0.25)',
+                            color: 'white',
+                            width: '32px',
+                            height: '32px',
+                            borderRadius: '8px',
+                            cursor: 'pointer',
+                            fontSize: '1.2rem',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            transition: 'all 0.2s ease'
+                        }}
+                        onMouseOver={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.25)'}
+                        onMouseOut={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.15)'}
+                    >
+                        −
+                    </button>
+                    <div style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        width: '45px',
+                        fontSize: '0.9rem',
+                        fontWeight: 'bold',
+                        background: 'rgba(0,0,0,0.2)',
+                        borderRadius: '6px'
+                    }}>
+                        {zoomLevel}%
+                    </div>
+                    <button
+                        onClick={handleZoomIn}
+                        title="Zoom In"
+                        style={{
+                            background: 'rgba(255,255,255,0.15)',
+                            border: '1px solid rgba(255,255,255,0.25)',
+                            color: 'white',
+                            width: '32px',
+                            height: '32px',
+                            borderRadius: '8px',
+                            cursor: 'pointer',
+                            fontSize: '1.2rem',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            transition: 'all 0.2s ease'
+                        }}
+                        onMouseOver={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.25)'}
+                        onMouseOut={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.15)'}
+                    >
+                        +
+                    </button>
+                </div>
             </div>
 
             {/* PDF Container with security overlay */}
             <div style={{
                 flex: 1,
                 position: 'relative',
-                overflow: 'hidden'
+                overflow: 'hidden',
+                background: '#1e293b'
             }}>
+                {/* Loading Indicator */}
+                <div style={{
+                    position: 'absolute',
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    gap: '15px',
+                    color: '#94a3b8',
+                    zIndex: 1
+                }}>
+                    <div style={{
+                        width: '50px',
+                        height: '50px',
+                        border: '4px solid rgba(255,255,255,0.1)',
+                        borderTop: '4px solid #8b5cf6',
+                        borderRadius: '50%',
+                        animation: 'spin 1s linear infinite'
+                    }} />
+                    <p style={{ margin: 0, fontWeight: 600 }}>PDF લોડ થઈ રહી છે...</p>
+                </div>
+
                 {/* PDF iframe - toolbar disabled */}
                 <iframe
-                    src={`${pdfUrl}#toolbar=0&navpanes=0&scrollbar=1&view=FitH`}
+                    key={zoomLevel}
+                    src={`${pdfUrl}#toolbar=0&navpanes=0&scrollbar=1&zoom=${zoomLevel}`}
                     title={title}
                     style={{
                         width: '100%',
                         height: '100%',
                         border: 'none',
-                        display: 'block'
+                        position: 'relative',
+                        zIndex: 10,
+                        backgroundColor: 'white'
                     }}
                 />
 

@@ -42,7 +42,7 @@ function Home() {
 
             <div className="home-footer-links">
                 <span onClick={() => navigate('/about')} className="home-footer-item">About Us</span>
-                <span className="separator" style={{ color: 'rgba(0,0,0,0.2)' }}>|</span>
+                <span className="separator" style={{ color: '#94a3b8' }}>|</span>
                 <span onClick={() => navigate('/contact')} className="home-footer-item">Contact Us</span>
             </div>
         </>

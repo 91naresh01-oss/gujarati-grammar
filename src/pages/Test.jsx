@@ -15,6 +15,29 @@ function Test() {
     const [score, setScore] = useState(0);
     const [showResult, setShowResult] = useState(false);
 
+    // State for lazy-loaded test data
+    const [testsData, setTestsData] = useState(null);
+    const [isLoadingTests, setIsLoadingTests] = useState(true);
+    const [error, setError] = useState(null);
+
+    React.useEffect(() => {
+        if (chapter && chapter.loadTests) {
+            setIsLoadingTests(true);
+            chapter.loadTests()
+                .then(data => {
+                    setTestsData(data);
+                    setIsLoadingTests(false);
+                })
+                .catch(err => {
+                    console.error("Failed to load tests:", err);
+                    setError("ટેસ્ટ ડેટા લોડ કરવામાં નિષ્ફળ. કૃપા કરીને ફરી પ્રયાસ કરો.");
+                    setIsLoadingTests(false);
+                });
+        } else {
+            setIsLoadingTests(false);
+        }
+    }, [chapter]);
+
     if (!chapter) return <div>Chapter Not Found</div>;
 
     // Helper to reset and start a specific test
@@ -69,8 +92,19 @@ function Test() {
                 </div>
 
                 <div style={{ display: 'grid', gap: '20px' }}>
-                    {chapter.tests && chapter.tests.length > 0 ? (
-                        chapter.tests.map((test) => (
+                    {isLoadingTests ? (
+                        <div style={{ textAlign: 'center', padding: '50px 0', color: '#3b82f6', fontSize: '1.2rem', fontWeight: 600 }}>
+                            <div style={{
+                                width: '40px', height: '40px', border: '4px solid #e5e7eb',
+                                borderTop: '4px solid #3b82f6', borderRadius: '50%',
+                                animation: 'spin 0.8s linear infinite', margin: '0 auto 15px'
+                            }} />
+                            ટેસ્ટ લોડ થઈ રહી છે...
+                        </div>
+                    ) : error ? (
+                        <div style={{ textAlign: 'center', padding: '20px', color: '#ef4444' }}>{error}</div>
+                    ) : testsData && testsData.length > 0 ? (
+                        testsData.map((test) => (
                             <div key={test.id} className="clean-card" style={{ padding: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
                                     <div style={{
@@ -115,7 +149,7 @@ function Test() {
     }
 
     // Active Test Logic
-    const activeTest = chapter.tests.find(t => t.id === selectedTestId);
+    const activeTest = testsData?.find(t => t.id === selectedTestId);
     if (!activeTest) return <div>Test Not Found</div>;
 
     const currentQuestion = activeTest.questions[currentQuestionIndex];
