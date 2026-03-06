@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { chaptersData } from '../data';
+import BackArrow from '../components/BackArrow';
 
 function Test() {
     const navigate = useNavigate();
@@ -49,7 +50,7 @@ function Test() {
                             top: '50%',
                             transform: 'translateY(-50%)'
                         }}>
-                        ←
+                        <BackArrow size={18} color="white" />
                     </button>
 
                     <div className="theory-title-pill" style={{
@@ -225,7 +226,7 @@ function Test() {
                         flexShrink: 0
                     }}
                 >
-                    ←
+                    <BackArrow size={18} color="white" />
                 </button>
 
                 <div style={{

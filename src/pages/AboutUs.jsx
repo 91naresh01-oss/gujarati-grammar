@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import BackArrow from '../components/BackArrow';
 
 function AboutUs() {
     const navigate = useNavigate();
@@ -9,7 +10,7 @@ function AboutUs() {
             {/* Header Section */}
             <div className="about-header-section compact">
                 <button className="about-back-btn" onClick={() => navigate('/')}>
-                    ←
+                    <BackArrow size={20} color="white" />
                 </button>
                 <div className="about-branding">
                     <img src="/gyan-logo.png" alt="Gyan Academy Logo" className="about-logo" />

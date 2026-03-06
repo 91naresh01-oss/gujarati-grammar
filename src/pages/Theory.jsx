@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { chaptersData } from '../data';
+import BackArrow from '../components/BackArrow';
 
 function Theory() {
     const navigate = useNavigate();
@@ -19,7 +20,7 @@ function Theory() {
 
             <div className="theory-header-outside">
                 <button onClick={() => navigate('/chapters')} className="back-btn-theory-outside">
-                    ←
+                    <BackArrow size={20} color="white" />
                 </button>
                 <div className="theory-title-pill">
                     {chapter.name}

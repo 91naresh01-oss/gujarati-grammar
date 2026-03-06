@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { chaptersData } from '../data';
+import BackArrow from '../components/BackArrow';
 
 function Chapters() {
     const navigate = useNavigate();
@@ -20,7 +21,7 @@ function Chapters() {
                         onClick={() => navigate('/')}
                         className="back-btn-circle"
                     >
-                        ←
+                        <BackArrow size={20} color="white" />
                     </button>
                     <h2 className="page-title">ગુજરાતી વ્યાકરણ</h2>
                 </div>

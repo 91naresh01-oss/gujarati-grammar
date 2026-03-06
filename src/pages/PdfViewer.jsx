@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
+import BackArrow from '../components/BackArrow';
 
 function PdfViewer() {
     const navigate = useNavigate();
@@ -106,7 +107,7 @@ function PdfViewer() {
                         e.currentTarget.style.background = 'rgba(255,255,255,0.15)';
                     }}
                 >
-                    ← પાછા જાઓ
+                    <BackArrow size={16} color="white" /> પાછા જાઓ
                 </button>
                 <h3 style={{
                     margin: 0,

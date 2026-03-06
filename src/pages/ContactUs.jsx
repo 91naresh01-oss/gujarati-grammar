@@ -1,5 +1,39 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import BackArrow from '../components/BackArrow';
+import youtubeIcon from '../assets/social/youtube.svg';
+import telegramIcon from '../assets/social/telegram.svg';
+import instagramIcon from '../assets/social/instagram.svg';
+import appDownloadIcon from '../assets/social/app-download.svg';
+import websiteIcon from '../assets/social/website.svg';
+
+const socialLinks = [
+    {
+        href: 'https://www.youtube.com/@gyanacademyonline',
+        icon: youtubeIcon,
+        label: 'YouTube પર સબ્સ્ક્રાઇબ કરો',
+    },
+    {
+        href: 'https://t.me/gyanacademygandhinagar',
+        icon: telegramIcon,
+        label: 'Telegram ચેનલમાં જોડાઓ',
+    },
+    {
+        href: 'https://instagram.com/gyanacademy_official',
+        icon: instagramIcon,
+        label: 'Instagram પર ફોલો કરો',
+    },
+    {
+        href: 'https://play.google.com/store/apps/details?id=com.gyanacademy.com',
+        icon: appDownloadIcon,
+        label: 'Gyan Academy એપ ડાઉનલોડ કરો',
+    },
+    {
+        href: 'https://gyanacademys.com',
+        icon: websiteIcon,
+        label: 'અમારી વેબસાઇટની મુલાકાત લો',
+    },
+];
 
 function ContactUs() {
     const navigate = useNavigate();

@@ -1,0 +1,12 @@
+<svg viewBox=\"0 0 64 64\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
+  <defs>
+    <linearGradient id=\"instaGradient\" x1=\"0\" y1=\"0\" x2=\"64\" y2=\"64\">
+      <stop offset=\"0%\" stop-color=\"#F58529\"/>
+      <stop offset=\"50%\" stop-color=\"#DD2A7B\"/>
+      <stop offset=\"100%\" stop-color=\"#8134AF\"/>
+    </linearGradient>
+  </defs>
+  <rect x=\"10\" y=\"10\" width=\"44\" height=\"44\" rx=\"14\" fill=\"url(#instaGradient)\"/>
+  <circle cx=\"32\" cy=\"32\" r=\"12\" stroke=\"#fff\" stroke-width=\"3\"/>
+  <circle cx=\"40\" cy=\"24\" r=\"3.5\" fill=\"#fff\"/>
+</svg>
