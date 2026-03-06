@@ -909,21 +909,14 @@ body {
 
   .home-footer-links {
     position: fixed;
-    bottom: 10px;
-    margin-top: 0;
-    padding: 8px 15px;
-    gap: 15px;
-    background: rgba(255, 255, 255, 0.4);
-    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.05);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 20px;
-    justify-content: center;
-    width: auto;
+    bottom: 25px;
     left: 50%;
     transform: translateX(-50%);
-    width: 90%;
-    max-width: 300px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    z-index: 50;
+    width: max-content;
   }
 
   .home-footer-item {
