@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import SettingsModal from './SettingsModal';
+import InstallButton from './InstallButton';
 
 const Navbar = () => {
     const navigate = useNavigate();
@@ -14,13 +15,16 @@ const Navbar = () => {
                     <span className="brand-text">ગુજરાતી વ્યાકરણ</span>
                 </div>
 
-                <button
-                    className="settings-trigger-btn"
-                    onClick={() => setIsSettingsOpen(true)}
-                    title="Settings"
-                >
-                    ⚙️
-                </button>
+                <div className="nav-actions" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <InstallButton />
+                    <button
+                        className="settings-trigger-btn"
+                        onClick={() => setIsSettingsOpen(true)}
+                        title="Settings"
+                    >
+                        ⚙️
+                    </button>
+                </div>
             </nav>
 
             <SettingsModal

@@ -7,6 +7,7 @@ import Theory from './pages/Theory';
 import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
 import Test from './pages/Test';
+import PdfViewer from './pages/PdfViewer';
 import BackgroundBlobs from './components/BackgroundBlobs';
 import Navbar from './components/Navbar';
 import { ThemeProvider } from './context/ThemeContext';
@@ -28,6 +29,7 @@ function App() {
             <Route path="/test/:id" element={<Test />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/contact" element={<ContactUs />} />
+            <Route path="/pdf-view" element={<PdfViewer />} />
           </Routes>
         </div>
       </Router>

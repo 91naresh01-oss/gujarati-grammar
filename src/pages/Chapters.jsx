@@ -46,9 +46,25 @@ function Chapters() {
                             >
                                 <span>📝</span> TEST
                             </button>
-                            <button className="action-btn btn-pdf">
-                                <span>📄</span> PDF
+                        </div>
+
+                        <div className="pdf-actions">
+                            <button
+                                className="pdf-btn pdf-theory-btn"
+                                onClick={() => navigate(`/pdf-view?file=${encodeURIComponent(`/pdf/Ch ${chapter.id} theory.pdf`)}&title=${encodeURIComponent(`Ch ${chapter.id} - ${chapter.name} (Theory)`)}`)}
+                            >
+                                <span className="pdf-icon">📘</span>
+                                <span>{chapter.hasTestPdf ? 'Theory PDF' : 'Theory PDF | Test'}</span>
                             </button>
+                            {chapter.hasTestPdf && (
+                                <button
+                                    className="pdf-btn pdf-test-btn"
+                                    onClick={() => navigate(`/pdf-view?file=${encodeURIComponent(`/pdf/Ch ${chapter.id} questions.pdf`)}&title=${encodeURIComponent(`Ch ${chapter.id} - ${chapter.name} (Test)`)}`)}
+                                >
+                                    <span className="pdf-icon">📙</span>
+                                    <span>Test PDF</span>
+                                </button>
+                            )}
                         </div>
 
                     </div>
