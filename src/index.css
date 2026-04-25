@@ -18,6 +18,13 @@
 
   /* Bullet Color */
   --bullet-red: #ef4444;
+
+  /* Theory Layout Variables */
+  --theory-card-padding: 18px;
+  --theory-element-padding: 12px;
+  --theory-card-radius: 16px;
+  --theory-wrapper-width: 95%;
+  --theory-wrapper-max-width: 900px;
 }
 
 * {
@@ -28,9 +35,7 @@
 
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  background: linear-gradient(-45deg, #f0f9ff, #fdf2f8, #f5f3ff, #fffaf5, #ecfeff, #eef2ff);
-  background-size: 400% 400%;
-  animation: gradientBG 12s ease infinite;
+  background: linear-gradient(135deg, #f0f9ff 0%, #eef2ff 100%);
   background-attachment: fixed;
   min-height: 100vh;
   color: var(--text-main);
@@ -46,20 +51,6 @@ body {
   /* Firefox */
   -ms-user-select: none;
   /* IE10+ */
-}
-
-@keyframes gradientBG {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 #root {
@@ -108,7 +99,7 @@ body {
   min-height: 200px;
   max-width: 520px;
   width: 90%;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-radius: 24px;
@@ -386,31 +377,15 @@ body {
 
 .rainbow-pastel-bg {
   position: absolute;
-  width: 150%;
-  height: 150%;
-  top: -25%;
-  left: -25%;
-  background: radial-gradient(circle at 20% 20%, rgba(255, 182, 193, 0.45) 0%, transparent 40%),
-    radial-gradient(circle at 80% 20%, rgba(173, 216, 230, 0.45) 0%, transparent 40%),
-    radial-gradient(circle at 50% 50%, rgba(255, 255, 224, 0.45) 0%, transparent 50%),
-    radial-gradient(circle at 20% 80%, rgba(221, 160, 221, 0.45) 0%, transparent 40%),
-    radial-gradient(circle at 80% 80%, rgba(144, 238, 144, 0.45) 0%, transparent 40%);
-  filter: blur(80px);
-  /* Slightly reduced for better performance */
-  animation: rotate-bg 30s linear infinite;
-  /* GPU acceleration */
-  will-change: transform;
-  transform: translateZ(0);
-}
-
-@keyframes rotate-bg {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(255, 182, 193, 0.2) 0%, transparent 40%),
+    radial-gradient(circle at 80% 20%, rgba(173, 216, 230, 0.2) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 224, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 20% 80%, rgba(221, 160, 221, 0.2) 0%, transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(144, 238, 144, 0.2) 0%, transparent 40%);
 }
 
 .theory-header-outside {
@@ -590,10 +565,10 @@ body {
 
 /* Main Container with extra spacing */
 .modern-theory-wrapper {
-  max-width: 750px;
+  max-width: var(--theory-wrapper-max-width, 750px);
   margin: 0 auto;
   padding: 10px;
-  width: 95%;
+  width: var(--theory-wrapper-width, 95%);
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -602,9 +577,8 @@ body {
 /* Individual Theory Section Card */
 .modern-theory-card {
   background: rgba(248, 250, 252, 0.92);
-  backdrop-filter: blur(10px);
-  border-radius: 16px;
-  padding: 16px;
+  border-radius: var(--theory-card-radius, 16px);
+  padding: var(--theory-card-padding, 16px);
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
   border: 1px solid rgba(226, 232, 240, 0.8);
   position: relative;
@@ -667,68 +641,79 @@ body {
   /* White for even rows */
 }
 
-/* Highlighting keywords (optional helper) */
-
-  font-weight: 700;
-}
 
 /* Mobile responsiveness - COMPACT */
 @media (max-width: 600px) {
   body {
     padding: 0;
     overflow-x: hidden;
+    position: relative;
+    height: 100%;
+    width: 100%;
   }
 
   #root {
     width: 100%;
     max-width: 100%;
     margin: 0;
-    padding: 0 5px;
+    padding: 0 1px;
+  }
+
+  :root {
+    --theory-card-padding: 6px;
+    --theory-element-padding: 5px;
+    --theory-card-radius: 8px;
+    --theory-wrapper-width: 99%;
+    --theory-wrapper-max-width: 100%;
   }
 
   /* Home page - Premium Mobile */
   .home-wrapper {
     margin: 0 auto;
-    height: calc(100dvh - 46px);
-    justify-content: flex-start;
-    padding-top: 8vh;
+    height: calc(100dvh - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
-    gap: 0;
+    gap: 15px;
+    position: relative;
+    padding-bottom: 40px; /* Space for footer */
   }
 
   .home-logo {
-    width: 150px;
-    margin-bottom: 1.2rem;
+    width: 130px;
+    margin-bottom: 1rem;
   }
 
   .home-container {
-    max-width: 92%;
+    max-width: 90%;
     margin: 0 auto;
-    padding: 1.8rem 1.5rem;
-    border-radius: 22px;
-    gap: 18px;
+    padding: 1.2rem 1.2rem;
+    border-radius: 20px;
+    gap: 12px;
     min-height: auto;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08), inset 0 0 15px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   }
 
   .home-icon {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .home-title {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .home-subtitle {
-    font-size: 1rem;
+    font-size: 0.95rem;
     line-height: 1.4;
-    margin-top: 4px;
+    margin-top: 2px;
   }
 
   .home-content-row {
     flex-direction: row;
     text-align: left;
-    gap: 14px;
+    gap: 10px;
   }
 
   .home-text-col {
@@ -746,7 +731,7 @@ body {
 
   .home-footer-links {
     position: fixed;
-    bottom: 25px;
+    bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -850,7 +835,7 @@ body {
     padding: 6px 14px;
     font-size: 0.88rem;
     min-width: auto;
-    max-width: 80%;
+    max-width: 95%;
   }
 
   .back-btn-theory-outside {
@@ -880,17 +865,17 @@ body {
 
   /* Modern Theory Wrapper - Full Width Mobile - COMPACT */
   .modern-theory-wrapper {
-    padding: 6px 3px;
+    padding: 6px 1px;
     gap: 8px;
-    width: 100%;
-    margin: 0;
+    width: var(--theory-wrapper-width, 99%) !important;
+    margin: 0 auto;
   }
 
   .modern-theory-card {
     width: 100%;
     margin: 0;
-    padding: 10px 8px;
-    border-radius: 10px;
+    padding: var(--theory-card-padding, 10px);
+    border-radius: var(--theory-card-radius, 12px);
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
   }
 
@@ -962,8 +947,8 @@ body {
 
   /* Gradient cards - smaller on mobile */
   .modern-theory-content div[style*="background: linear-gradient"] {
-    padding: 10px 8px !important;
-    border-radius: 10px !important;
+    padding: var(--theory-card-padding, 6px) !important;
+    border-radius: var(--theory-card-radius, 8px) !important;
     margin-bottom: 8px !important;
   }
 

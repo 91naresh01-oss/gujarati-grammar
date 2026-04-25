@@ -29,7 +29,8 @@ const themeConfig = {
         tableHeader: '0.88rem',
     },
     spacing: {
-        cardPadding: '16px',
+        cardPadding: 'var(--theory-card-padding, 16px)',
+        elementPadding: 'var(--theory-element-padding, 12px)',
         elementGap: '10px',
         lineHeight: '1.5'
     },
@@ -60,7 +61,7 @@ const themeConfig = {
         text: '0 2px 10px rgba(99, 102, 241, 0.3)'
     },
     radius: {
-        card: '16px',
+        card: 'var(--theory-card-radius, 16px)',
         element: '12px',
         pill: '50px'
     }
@@ -265,7 +266,7 @@ export const GradientCard = ({ title, heading, icon, description, theme = 'indig
                         background: 'rgba(255,255,255,0.6)',
                         backdropFilter: 'blur(10px)',
                         borderRadius: '16px',
-                        padding: children ? '12px' : '0',
+                        padding: children ? themeConfig.spacing.elementPadding : '0',
                         border: '1px solid rgba(255,255,255,0.5)',
                         boxShadow: '0 3px 5px rgba(0,0,0,0.02)'
                     }}>
@@ -410,7 +411,7 @@ export const HighlightBox = ({ title, children, type, theme: explicitTheme }) =>
         <div style={{
             background: style.bg,
             borderLeft: `5px solid ${style.border}`,
-            padding: '12px',
+            padding: themeConfig.spacing.elementPadding,
             borderRadius: '0 14px 14px 0',
             marginBottom: '10px',
             boxShadow: '0 3px 5px -1px rgba(0,0,0,0.04)',

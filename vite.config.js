@@ -12,7 +12,7 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom', 'react-router-dom'],
-          pdf: ['/src/pages/PdfViewer.jsx']
+          pdf: ['react-pdf', 'pdfjs-dist']
         }
       }
     },
