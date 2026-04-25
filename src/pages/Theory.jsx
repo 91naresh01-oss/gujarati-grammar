@@ -52,11 +52,11 @@ function Theory() {
 
             <div className="modern-theory-wrapper">
                 {isLoading ? (
-                    <div style={{ textAlign: 'center', padding: '50px 0', color: '#3b82f6', fontSize: '1.2rem', fontWeight: 600 }}>
+                    <div style={{ textAlign: 'center', padding: '30px 0', color: '#3b82f6', fontSize: '1.1rem', fontWeight: 600 }}>
                         <div style={{
-                            width: '40px', height: '40px', border: '4px solid #e5e7eb',
-                            borderTop: '4px solid #3b82f6', borderRadius: '50%',
-                            animation: 'spin 0.8s linear infinite', margin: '0 auto 15px'
+                            width: '35px', height: '35px', border: '3px solid #e5e7eb',
+                            borderTop: '3px solid #3b82f6', borderRadius: '50%',
+                            animation: 'spin 0.8s linear infinite', margin: '0 auto 10px'
                         }} />
                         થિયરી લોડ થઈ રહી છે...
                     </div>

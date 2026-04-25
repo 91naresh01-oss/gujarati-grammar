@@ -21,17 +21,17 @@ const TheoryThemeContext = createContext('indigo');
 // --- 🎨 Global Theme Configuration (Colorful Professional) ---
 const themeConfig = {
     fontSizes: {
-        body: '1.05rem',
-        headingMain: '1.8rem',
-        headingSection: '1.5rem',
-        headingSub: '1.2rem',
-        small: '0.9rem',
-        tableHeader: '0.95rem',
+        body: '0.95rem',
+        headingMain: '1.5rem',
+        headingSection: '1.25rem',
+        headingSub: '1.1rem',
+        small: '0.85rem',
+        tableHeader: '0.88rem',
     },
     spacing: {
-        cardPadding: '24px',
-        elementGap: '16px',
-        lineHeight: '1.6'
+        cardPadding: '16px',
+        elementGap: '10px',
+        lineHeight: '1.5'
     },
     colors: {
         textMain: '#0f172a',      // Dark Slate (વધુ કોન્ટ્રાસ્ટ)
@@ -60,8 +60,8 @@ const themeConfig = {
         text: '0 2px 10px rgba(99, 102, 241, 0.3)'
     },
     radius: {
-        card: '24px',
-        element: '16px',
+        card: '16px',
+        element: '12px',
         pill: '50px'
     }
 };
@@ -132,17 +132,17 @@ export const TheoryCard = ({ title, icon, children, theme = 'indigo', style = {}
 
 
                 {(icon || title) && (
-                    <div style={{ marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '18px' }}>
+                    <div style={{ marginBottom: '10px', display: 'flex', alignItems: 'center', gap: '12px' }}>
                         {icon && (
                             <div style={{
-                                width: '48px',
-                                height: '48px',
+                                width: '40px',
+                                height: '40px',
                                 borderRadius: themeConfig.radius.element,
                                 background: activeTheme.light,
                                 display: 'flex',
                                 alignItems: 'center',
                                 justifyContent: 'center',
-                                fontSize: '1.6rem',
+                                fontSize: '1.3rem',
                                 border: `1px solid ${activeTheme.main}30`
                             }}>
                                 {icon}
@@ -220,14 +220,14 @@ export const GradientCard = ({ title, heading, icon, description, theme = 'indig
                                 <div style={{
                                     background: 'rgba(255, 255, 255, 0.8)',
                                     backdropFilter: 'blur(12px)',
-                                    borderRadius: '18px',
-                                    minWidth: '64px',
-                                    height: '64px',
+                                    borderRadius: '14px',
+                                    minWidth: '52px',
+                                    height: '52px',
                                     display: 'flex',
                                     alignItems: 'center',
                                     justifyContent: 'center',
-                                    fontSize: '2.2rem',
-                                    boxShadow: '0 8px 16px rgba(0,0,0,0.05)'
+                                    fontSize: '1.8rem',
+                                    boxShadow: '0 6px 12px rgba(0,0,0,0.04)'
                                 }}>
                                     {icon}
                                 </div>
@@ -237,8 +237,8 @@ export const GradientCard = ({ title, heading, icon, description, theme = 'indig
                                     <h2 style={{
                                         fontSize: themeConfig.fontSizes.headingMain,
                                         fontWeight: '900',
-                                        marginBottom: '8px',
-                                        lineHeight: '1.1',
+                                        marginBottom: '6px',
+                                        lineHeight: '1.15',
                                         color: '#0f172a', // Dark text for readability
                                         letterSpacing: '-0.02em'
                                     }}>
@@ -264,10 +264,10 @@ export const GradientCard = ({ title, heading, icon, description, theme = 'indig
                     <div style={{
                         background: 'rgba(255,255,255,0.6)',
                         backdropFilter: 'blur(10px)',
-                        borderRadius: '20px',
-                        padding: children ? '16px' : '0',
+                        borderRadius: '16px',
+                        padding: children ? '12px' : '0',
                         border: '1px solid rgba(255,255,255,0.5)',
-                        boxShadow: '0 4px 6px rgba(0,0,0,0.02)'
+                        boxShadow: '0 3px 5px rgba(0,0,0,0.02)'
                     }}>
                         {children}
                     </div>
@@ -279,7 +279,7 @@ export const GradientCard = ({ title, heading, icon, description, theme = 'indig
 
 // 3. 🎯 Section Heading (Gradient Text)
 export const TheoryHeading = ({ children, color }) => (
-    <div style={{ marginBottom: '12px', marginTop: '24px', position: 'relative' }}>
+    <div style={{ marginBottom: '8px', marginTop: '16px', position: 'relative' }}>
         <h3 style={{
             fontSize: themeConfig.fontSizes.headingSection,
             fontWeight: '800',
@@ -288,19 +288,18 @@ export const TheoryHeading = ({ children, color }) => (
             background: color || themeConfig.gradients.main,
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: color ? 'initial' : 'transparent',
-            color: color || themeConfig.colors.primary, // Fallback
+            color: color || themeConfig.colors.primary,
             letterSpacing: '-0.01em',
-            paddingBottom: '8px'
+            paddingBottom: '6px'
         }}>
             {children}
         </h3>
-        {/* Underline Decoration */}
         <div style={{
-            height: '4px',
-            width: '40px',
+            height: '3px',
+            width: '30px',
             background: color || themeConfig.gradients.main,
             borderRadius: '2px',
-            marginTop: '4px'
+            marginTop: '3px'
         }} />
     </div>
 );
@@ -313,10 +312,10 @@ export const TheorySubHeading = ({ children, bg, color, glass = false }) => {
             fontWeight: '700',
             color: color || '#1e293b',
             background: glass ? 'rgba(255,255,255,0.5)' : (bg || '#f1f5f9'),
-            padding: '6px 16px',
+            padding: '5px 12px',
             borderRadius: themeConfig.radius.pill,
-            marginBottom: '8px',
-            marginTop: '8px',
+            marginBottom: '6px',
+            marginTop: '6px',
             display: 'inline-flex',
             alignItems: 'center',
             gap: '8px',
@@ -334,8 +333,8 @@ export const TheoryText = ({ children, highlight = false, color: customColor }) 
     <p style={{
         fontSize: themeConfig.fontSizes.body,
         color: customColor || (highlight ? '#0f172a' : themeConfig.colors.textLight),
-        marginBottom: '10px',
-        lineHeight: '1.8',
+        marginBottom: '6px',
+        lineHeight: '1.6',
         fontWeight: highlight ? '600' : '400',
         letterSpacing: '0.01em'
     }}>
@@ -345,7 +344,7 @@ export const TheoryText = ({ children, highlight = false, color: customColor }) 
 
 // --- ✅ List Components (Custom Checkmarks) ---
 export const TheoryList = ({ children, color }) => (
-    <ul style={{ listStyle: 'none', padding: '0', margin: '12px 0' }}>
+    <ul style={{ listStyle: 'none', padding: '0', margin: '8px 0' }}>
         {children}
     </ul>
 );
@@ -353,28 +352,28 @@ export const TheoryList = ({ children, color }) => (
 export const TheoryListItem = ({ children, color }) => (
     <li style={{
         display: 'flex',
-        gap: '16px',
-        marginBottom: '8px',
-        lineHeight: '1.6',
+        gap: '10px',
+        marginBottom: '5px',
+        lineHeight: '1.5',
         fontSize: themeConfig.fontSizes.body,
         background: '#fff',
-        padding: '8px 12px',
-        borderRadius: '12px',
+        padding: '6px 10px',
+        borderRadius: '10px',
         border: '1px solid #f1f5f9',
-        boxShadow: '0 2px 4px rgba(0,0,0,0.02)',
+        boxShadow: '0 1px 3px rgba(0,0,0,0.02)',
         transition: 'transform 0.2s',
         alignItems: 'center'
     }}>
         <div style={{
-            minWidth: '24px',
-            height: '24px',
+            minWidth: '20px',
+            height: '20px',
             borderRadius: '50%',
             background: color || themeConfig.gradients.cool,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             color: '#fff',
-            fontSize: '0.8rem',
+            fontSize: '0.7rem',
             fontWeight: 'bold',
             flexShrink: 0
         }}>
@@ -410,11 +409,11 @@ export const HighlightBox = ({ title, children, type, theme: explicitTheme }) =>
     return (
         <div style={{
             background: style.bg,
-            borderLeft: `6px solid ${style.border}`,
-            padding: '16px',
-            borderRadius: '0 16px 16px 0',
-            marginBottom: '16px',
-            boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)',
+            borderLeft: `5px solid ${style.border}`,
+            padding: '12px',
+            borderRadius: '0 14px 14px 0',
+            marginBottom: '10px',
+            boxShadow: '0 3px 5px -1px rgba(0,0,0,0.04)',
             position: 'relative',
             overflow: 'hidden'
         }}>
@@ -472,8 +471,8 @@ export const TheoryTable = ({ children, theme: explicitTheme }) => {
     return (
         <div style={{
             overflowX: 'auto',
-            borderRadius: '16px',
-            marginBottom: '16px',
+            borderRadius: '12px',
+            marginBottom: '10px',
             border: `1px solid ${themeConfig.colors.border}`,
             boxShadow: themeConfig.shadows.soft,
             background: '#ffffff',
@@ -514,7 +513,7 @@ export const TheoryTableHeader = ({ headers, children, theme }) => {
             <tr style={{ background: headerStyle.bg }}>
                 {headers ? headers.map((h, i) => (
                     <th key={i} style={{
-                        padding: '12px',
+                        padding: '10px',
                         textAlign: 'left',
                         fontWeight: '700',
                         color: headerStyle.text,
@@ -538,7 +537,7 @@ export const TheoryTableRow = ({ cells, isEven = false, children }) => (
     }}>
         {cells ? cells.map((c, i) => (
             <td key={i} style={{
-                padding: '12px',
+                padding: '10px',
                 color: '#475569',
                 verticalAlign: 'top',
                 borderBottom: '1px solid #f1f5f9'
@@ -554,8 +553,8 @@ export const TheoryGrid = ({ children, minWidth = '320px' }) => (
     <div style={{
         display: 'grid',
         gridTemplateColumns: `repeat(auto-fit, minmax(${minWidth}, 1fr))`,
-        gap: '16px',
-        marginTop: '16px'
+        gap: '10px',
+        marginTop: '10px'
     }}>
         {children}
     </div>
