@@ -2506,6 +2506,14 @@ body {
   }
 
   body {
-    padding: 10px !important;
+    padding: 5px !important;
+  }
+
+  /* Target the main container divs in Chapters, Home, etc. */
+  #root > div, 
+  #root > main,
+  .page-container,
+  div[style*="padding: 20px"] {
+    padding: 5px !important;
   }
 }
