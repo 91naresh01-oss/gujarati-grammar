@@ -2504,4 +2504,8 @@ body {
     min-width: 65px !important;
     border-radius: 10px !important; /* Slightly less rounded to fit better */
   }
+
+  body {
+    padding: 10px !important;
+  }
 }
