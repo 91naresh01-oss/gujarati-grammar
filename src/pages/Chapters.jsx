@@ -42,8 +42,8 @@ function Chapters() {
                     {chapters.map((chapter, index) => {
                         const theme = colorThemes[index % colorThemes.length];
                         return (
-                            <div 
-                                key={chapter.id} 
+                            <div
+                                key={chapter.id}
                                 className="chapter-card"
                                 style={{
                                     backgroundColor: theme.bg,

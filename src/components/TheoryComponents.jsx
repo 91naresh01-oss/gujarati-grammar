@@ -55,10 +55,10 @@ const themeConfig = {
         glass: 'linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.6) 100%)'
     },
     shadows: {
-        soft: '0 4px 20px -2px rgba(99, 102, 241, 0.1)', // જાંબલી ટિન્ટવાળો પડછાયો
-        card: '0 10px 40px -10px rgba(0, 0, 0, 0.08)',
-        hover: '0 20px 40px -10px rgba(99, 102, 241, 0.2)', // હોવર ઇફેક્ટ
-        text: '0 2px 10px rgba(99, 102, 241, 0.3)'
+        soft: '0 4px 15px rgba(0, 0, 0, 0.1)',
+        card: '0 12px 30px rgba(0, 0, 0, 0.12)',
+        hover: '0 20px 45px rgba(0, 0, 0, 0.18)',
+        text: '0 2px 8px rgba(0, 0, 0, 0.2)'
     },
     radius: {
         card: 'var(--theory-card-radius, 16px)',
@@ -185,7 +185,7 @@ export const GradientCard = ({ title, heading, icon, description, theme = 'indig
                 padding: themeConfig.spacing.cardPadding,
                 borderRadius: themeConfig.radius.card,
                 marginBottom: themeConfig.spacing.elementGap,
-                boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
+                boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)',
                 position: 'relative',
                 overflow: 'hidden',
                 border: '1px solid rgba(255, 255, 255, 0.8)'
@@ -361,7 +361,7 @@ export const TheoryListItem = ({ children, color }) => (
         padding: '6px 10px',
         borderRadius: '10px',
         border: '1px solid #f1f5f9',
-        boxShadow: '0 1px 3px rgba(0,0,0,0.02)',
+        boxShadow: '0 4px 10px rgba(0,0,0,0.08)',
         transition: 'transform 0.2s',
         alignItems: 'center'
     }}>
@@ -414,7 +414,7 @@ export const HighlightBox = ({ title, children, type, theme: explicitTheme }) =>
             padding: themeConfig.spacing.elementPadding,
             borderRadius: '0 14px 14px 0',
             marginBottom: '10px',
-            boxShadow: '0 3px 5px -1px rgba(0,0,0,0.04)',
+            boxShadow: '0 6px 15px rgba(0,0,0,0.08)',
             position: 'relative',
             overflow: 'hidden'
         }}>

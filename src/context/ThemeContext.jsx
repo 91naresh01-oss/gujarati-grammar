@@ -12,11 +12,11 @@ export const ThemeProvider = ({ children }) => {
     }, [fontSize]);
 
     const increaseFontSize = () => {
-        setFontSize(prev => Math.min(prev + 2, 24)); // Max 24px
+        setFontSize(prev => Math.min(prev + 1, 24)); // Max 24px
     };
 
     const decreaseFontSize = () => {
-        setFontSize(prev => Math.max(prev - 2, 12)); // Min 12px
+        setFontSize(prev => Math.max(prev - 1, 12)); // Min 12px
     };
 
     const resetFontSize = () => {

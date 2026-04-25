@@ -202,11 +202,14 @@ function Test() {
                             <BackArrow size={18} color="white" />
                         </button>
 
-                        <div className="test-chip-row test-chip-row-center">
-                            <span className="test-chip">CH {id}</span>
-                            <span className="test-chip test-chip-soft">TEST {getTestNumber(selectedTestId)}</span>
-                            <span className="test-result-title">{chapter.name}</span>
+                        <div className="test-question-header-main">
+                            <div className="test-chip-row">
+                                <span className="test-chip">CH {id}</span>
+                                <span className="test-chip test-chip-soft">TEST {getTestNumber(selectedTestId)}</span>
+                            </div>
+                            <h1 className="test-result-title">{chapter.name}</h1>
                         </div>
+                        <div style={{ width: '48px' }} className="mobile-hide" />
                     </div>
 
                     <div className={`test-result-hero ${resultToneClass}`}>
@@ -316,6 +319,7 @@ function Test() {
                         <h1 className="test-question-title">{chapter.name}</h1>
                     </div>
 
+                    <div style={{ width: '48px' }} className="mobile-hide" />
                 </div>
 
                 <div className="test-shell test-shell-question">
