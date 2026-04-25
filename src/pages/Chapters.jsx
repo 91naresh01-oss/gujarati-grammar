@@ -3,6 +3,18 @@ import { useNavigate } from 'react-router-dom';
 import { chaptersData } from '../data';
 import BackArrow from '../components/BackArrow';
 
+const colorThemes = [
+    { main: '#e11d48', border: '#f43f5e', bg: 'rgba(244, 63, 94, 0.08)' }, // 1: Red
+    { main: '#4f46e5', border: '#6366f1', bg: 'rgba(99, 102, 241, 0.08)' }, // 2: Indigo
+    { main: '#0284c7', border: '#38bdf8', bg: 'rgba(56, 189, 248, 0.08)' }, // 3: Light Blue
+    { main: '#059669', border: '#34d399', bg: 'rgba(52, 211, 153, 0.08)' }, // 4: Green
+    { main: '#d97706', border: '#fbbf24', bg: 'rgba(251, 191, 36, 0.08)' }, // 5: Orange
+    { main: '#334155', border: '#94a3b8', bg: 'rgba(148, 163, 184, 0.08)' }, // 6: Slate
+    { main: '#7c3aed', border: '#a855f7', bg: 'rgba(168, 85, 247, 0.08)' }, // 7: Purple
+    { main: '#0d9488', border: '#2dd4bf', bg: 'rgba(45, 212, 191, 0.08)' }, // 8: Teal
+    { main: '#be123c', border: '#fb7185', bg: 'rgba(251, 113, 133, 0.08)' }, // 9: Pink
+];
+
 function Chapters() {
     const navigate = useNavigate();
     const chapters = chaptersData;
@@ -27,55 +39,58 @@ function Chapters() {
                 </div>
 
                 <div className="chapter-grid">
-                    {chapters.map((chapter) => (
-                        <div key={chapter.id} className="chapter-card">
-
-                            <div className="chapter-header">
-                                <div className="chapter-number-box">
-                                    {chapter.id}
+                    {chapters.map((chapter, index) => {
+                        const theme = colorThemes[index % colorThemes.length];
+                        return (
+                            <div 
+                                key={chapter.id} 
+                                className="chapter-card"
+                                style={{
+                                    backgroundColor: theme.bg,
+                                    borderLeftColor: theme.border
+                                }}
+                            >
+                                <div className="chapter-header">
+                                    <div className="chapter-number-box" style={{ backgroundColor: theme.main }}>
+                                        {chapter.id}
+                                    </div>
+                                    <div className="chapter-info">
+                                        <h3>{chapter.name}</h3>
+                                        <p className="chapter-desc">{chapter.desc}</p>
+                                    </div>
                                 </div>
-                                <div className="chapter-info">
-                                    <h3>{chapter.name}</h3>
-                                    <p className="chapter-desc">{chapter.desc}</p>
-                                </div>
-                            </div>
 
-                            <div className="chapter-actions">
-                                <button
-                                    className="action-btn btn-theory"
-                                    onClick={() => navigate(`/theory/${chapter.id}`)}
-                                >
-                                    <span>📖</span> THEORY
-                                </button>
-                                <button
-                                    className="action-btn btn-test"
-                                    onClick={() => navigate(`/test/${chapter.id}`)}
-                                >
-                                    <span>📝</span> TEST
-                                </button>
-                            </div>
-
-                            <div className="pdf-actions">
-                                <button
-                                    className="pdf-btn pdf-theory-btn"
-                                    onClick={() => navigate(`/pdf-view?file=${encodeURIComponent(`/pdf/Ch ${chapter.id} theory.pdf`)}&title=${encodeURIComponent(`Ch ${chapter.id} - ${chapter.name} (Theory)`)}`)}
-                                >
-                                    <span className="pdf-icon">📘</span>
-                                    <span>{chapter.hasTestPdf ? 'Theory PDF' : 'Theory PDF | Test'}</span>
-                                </button>
-                                {chapter.hasTestPdf && (
+                                <div className="chapter-actions">
                                     <button
-                                        className="pdf-btn pdf-test-btn"
-                                        onClick={() => navigate(`/pdf-view?file=${encodeURIComponent(`/pdf/Ch ${chapter.id} questions.pdf`)}&title=${encodeURIComponent(`Ch ${chapter.id} - ${chapter.name} (Test)`)}`)}
+                                        className="action-btn btn-theory"
+                                        onClick={() => navigate(`/theory/${chapter.id}`)}
                                     >
-                                        <span className="pdf-icon">📙</span>
-                                        <span>Test PDF</span>
+                                        Theory
                                     </button>
-                                )}
+                                    <button
+                                        className="action-btn btn-test"
+                                        onClick={() => navigate(`/test/${chapter.id}`)}
+                                    >
+                                        Test
+                                    </button>
+                                    <button
+                                        className="action-btn btn-pdf"
+                                        onClick={() => navigate(`/pdf-view?file=${encodeURIComponent(`/pdf/Ch ${chapter.id} theory.pdf`)}&title=${encodeURIComponent(`Ch ${chapter.id} - ${chapter.name} (Theory)`)}`)}
+                                    >
+                                        Theory PDF
+                                    </button>
+                                    {chapter.hasTestPdf && (
+                                        <button
+                                            className="action-btn btn-pdf"
+                                            onClick={() => navigate(`/pdf-view?file=${encodeURIComponent(`/pdf/Ch ${chapter.id} questions.pdf`)}&title=${encodeURIComponent(`Ch ${chapter.id} - ${chapter.name} (Test)`)}`)}
+                                        >
+                                            Test PDF
+                                        </button>
+                                    )}
+                                </div>
                             </div>
-
-                        </div>
-                    ))}
+                        );
+                    })}
                 </div>
             </div>
         </>

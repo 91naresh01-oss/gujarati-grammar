@@ -3,6 +3,25 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { chaptersData } from '../data';
 import BackArrow from '../components/BackArrow';
 
+// Gradient colors for test buttons
+const testGradients = [
+    'linear-gradient(135deg, #667eea, #764ba2)', // Purple-Indigo
+    'linear-gradient(135deg, #43e97b, #38f9d7)', // Green-Mint
+    'linear-gradient(135deg, #a18cd1, #fbc2eb)', // Purple-Pink
+    'linear-gradient(135deg, #f6d365, #fda085)', // Yellow-Orange
+    'linear-gradient(135deg, #f093fb, #f5576c)', // Pink-Red
+    'linear-gradient(135deg, #4facfe, #00f2fe)', // Blue-Cyan
+    'linear-gradient(135deg, #43e97b, #38f9d7)', // Green-Teal
+    'linear-gradient(135deg, #fa709a, #fee140)', // Pink-Yellow
+    'linear-gradient(135deg, #a18cd1, #fbc2eb)', // Lavender
+    'linear-gradient(135deg, #667eea, #764ba2)', // Indigo
+    'linear-gradient(135deg, #f093fb, #f5576c)', // Magenta
+    'linear-gradient(135deg, #e44d26, #f16529)', // Red
+    'linear-gradient(135deg, #11998e, #38ef7d)', // Teal-Green
+    'linear-gradient(135deg, #ee0979, #ff6a00)', // Pink-Orange
+    'linear-gradient(135deg, #0575e6, #021b79)', // Deep Blue
+];
+
 function Test() {
     const navigate = useNavigate();
     const { id } = useParams();
@@ -14,6 +33,7 @@ function Test() {
     const [selectedOption, setSelectedOption] = useState(null);
     const [score, setScore] = useState(0);
     const [showResult, setShowResult] = useState(false);
+    const [userAnswers, setUserAnswers] = useState([]);
 
     // State for lazy-loaded test data
     const [testsData, setTestsData] = useState(null);
@@ -47,53 +67,35 @@ function Test() {
         setSelectedOption(null);
         setScore(0);
         setShowResult(false);
+        setUserAnswers([]);
     };
 
     // If no test is selected yet, show the "Select Test" screen
     if (!selectedTestId) {
         return (
-            <div style={{ padding: '20px', maxWidth: '600px', margin: '0 auto' }}>
-                <div className="theory-header-outside" style={{
-                    justifyContent: 'center',
-                    marginBottom: '30px',
-                    alignItems: 'center',
-                    position: 'relative',
-                    display: 'flex',
-                    width: '100%'
-                }}>
+            <div className="test-select-wrapper">
+                {/* Glass Container */}
+                <div className="test-select-container">
+                    {/* Back Button */}
                     <button
                         onClick={() => navigate('/chapters')}
-                        className="back-btn-theory-outside"
-                        style={{
-                            width: '40px',
-                            height: '40px',
-                            fontSize: '1rem',
-                            position: 'absolute',
-                            left: '0',
-                            top: '50%',
-                            transform: 'translateY(-50%)'
-                        }}>
+                        className="test-select-back-btn"
+                    >
                         <BackArrow size={18} color="white" />
                     </button>
 
-                    <div className="theory-title-pill" style={{
-                        background: '#3b82f6',
-                        color: 'white',
-                        padding: '12px 30px',
-                        borderRadius: '50px',
-                        fontSize: '1.2rem',
-                        fontWeight: '800',
-                        boxShadow: '0 4px 15px rgba(59, 130, 246, 0.4)',
-                        border: '2px solid rgba(255, 255, 255, 0.2)',
-                        textAlign: 'center'
-                    }}>
-                        {chapter.name} : ટેસ્ટ સીરીઝ
+                    {/* Chapter Badge */}
+                    <div className="test-select-badge">
+                        <span className="test-badge-dot"></span>
+                        CHAPTER {id}
                     </div>
-                </div>
 
-                <div style={{ display: 'grid', gap: '20px' }}>
+                    {/* Chapter Name */}
+                    <h2 className="test-select-title">{chapter.name}</h2>
+
+                    {/* Test Buttons Grid */}
                     {isLoadingTests ? (
-                        <div style={{ textAlign: 'center', padding: '50px 0', color: '#3b82f6', fontSize: '1.2rem', fontWeight: 600 }}>
+                        <div style={{ textAlign: 'center', padding: '50px 0', color: '#3b82f6', fontSize: '1.1rem', fontWeight: 600 }}>
                             <div style={{
                                 width: '40px', height: '40px', border: '4px solid #e5e7eb',
                                 borderTop: '4px solid #3b82f6', borderRadius: '50%',
@@ -104,44 +106,21 @@ function Test() {
                     ) : error ? (
                         <div style={{ textAlign: 'center', padding: '20px', color: '#ef4444' }}>{error}</div>
                     ) : testsData && testsData.length > 0 ? (
-                        testsData.map((test) => (
-                            <div key={test.id} className="clean-card" style={{ padding: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-                                    <div style={{
-                                        width: '50px',
-                                        height: '50px',
-                                        background: '#eff6ff',
-                                        borderRadius: '12px',
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        justifyContent: 'center',
-                                        overflow: 'hidden',
-                                        padding: '8px'
-                                    }}>
-                                        <img
-                                            src="/icon/test icon.png"
-                                            alt="Test"
-                                            style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-                                        />
-                                    </div>
-                                    <div>
-                                        <h3 style={{ margin: 0, fontSize: '1.2rem', color: '#1f2937' }}>{test.name}</h3>
-                                        <p style={{ margin: '5px 0 0 0', color: '#6b7280', fontSize: '0.9rem' }}>
-                                            {test.questions.length} પ્રશ્નો
-                                        </p>
-                                    </div>
-                                </div>
+                        <div className="test-select-grid">
+                            {testsData.map((test, index) => (
                                 <button
-                                    className="btn-primary"
-                                    style={{ marginTop: 0, padding: '10px 20px', fontSize: '1rem' }}
+                                    key={test.id}
+                                    className="test-pill-btn"
+                                    style={{ background: testGradients[index % testGradients.length] }}
                                     onClick={() => startTest(test.id)}
                                 >
-                                    Start
+                                    <span className="test-pill-num">{index + 1}</span>
+                                    <span className="test-pill-text">Test</span>
                                 </button>
-                            </div>
-                        ))
+                            ))}
+                        </div>
                     ) : (
-                        <p style={{ textAlign: 'center' }}>No tests available yet.</p>
+                        <p style={{ textAlign: 'center', color: '#9ca3af', padding: '30px 0' }}>No tests available yet.</p>
                     )}
                 </div>
             </div>
@@ -157,12 +136,17 @@ function Test() {
     const handleOptionSelect = (option) => {
         if (selectedOption) return; // Prevent changing after selection
         setSelectedOption(option);
+        setUserAnswers(prev => [...prev, { questionIndex: currentQuestionIndex, selected: option }]);
         if (option === currentQuestion.answer) {
             setScore(score + 1);
         }
     };
 
     const handleNextQuestion = () => {
+        // If skipped (no option selected), record skip
+        if (!selectedOption) {
+            setUserAnswers(prev => [...prev, { questionIndex: currentQuestionIndex, selected: null }]);
+        }
         const nextIndex = currentQuestionIndex + 1;
         if (nextIndex < activeTest.questions.length) {
             setCurrentQuestionIndex(nextIndex);
@@ -202,26 +186,86 @@ function Test() {
 
     // Result Screen
     if (showResult) {
+        const percentage = Math.round((score / activeTest.questions.length) * 100);
+        const getResultEmoji = () => {
+            if (percentage === 100) return '🏆';
+            if (percentage >= 80) return '🎉';
+            if (percentage >= 60) return '😊';
+            if (percentage >= 40) return '👍';
+            return '💪';
+        };
+        const getResultMsg = () => {
+            if (percentage === 100) return 'ઉત્તમ! પરફેક્ટ સ્કોર!';
+            if (percentage >= 80) return 'ખૂબ સરસ!';
+            if (percentage >= 60) return 'સારું!';
+            if (percentage >= 40) return 'સારા પ્રયાસ!';
+            return 'ફરી પ્રયાસ કરો!';
+        };
+        const wrongCount = activeTest.questions.length - score;
+        const skippedCount = userAnswers.filter(a => a.selected === null).length;
+
         return (
-            <div className="clean-card" style={{ maxWidth: '500px', margin: '50px auto', padding: '40px', textAlign: 'center' }}>
-                <h2 style={{ fontSize: '2rem', marginBottom: '20px' }}>પરિણામ</h2>
-                <div style={{ fontSize: '4rem', fontWeight: 'bold', color: '#3b82f6', marginBottom: '10px' }}>
-                    {score} / {activeTest.questions.length}
+            <div className="result-page-wrapper">
+                {/* Score Card */}
+                <div className="result-score-card">
+                    <div className="result-score-ring">
+                        <svg viewBox="0 0 120 120" className="result-ring-svg">
+                            <circle cx="60" cy="60" r="52" fill="none" stroke="#e5e7eb" strokeWidth="8" />
+                            <circle cx="60" cy="60" r="52" fill="none" stroke={percentage >= 60 ? '#22c55e' : percentage >= 40 ? '#f59e0b' : '#ef4444'} strokeWidth="8" strokeLinecap="round" strokeDasharray={`${(percentage / 100) * 327} 327`} transform="rotate(-90 60 60)" style={{ transition: 'stroke-dasharray 1s ease' }} />
+                        </svg>
+                        <div className="result-ring-text">
+                            <span className="result-ring-score">{score}/{activeTest.questions.length}</span>
+                            <span className="result-ring-percent">{percentage}%</span>
+                        </div>
+                    </div>
+                    <div className="result-emoji">{getResultEmoji()}</div>
+                    <h2 className="result-msg">{getResultMsg()}</h2>
+
+                    <div className="result-stats">
+                        <div className="result-stat correct"><span className="stat-num">{score}</span><span className="stat-label">સાચા</span></div>
+                        <div className="result-stat wrong"><span className="stat-num">{wrongCount - skippedCount}</span><span className="stat-label">ખોટા</span></div>
+                        <div className="result-stat skipped"><span className="stat-num">{skippedCount}</span><span className="stat-label">છોડ્યા</span></div>
+                    </div>
+
+                    <div className="result-actions">
+                        <button className="result-btn result-btn-primary" onClick={() => startTest(selectedTestId)}>ફરીથી ટેસ્ટ આપો</button>
+                        <button className="result-btn result-btn-outline" onClick={() => setSelectedTestId(null)}>બીજી ટેસ્ટ પસંદ કરો</button>
+                    </div>
                 </div>
-                <p style={{ fontSize: '1.2rem', color: '#6b7280', marginBottom: '30px' }}>
-                    {score === activeTest.questions.length ? "ખૂબ સરસ! 🎉" : "સારા પ્રયાસ! 👍"}
-                </p>
-                <div style={{ display: 'flex', gap: '10px', justifyContent: 'center' }}>
-                    <button className="btn-primary" onClick={() => startTest(selectedTestId)} style={{ marginTop: 0 }}>
-                        ફરીથી ટેસ્ટ આપો
-                    </button>
-                    <button
-                        className="btn-primary"
-                        style={{ marginTop: 0, background: 'white', color: '#3b82f6', border: '2px solid #3b82f6' }}
-                        onClick={() => setSelectedTestId(null)}
-                    >
-                        બીજી ટેસ્ટ પસંદ કરો
-                    </button>
+
+                {/* Questions Review */}
+                <div className="result-review-section">
+                    <h3 className="review-heading">📋 જવાબોની સમીક્ષા</h3>
+                    {activeTest.questions.map((q, qIndex) => {
+                        const userAns = userAnswers.find(a => a.questionIndex === qIndex);
+                        const userSelected = userAns ? userAns.selected : null;
+                        const isCorrect = userSelected === q.answer;
+                        const isSkipped = userSelected === null;
+
+                        return (
+                            <div key={qIndex} className={`review-card ${isSkipped ? 'review-skipped' : isCorrect ? 'review-correct' : 'review-wrong'}`}>
+                                <div className="review-q-header">
+                                    <span className={`review-q-badge ${isSkipped ? 'badge-skip' : isCorrect ? 'badge-correct' : 'badge-wrong'}`}>
+                                        {isSkipped ? '⏩' : isCorrect ? '✅' : '❌'}
+                                    </span>
+                                    <span className="review-q-num">Q{qIndex + 1}.</span>
+                                    <span className="review-q-text">{q.question}</span>
+                                </div>
+                                <div className="review-answers">
+                                    {!isSkipped && !isCorrect && (
+                                        <div className="review-ans review-ans-wrong">
+                                            <span className="review-ans-label">તમારો જવાબ:</span>
+                                            <span className="review-ans-value">{userSelected}</span>
+                                        </div>
+                                    )}
+                                    <div className="review-ans review-ans-correct">
+                                        <span className="review-ans-label">સાચો જવાબ:</span>
+                                        <span className="review-ans-value">{q.answer}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         );
