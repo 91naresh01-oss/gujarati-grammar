@@ -10,6 +10,64 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/b
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
 
+// Lazy loading component for PDF pages
+const LazyPage = ({ pageNumber, zoomLevel }) => {
+    const [isVisible, setIsVisible] = useState(false);
+    const pageRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                if (entries[0].isIntersecting) {
+                    setIsVisible(true);
+                    observer.disconnect(); // Once visible, keep it rendered
+                }
+            },
+            {
+                rootMargin: '800px 0px', // Pre-load 800px before it comes into view
+                threshold: 0
+            }
+        );
+
+        if (pageRef.current) {
+            observer.observe(pageRef.current);
+        }
+
+        return () => observer.disconnect();
+    }, []);
+
+    // Estimated height to prevent scroll jumps
+    const estimatedHeight = 600 * (zoomLevel / 100);
+
+    return (
+        <div 
+            ref={pageRef} 
+            style={{ 
+                marginBottom: '20px', 
+                boxShadow: '0 10px 25px rgba(0,0,0,0.5)',
+                minHeight: isVisible ? 'auto' : `${estimatedHeight}px`,
+                width: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                backgroundColor: 'white'
+            }}
+        >
+            {isVisible ? (
+                <Page
+                    pageNumber={pageNumber}
+                    scale={zoomLevel / 100}
+                    loading={<div style={{ padding: '20px', color: '#94a3b8' }}>પેજ {pageNumber} લોડ થાય છે...</div>}
+                    renderAnnotationLayer={false}
+                    renderTextLayer={false}
+                />
+            ) : (
+                 <div style={{ color: '#cbd5e1' }}>પેજ {pageNumber} લોડ થાય છે...</div>
+            )}
+        </div>
+    );
+};
+
 function PdfViewer() {
     const navigate = useNavigate();
     const [searchParams] = useSearchParams();
@@ -215,17 +273,13 @@ function PdfViewer() {
                     loading={null}
                     error={<div style={{ color: '#ef4444' }}>PDF લોડ કરવામાં ભૂલ આવી!</div>}
                 >
-                    {/* Render all pages for a continuous scroll experience */}
+                    {/* Render pages using lazy loading */}
                     {Array.from(new Array(numPages || 0), (el, index) => (
-                        <div key={`page_${index + 1}`} style={{ marginBottom: '20px', boxShadow: '0 10px 25px rgba(0,0,0,0.5)' }}>
-                            <Page
-                                pageNumber={index + 1}
-                                scale={zoomLevel / 100}
-                                loading=""
-                                renderAnnotationLayer={false}
-                                renderTextLayer={false} // Prevent text selection/copying for security
-                            />
-                        </div>
+                        <LazyPage 
+                            key={`page_${index + 1}`} 
+                            pageNumber={index + 1} 
+                            zoomLevel={zoomLevel} 
+                        />
                     ))}
                 </Document>
             </div>
