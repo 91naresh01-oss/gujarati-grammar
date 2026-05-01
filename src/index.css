@@ -105,10 +105,10 @@ body:has(.home-wrapper) .app-content {
 
 .home-container {
   position: relative;
-  padding: 2.5rem 2rem 3rem 2rem;
+  padding: 3rem 2.5rem 3.5rem 2.5rem;
   min-height: 200px;
-  max-width: 520px;
-  width: 90%;
+  max-width: 580px;
+  width: 93%;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -146,7 +146,7 @@ body:has(.home-wrapper) .app-content {
 }
 
 .home-title {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 800;
   color: #2563eb;
   margin: 0;
@@ -155,7 +155,7 @@ body:has(.home-wrapper) .app-content {
 
 .home-subtitle {
   color: #475569;
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.4;
   margin: 5px 0 0 0;
   font-weight: 600;
@@ -580,13 +580,13 @@ body:has(.home-wrapper) .app-content {
   animation-delay: 4s;
 }
 
-/* Hide blobs on mobile for better scroll performance */
+/* Show static blobs on mobile for better scroll performance */
 @media (max-width: 768px) {
   .blob {
-    display: none;
+    display: block;
     animation: none;
-    opacity: 0;
-    filter: none;
+    opacity: 0.15;
+    filter: blur(40px);
     will-change: auto;
   }
 }
@@ -814,20 +814,29 @@ body:has(.home-wrapper) .app-content {
 
 
 /* Mobile responsiveness - COMPACT */
-@media (max-width: 600px) {
-  body {
+@media (max-width: 768px) {
+  html, body {
     padding: 0;
+    margin: 0;
     overflow-x: hidden;
     position: relative;
-    height: 100%;
     width: 100%;
+    min-height: 100vh;
+  }
+
+  body {
+    background-attachment: scroll !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   #root {
     width: 100%;
     max-width: 100%;
     margin: 0;
-    padding: 0 1px;
+    padding: 0;
+    overflow-x: hidden;
   }
 
   :root {
@@ -862,10 +871,10 @@ body:has(.home-wrapper) .app-content {
   }
 
   .home-container {
-    width: 94%;
-    max-width: 94%;
+    width: 96%;
+    max-width: 96%;
     margin: 0 auto;
-    padding: 1.2rem 1.2rem;
+    padding: 1.6rem 1.4rem;
     border-radius: 20px;
     gap: 12px;
     min-height: auto;
@@ -877,11 +886,11 @@ body:has(.home-wrapper) .app-content {
   }
 
   .home-title {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 
   .home-subtitle {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     line-height: 1.4;
     margin-top: 2px;
   }
@@ -2723,7 +2732,7 @@ body:has(.home-wrapper) .app-content {
 @media (max-width: 768px) {
   .chapter-card {
     padding: 1.3rem !important;
-    min-height: 140px !important;
+    min-height: 160px !important;
     gap: 1rem !important;
     border-radius: 18px !important;
   }
@@ -2733,7 +2742,7 @@ body:has(.home-wrapper) .app-content {
   }
 
   .action-btn {
-    padding: 7px 4px !important;
+    padding: 10px 4px !important;
     font-size: 0.75rem !important;
     min-width: 65px !important;
     border-radius: 10px !important;
