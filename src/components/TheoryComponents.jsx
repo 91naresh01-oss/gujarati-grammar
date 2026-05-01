@@ -103,6 +103,11 @@ const themePalette = {
 
 const getTheme = (theme) => themePalette[theme] || themePalette.indigo;
 
+const canUseHoverEffects = (element) => {
+    const view = element?.ownerDocument?.defaultView;
+    return Boolean(view?.matchMedia?.('(hover: hover) and (pointer: fine)').matches);
+};
+
 // 1. ✨ Theory Card (Unified Theme)
 export const TheoryCard = ({ title, icon, children, theme = 'indigo', style = {} }) => {
     const activeTheme = getTheme(theme);
@@ -123,10 +128,12 @@ export const TheoryCard = ({ title, icon, children, theme = 'indigo', style = {}
                 ...validStyle
             }}
                 onMouseEnter={(e) => {
+                    if (!canUseHoverEffects(e.currentTarget)) return;
                     e.currentTarget.style.transform = 'translateY(-4px)';
                     e.currentTarget.style.boxShadow = themeConfig.shadows.hover;
                 }}
                 onMouseLeave={(e) => {
+                    if (!canUseHoverEffects(e.currentTarget)) return;
                     e.currentTarget.style.transform = 'translateY(0)';
                     e.currentTarget.style.boxShadow = themeConfig.shadows.card;
                 }}>

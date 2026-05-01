@@ -69,13 +69,22 @@ body {
 
 
 /* Home Container specific */
+body:has(.home-wrapper) {
+  overflow-y: hidden;
+}
+
+body:has(.home-wrapper) .app-content {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .home-wrapper {
   position: relative;
   perspective: 1000px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 12vh auto;
+  margin: 6vh auto 12vh;
 }
 
 .home-content-inner {
@@ -88,9 +97,10 @@ body {
 
 .home-logo {
   width: 180px;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   object-fit: contain;
   filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.15)) drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+  transform: translateY(-14px);
 }
 
 .home-container {
@@ -573,10 +583,145 @@ body {
 /* Hide blobs on mobile for better scroll performance */
 @media (max-width: 768px) {
   .blob {
+    display: none;
     animation: none;
-    opacity: 0.12;
-    filter: blur(100px);
+    opacity: 0;
+    filter: none;
     will-change: auto;
+  }
+}
+
+/* Mobile: disable visual-only motion and hover effects. Keep loaders/progress active. */
+@media (max-width: 768px),
+(hover: none) and (pointer: coarse) {
+
+  .home-container,
+  .home-start-btn,
+  .home-footer-item,
+  .chapter-card,
+  .action-btn,
+  .back-btn-theory-outside,
+  .back-btn-circle,
+  .settings-trigger-btn,
+  .install-app-btn,
+  .about-nav-btn,
+  .settings-modal,
+  .close-btn,
+  .reset-btn,
+  .modern-theory-card,
+  .about-back-btn,
+  .about-info-card,
+  .feature-card,
+  .contact-back-btn,
+  .action-button-outline,
+  .contact-email-link,
+  .social-button,
+  .test-select-back-btn,
+  .test-pill-btn,
+  .result-btn-primary,
+  .result-btn-outline,
+  .test-top-back,
+  .test-select-card,
+  .test-option-card,
+  .test-action-btn {
+    transition: none !important;
+    will-change: auto !important;
+  }
+
+  .home-container:hover,
+  .home-start-btn:hover,
+  .chapter-card:hover,
+  .action-btn:hover,
+  .btn-theory:hover,
+  .btn-test:hover,
+  .btn-pdf:hover,
+  .back-btn-theory-outside:hover,
+  .back-btn-circle:hover,
+  .settings-trigger-btn:hover,
+  .install-app-btn:hover,
+  .about-nav-btn:hover,
+  .close-btn:hover,
+  .reset-btn:hover,
+  .modern-theory-card:hover,
+  .about-back-btn:hover,
+  .about-info-card:hover,
+  .feature-card:hover,
+  .contact-back-btn:hover,
+  .action-button-outline:hover,
+  .social-button:hover,
+  .test-select-back-btn:hover,
+  .test-pill-btn:hover,
+  .result-btn-primary:hover,
+  .result-btn-outline:hover,
+  .test-top-back:hover,
+  .test-select-card:hover,
+  .test-option-card:hover:not(:disabled),
+  .test-action-btn:hover:not(:disabled) {
+    transform: none !important;
+    filter: none !important;
+  }
+
+  .home-start-btn:hover,
+  .chapter-card:hover,
+  .modern-theory-card:hover,
+  .about-info-card:hover,
+  .feature-card:hover,
+  .settings-trigger-btn:hover,
+  .install-app-btn:hover,
+  .social-button:hover,
+  .test-select-card:hover,
+  .test-option-card:hover:not(:disabled),
+  .test-action-btn:hover:not(:disabled),
+  .result-btn-primary:hover,
+  .result-btn-outline:hover {
+    box-shadow: inherit !important;
+  }
+
+  .action-btn:active,
+  .back-btn-theory-outside:active,
+  .back-btn-circle:active,
+  .font-btn:active,
+  .test-pill-btn:active {
+    transform: none !important;
+  }
+
+  .home-footer-item:hover {
+    color: #475569 !important;
+  }
+
+  .btn-theory:hover {
+    background: #2a364a !important;
+  }
+
+  .btn-test:hover {
+    background: #8b5cf6 !important;
+  }
+
+  .btn-pdf:hover {
+    background: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+  }
+
+  .settings-trigger-btn:hover,
+  .about-nav-btn:hover {
+    background: transparent !important;
+  }
+
+  .close-btn:hover {
+    color: #6b7280 !important;
+  }
+
+  .action-button-outline:hover,
+  .social-button:hover {
+    background: white !important;
+  }
+
+  .contact-email-link:hover {
+    text-decoration: none !important;
+  }
+
+  .result-btn-outline:hover {
+    background: white !important;
   }
 }
 
@@ -701,8 +846,10 @@ body {
     height: 100dvh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    padding-top: 22dvh;
+    box-sizing: border-box;
     overflow: hidden;
     gap: 15px;
     position: relative;
@@ -710,7 +857,8 @@ body {
 
   .home-logo {
     width: 130px;
-    margin-bottom: 1rem;
+    margin-bottom: 1.75rem;
+    transform: translateY(-18px);
   }
 
   .home-container {
@@ -1894,6 +2042,193 @@ body {
   padding: 25px;
 }
 
+/* Desktop compact layout for About and Contact pages */
+@media (min-width: 801px) {
+  body:has(.about-page) .app-content,
+  body:has(.contact-page) .app-content {
+    margin-top: 38px;
+    padding-top: 8px;
+    padding-bottom: 0;
+  }
+
+  .about-page {
+    max-width: 860px;
+    padding: 8px 18px 0;
+  }
+
+  .about-header-section.compact {
+    padding: 0;
+    margin-bottom: 4px;
+  }
+
+  .about-logo,
+  .contact-logo {
+    height: 62px;
+  }
+
+  .about-location.compact {
+    display: none;
+  }
+
+  .about-back-btn,
+  .contact-back-btn {
+    left: 8px;
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.28);
+  }
+
+  .about-tagline,
+  .contact-tagline {
+    font-size: 0.9rem;
+    line-height: 1.35;
+    margin-bottom: 10px;
+    padding: 0;
+  }
+
+  .about-info-card {
+    border-radius: 14px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+  }
+
+  .info-card-header {
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+
+  .info-icon,
+  .sparkle-icon,
+  .feature-icon,
+  .card-header .icon {
+    font-size: 1.15rem;
+  }
+
+  .info-card-header h2,
+  .card-header h2 {
+    font-size: 1.05rem;
+  }
+
+  .about-info-card p,
+  .feature-card p,
+  .card-content p {
+    font-size: 0.82rem;
+    line-height: 1.35;
+  }
+
+  .about-section-title {
+    font-size: 1rem;
+    gap: 7px;
+    margin-bottom: 8px;
+  }
+
+  .about-features-grid {
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .feature-card {
+    border-radius: 12px;
+    padding: 12px 14px;
+  }
+
+  .feature-header {
+    gap: 7px;
+    margin-bottom: 6px;
+  }
+
+  .feature-header h3 {
+    font-size: 0.95rem;
+  }
+
+  .about-footer-card,
+  .contact-footer-card {
+    padding: 8px;
+  }
+
+  .about-footer-card .made-with-love,
+  .contact-footer-card .made-with-love,
+  .copyright {
+    font-size: 0.8rem;
+    margin-bottom: 2px;
+  }
+
+  .contact-page {
+    max-width: 900px;
+    padding: 8px 18px 0;
+  }
+
+  .contact-header-section {
+    padding: 0;
+    margin-bottom: 6px;
+  }
+
+  .contact-grid {
+    gap: 14px;
+    margin-bottom: 8px;
+  }
+
+  .contact-card {
+    border-radius: 10px;
+  }
+
+  .border-red,
+  .border-green {
+    border-top-width: 4px;
+  }
+
+  .card-header {
+    padding: 10px 16px 2px;
+    gap: 8px;
+  }
+
+  .card-content {
+    padding: 6px 16px 14px;
+  }
+
+  .card-content h3 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+
+  .card-divider {
+    margin: 5px 16px;
+  }
+
+  .action-button-outline {
+    padding: 7px 12px;
+    font-size: 0.82rem;
+  }
+
+  .contact-email-link {
+    font-size: 0.92rem;
+    margin-bottom: 7px;
+  }
+
+  .time-badge {
+    padding: 6px 10px;
+    font-size: 0.76rem;
+  }
+
+  .social-links-list {
+    gap: 7px;
+    margin-bottom: 10px;
+  }
+
+  .social-button {
+    padding: 8px 12px;
+    gap: 9px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+  }
+
+  .feedback-hint {
+    padding: 9px 12px;
+    font-size: 0.86rem;
+  }
+}
+
 /* Mobile Responsive */
 @media (max-width: 800px) {
   .contact-grid {
@@ -2390,6 +2725,7 @@ body {
     padding: 1.3rem !important;
     min-height: 140px !important;
     gap: 1rem !important;
+    border-radius: 18px !important;
   }
 
   .chapter-actions {

@@ -10,8 +10,8 @@ function ContactUs() {
         <div className="contact-page">
             {/* Header / Logo Section */}
             <div className="contact-header-section">
-                <button className="contact-back-btn" onClick={() => navigate('/')}>
-                    ←
+                <button className="contact-back-btn" onClick={() => navigate('/')} aria-label="Back to home">
+                    <BackArrow size={20} color="white" />
                 </button>
                 <div className="contact-branding">
                     <img src="/gyan-logo.png" alt="Gyan Academy Logo" className="contact-logo" />
