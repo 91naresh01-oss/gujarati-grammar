@@ -46,6 +46,7 @@ function Theory() {
                     <BackArrow size={20} color="white" />
                 </button>
                 <div className="theory-title-pill">
+                    <span className="theory-ch-badge">{chapter.id}</span>
                     {chapter.name}
                 </div>
             </div>

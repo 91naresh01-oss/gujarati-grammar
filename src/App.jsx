@@ -3,6 +3,7 @@ import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import BackgroundBlobs from './components/BackgroundBlobs';
 import Navbar from './components/Navbar';
+import ScrollToTop from './components/ScrollToTop';
 import { ThemeProvider } from './context/ThemeContext';
 
 // Lazy load all pages for code splitting
@@ -36,6 +37,7 @@ function App() {
   return (
     <ThemeProvider>
       <Router>
+        <ScrollToTop />
         <BackgroundBlobs />
         <Navbar />
         <div className="app-content">
@@ -55,6 +57,7 @@ function App() {
     </ThemeProvider>
   );
 }
+
 
 
 
