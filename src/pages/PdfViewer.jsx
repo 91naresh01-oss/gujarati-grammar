@@ -3,8 +3,8 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Document, Page, pdfjs } from 'react-pdf';
 import BackArrow from '../components/BackArrow';
 
-// Use standard worker from CDN for better performance and compatibility
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+// Use local worker for reliability (no CDN dependency)
+pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.mjs';
 
 // CSS for react-pdf to handle scrolling and layout properly
 import 'react-pdf/dist/Page/AnnotationLayer.css';
