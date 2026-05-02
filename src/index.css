@@ -43,14 +43,6 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  /* Block text selection/copying */
-  user-select: none;
-  -webkit-user-select: none;
-  /* Safari */
-  -moz-user-select: none;
-  /* Firefox */
-  -ms-user-select: none;
-  /* IE10+ */
 }
 
 #root {
@@ -71,6 +63,14 @@ body {
 /* Home Container specific */
 body:has(.home-wrapper) {
   overflow-y: hidden;
+  background:
+    radial-gradient(ellipse 80% 60% at 15% 20%, rgba(168, 85, 247, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 50% at 85% 25%, rgba(59, 130, 246, 0.14) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 50% at 50% 80%, rgba(244, 114, 182, 0.10) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 40% at 25% 60%, rgba(52, 211, 153, 0.08) 0%, transparent 45%),
+    radial-gradient(ellipse 40% 35% at 75% 70%, rgba(251, 191, 36, 0.07) 0%, transparent 40%),
+    linear-gradient(145deg, #f0f4ff 0%, #e8eeff 25%, #f5f0ff 50%, #fff0f5 75%, #f0faff 100%);
+  background-attachment: fixed;
 }
 
 body:has(.home-wrapper) .app-content {
@@ -80,7 +80,6 @@ body:has(.home-wrapper) .app-content {
 
 .home-wrapper {
   position: relative;
-  perspective: 1000px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -113,7 +112,7 @@ body:has(.home-wrapper) .app-content {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-radius: 24px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08), inset 0 0 20px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08), 0 12px 35px rgba(0, 0, 0, 0.12), 0 25px 55px rgba(0, 0, 0, 0.10);
   border: 1px solid rgba(255, 255, 255, 0.6);
   display: flex;
   flex-direction: column;
@@ -542,13 +541,14 @@ body:has(.home-wrapper) .app-content {
 .blob {
   position: fixed;
   border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.25;
+  filter: blur(40px);
+  opacity: 0.2;
   z-index: -1;
   pointer-events: none;
   animation: blob-float 10s infinite alternate;
   will-change: transform;
   transform: translateZ(0);
+  contain: strict;
 }
 
 .blob-1 {
@@ -755,6 +755,7 @@ body:has(.home-wrapper) .app-content {
   position: relative;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  contain: content;
 }
 
 .modern-theory-card:hover {
@@ -1234,15 +1235,14 @@ body:has(.home-wrapper) .app-content {
   left: 0;
   right: 0;
   height: 34px;
-  background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 15px;
   z-index: 1000;
-  transition: all 0.3s ease;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
@@ -3885,4 +3885,24 @@ body:has(.test-page-select) #root {
   .test-review-value {
     text-align: left;
   }
+}
+
+
+/* Disable text selection globally */
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Re-enable text selection for input fields */
+input, textarea {
+  -webkit-user-select: auto;
+  -khtml-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
 }

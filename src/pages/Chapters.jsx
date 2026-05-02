@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { chaptersData } from '../data';
 import BackArrow from '../components/BackArrow';
+import { prefetchNearbyChapters, prefetchChapter } from '../utils/prefetchUtils';
 
 const colorThemes = [
     { main: '#e11d48', border: '#f43f5e', bg: 'rgba(244, 63, 94, 0.08)' }, // 1: Red
@@ -19,13 +20,18 @@ function Chapters() {
     const navigate = useNavigate();
     const chapters = chaptersData;
 
+    // Prefetch first few chapters when page loads (idle time)
+    useEffect(() => {
+        prefetchNearbyChapters(chapters);
+    }, [chapters]);
+
+    // Hover/touch par chapter data prefetch
+    const handleChapterInteraction = useCallback((chapter) => {
+        prefetchChapter(chapter);
+    }, []);
+
     return (
         <>
-            {/* 3D Floating Blobs Background */}
-            <div className="blob blob-1" style={{ background: 'linear-gradient(135deg, #a78bfa, #3b82f6)' }}></div>
-            <div className="blob blob-2" style={{ background: 'linear-gradient(135deg, #f472b6, #fb7185)' }}></div>
-            <div className="blob blob-3" style={{ background: 'linear-gradient(135deg, #60a5fa, #34d399)' }}></div>
-
             <div style={{ width: '100%', padding: '20px', position: 'relative', zIndex: 1 }}>
 
                 <div className="page-header">
@@ -49,6 +55,8 @@ function Chapters() {
                                     backgroundColor: theme.bg,
                                     borderLeftColor: theme.border
                                 }}
+                                onMouseEnter={() => handleChapterInteraction(chapter)}
+                                onTouchStart={() => handleChapterInteraction(chapter)}
                             >
                                 <div className="chapter-header">
                                     <div className="chapter-number-box" style={{ backgroundColor: theme.main }}>

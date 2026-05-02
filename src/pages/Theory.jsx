@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { chaptersData } from '../data';
 import BackArrow from '../components/BackArrow';
+import { getCachedData, prefetchData } from '../utils/prefetchUtils';
 
 function Theory() {
     const navigate = useNavigate();
@@ -15,8 +16,24 @@ function Theory() {
 
     React.useEffect(() => {
         if (chapter && chapter.loadTheory) {
+            const cacheKey = `theory-${chapter.id}`;
+            const cached = getCachedData(cacheKey);
+
+            if (cached && !(cached instanceof Promise)) {
+                // Instant load from cache
+                setTheoryContent(() => cached);
+                setIsLoading(false);
+                return;
+            }
+
             setIsLoading(true);
-            chapter.loadTheory()
+
+            // Use prefetch system (handles deduplication + caching)
+            const loader = cached instanceof Promise
+                ? cached
+                : prefetchData(cacheKey, () => chapter.loadTheory());
+
+            loader
                 .then(module => {
                     setTheoryContent(() => module);
                     setIsLoading(false);

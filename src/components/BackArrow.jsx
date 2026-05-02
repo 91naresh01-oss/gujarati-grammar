@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BackArrow = ({ size = 20, color = 'currentColor' }) => (
+const BackArrow = React.memo(({ size = 20, color = 'currentColor' }) => (
     <svg
         width={size}
         height={size}
@@ -15,6 +15,8 @@ const BackArrow = ({ size = 20, color = 'currentColor' }) => (
         <path d="M19 12H5" />
         <polyline points="12 19 5 12 12 5" />
     </svg>
-);
+));
+
+BackArrow.displayName = 'BackArrow';
 
 export default BackArrow;

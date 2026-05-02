@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { chaptersData } from '../data';
 import BackArrow from '../components/BackArrow';
+import { getCachedData, prefetchData } from '../utils/prefetchUtils';
 
 const optionLabels = ['A', 'B', 'C', 'D', 'E', 'F'];
 
@@ -29,10 +30,25 @@ function Test() {
             return;
         }
 
+        const cacheKey = `tests-${chapter.id}`;
+        const cached = getCachedData(cacheKey);
+
+        if (cached && !(cached instanceof Promise)) {
+            // Instant load from cache
+            setTestsData(cached);
+            setIsLoadingTests(false);
+            return;
+        }
+
         setIsLoadingTests(true);
         setError(null);
 
-        chapter.loadTests()
+        // Use prefetch system (handles deduplication + caching)
+        const loader = cached instanceof Promise
+            ? cached
+            : prefetchData(cacheKey, () => chapter.loadTests());
+
+        loader
             .then((data) => {
                 setTestsData(data);
                 setIsLoadingTests(false);

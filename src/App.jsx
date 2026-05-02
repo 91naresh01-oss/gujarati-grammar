@@ -1,19 +1,24 @@
 // Main App Component
-import React, { Suspense } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import BackgroundBlobs from './components/BackgroundBlobs';
 import Navbar from './components/Navbar';
 import ScrollToTop from './components/ScrollToTop';
 import { ThemeProvider } from './context/ThemeContext';
 
-// Lazy load all pages for code splitting
-const Home = React.lazy(() => import('./pages/Home'));
+// Eager load Chapters (most visited page after Home)
 const Chapters = React.lazy(() => import('./pages/Chapters'));
+
+// Lazy load other pages
+const Home = React.lazy(() => import('./pages/Home'));
 const Theory = React.lazy(() => import('./pages/Theory'));
 const Test = React.lazy(() => import('./pages/Test'));
 const AboutUs = React.lazy(() => import('./pages/AboutUs'));
 const ContactUs = React.lazy(() => import('./pages/ContactUs'));
 const PdfViewer = React.lazy(() => import('./pages/PdfViewer'));
+
+// Prefetch Chapters immediately after initial render
+const chaptersPreload = import('./pages/Chapters');
 
 // Loading fallback component
 const PageLoader = () => (
@@ -33,6 +38,25 @@ const PageLoader = () => (
 );
 
 function App() {
+  useEffect(() => {
+    const handleContextMenu = (e) => e.preventDefault();
+    const handleCopy = (e) => e.preventDefault();
+    const handleKeyDown = (e) => {
+      if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'a' || e.key === 'A' || e.key === 'p' || e.key === 'P' || e.key === 's' || e.key === 'S')) {
+        e.preventDefault();
+      }
+    };
+    
+    document.addEventListener('contextmenu', handleContextMenu);
+    document.addEventListener('copy', handleCopy);
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.removeEventListener('contextmenu', handleContextMenu);
+      document.removeEventListener('copy', handleCopy);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
 
   return (
     <ThemeProvider>
