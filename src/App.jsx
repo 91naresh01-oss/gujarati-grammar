@@ -16,6 +16,7 @@ const Test = React.lazy(() => import('./pages/Test'));
 const AboutUs = React.lazy(() => import('./pages/AboutUs'));
 const ContactUs = React.lazy(() => import('./pages/ContactUs'));
 const PdfViewer = React.lazy(() => import('./pages/PdfViewer'));
+const NotFound = React.lazy(() => import('./pages/NotFound'));
 
 // Prefetch Chapters immediately after initial render
 const chaptersPreload = import('./pages/Chapters');
@@ -74,6 +75,7 @@ function App() {
               <Route path="/about" element={<AboutUs />} />
               <Route path="/contact" element={<ContactUs />} />
               <Route path="/pdf-view" element={<PdfViewer />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
         </div>

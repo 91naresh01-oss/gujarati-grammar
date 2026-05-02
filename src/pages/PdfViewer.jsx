@@ -71,8 +71,12 @@ const LazyPage = ({ pageNumber, zoomLevel }) => {
 function PdfViewer() {
     const navigate = useNavigate();
     const [searchParams] = useSearchParams();
-    const pdfUrl = searchParams.get('file');
+    const rawPdfUrl = searchParams.get('file');
     const title = searchParams.get('title') || 'PDF Viewer';
+
+    // Security: Only allow local /pdf/ paths — block external URLs
+    const isValidPdf = rawPdfUrl && rawPdfUrl.startsWith('/pdf/') && rawPdfUrl.endsWith('.pdf') && !rawPdfUrl.includes('..');
+    const pdfUrl = isValidPdf ? rawPdfUrl : null;
     const containerRef = useRef(null);
 
     const [numPages, setNumPages] = useState(null);
